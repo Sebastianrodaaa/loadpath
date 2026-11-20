@@ -12,6 +12,27 @@ from loadpath.receipts import coverage_summary, import_modelscan, import_pickles
 DEMO = Path(__file__).resolve().parents[1] / "examples/demo_app"
 
 
+@pytest.mark.parametrize("rebind", [
+    "import unknown as P", "from unknown import path as P", "(P := dynamic)",
+    "for P in paths:\n    pass", "with manager() as P:\n    pass",
+    "P += suffix", "del P", "def f(P):\n    pickle.load(P)",
+    "def f():\n    global P\n    pickle.load(P)",
+    "def outer():\n    P = 'x.pkl'\n    def inner():\n        nonlocal P\n        pickle.load(P)",
+    "def f():\n    pickle.load(P)\n    import unknown as P",
+])
+def test_rebinding_cannot_inherit_receipt(tmp_path, rebind):
+    artifact = tmp_path / "x.pkl"
+    artifact.write_bytes(b"\x80\x02N.")
+    expression = "P = 'x.pkl'\n" + rebind
+    if not rebind.startswith("def "):
+        expression += "\npickle.load(P)"
+    found = site(tmp_path, expression)
+    join(found, [receipt(artifact)], tmp_path)
+    assert len(found) == 1
+    assert found[0].resolved_artifact is None
+    assert found[0].coverage == "unresolved"
+
+
 def site(tmp_path, expression="pickle.load('x.pkl')"):
     (tmp_path / "app.py").write_text("import pickle\nimport joblib\nimport torch\nimport numpy\n" + expression)
     found, errors = scan(tmp_path / "app.py")

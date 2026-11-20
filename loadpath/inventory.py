@@ -85,21 +85,49 @@ class Inventory(ast.NodeVisitor):
 
     def visit_Import(self, node):
         for alias in node.names:
+            self.invalidate(alias.asname or alias.name.split(".")[0])
             self.aliases[alias.asname or alias.name.split(".")[0]] = alias.name if alias.asname else alias.name.split(".")[0]
 
     def visit_ImportFrom(self, node):
         for alias in node.names:
             if alias.name != "*":
+                self.invalidate(alias.asname or alias.name)
                 self.aliases[alias.asname or alias.name] = f"{node.module}.{alias.name}"
+
+    def invalidate(self, name):
+        self.values.pop(name, None)
+        self.aliases.pop(name, None)
+
+    def bind(self, target, value=None):
+        if isinstance(target, ast.Name):
+            self.invalidate(target.id)
+            if value is not None:
+                self.values[target.id] = value
+        elif isinstance(target, (ast.Tuple, ast.List)):
+            for element in target.elts:
+                self.bind(element)
+        elif isinstance(target, ast.Starred):
+            self.bind(target.value)
 
     def visit_Assign(self, node):
         self.visit(node.value)
         value = self.value(node.value)
         for target in node.targets:
-            for name in ast.walk(target):
-                if isinstance(name, ast.Name):
-                    self.values[name.id] = value if isinstance(target, ast.Name) else Value()
-                    self.aliases.pop(name.id, None)
+            self.bind(target, value)
+
+    def visit_NamedExpr(self, node):
+        self.visit(node.value)
+        self.bind(node.target, self.value(node.value))
+
+    def visit_Delete(self, node):
+        for target in node.targets:
+            self.bind(target)
+
+    def visit_Global(self, node):
+        for name in node.names:
+            self.invalidate(name)
+
+    visit_Nonlocal = visit_Global
 
     def visit_AnnAssign(self, node):
         if node.value:
@@ -108,21 +136,28 @@ class Inventory(ast.NodeVisitor):
 
     def visit_AugAssign(self, node):
         self.generic_visit(node)
-        if isinstance(node.target, ast.Name):
-            self.values.pop(node.target.id, None)
+        self.bind(node.target)
 
     def visit_With(self, node):
         for item in node.items:
             self.visit(item.context_expr)
-            if isinstance(item.optional_vars, ast.Name):
-                self.values[item.optional_vars.id] = self.value(item.context_expr)
+            if item.optional_vars is not None:
+                self.bind(item.optional_vars, self.value(item.context_expr))
         for statement in node.body:
             self.visit(statement)
 
+    visit_AsyncWith = visit_With
+
     def visit_FunctionDef(self, node):
+        self.invalidate(node.name)
         old_values, old_aliases = self.values.copy(), self.aliases.copy()
-        local_names = {n.id for n in ast.walk(node) if isinstance(n, ast.Name) and isinstance(n.ctx, ast.Store)}
+        local_names = {n.id for n in ast.walk(node) if isinstance(n, ast.Name) and isinstance(n.ctx, (ast.Store, ast.Del))}
         local_names |= {a.arg for a in ast.walk(node.args) if isinstance(a, ast.arg)}
+        for child in ast.walk(node):
+            if isinstance(child, (ast.Import, ast.ImportFrom)):
+                local_names.update(a.asname or a.name.split(".")[0] for a in child.names)
+            elif isinstance(child, (ast.Global, ast.Nonlocal)):
+                local_names.update(child.names)
         for name in local_names:
             self.values.pop(name, None)
             self.aliases.pop(name, None)
