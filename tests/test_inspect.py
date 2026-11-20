@@ -6,6 +6,7 @@ import struct
 import tarfile
 import zipfile
 import zlib
+from pathlib import Path
 
 import pytest
 
@@ -176,3 +177,35 @@ def test_inspect_cli_accepts_error_free_members(tmp_path, capsys, data):
     artifact.write_bytes(data)
     assert main(["inspect", str(artifact)]) == 0
     assert not json.loads(capsys.readouterr().out)["errors"]
+
+
+def test_inspect_cli_accepts_bundled_torch_zip(capsys):
+    artifact = Path(__file__).resolve().parents[1] / "eval/scanner_coverage/artifacts/torch-zip.pt"
+    assert main(["inspect", str(artifact)]) == 0
+    info = json.loads(capsys.readouterr().out)
+    assert info["format"] == "torch-zip" and not info["errors"]
+
+
+@pytest.mark.parametrize("metadata", [b"little", b"config", b"Iinvalid"])
+def test_torch_metadata_is_not_a_corrupt_pickle(tmp_path, capsys, metadata):
+    artifact = tmp_path / "model.pt"
+    artifact.write_bytes(zip_bytes({"weights/data.pkl": b"\x80\x02N.", "weights/byteorder": metadata}))
+    assert main(["inspect", str(artifact)]) == 0
+    info = json.loads(capsys.readouterr().out)
+    assert info["format"] == "torch-zip" and not info["errors"]
+    assert info["members"][1]["format"] == "unknown"
+    assert not info["members"][1]["errors"]
+
+
+@pytest.mark.parametrize("name,data", [("weights/data.pkl", b"l"), ("weights/payload", b"\x80\x02")])
+def test_definite_pickle_member_errors_still_fail_inspect(tmp_path, capsys, name, data):
+    artifact = tmp_path / "model.zip"
+    artifact.write_bytes(zip_bytes({name: data}))
+    assert main(["inspect", str(artifact)]) == 2
+    assert json.loads(capsys.readouterr().out)["errors"]
+
+
+def test_successful_protocol_zero_sniff_is_preserved():
+    info = inspect_bytes(b"cbuiltins\nprint\n.", "metadata")
+    assert info["format"] == "pickle" and not info["errors"]
+    assert info["imports"][0]["name"] == "print"

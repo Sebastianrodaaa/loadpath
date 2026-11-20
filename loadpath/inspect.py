@@ -145,8 +145,11 @@ def inspect_bytes(data, name="<bytes>", depth=0, budget=None):
         for member in result["members"]:
             result["errors"].extend(f"{member['name']}: {error}" for error in member.get("errors", []))
         return result
-    if data.startswith(b"\x80") or Path(name).suffix.lower() in {".pkl", ".pickle", ".joblib"} or data[:1] in {b"c", b"(", b"}", b"I", b"N", b"l", b"d"}:
+    definite_pickle = data.startswith(b"\x80") or Path(name).suffix.lower() in {".pkl", ".pickle", ".joblib"}
+    if definite_pickle or data[:1] in {b"c", b"(", b"}", b"I", b"N", b"l", b"d"}:
         protocol, imports, error = pickle_imports(data)
+        if error and not definite_pickle:
+            return result
         result.update(format="pickle", protocol=protocol, imports=imports)
         if error:
             result["errors"].append(error)
