@@ -307,3 +307,39 @@ def test_loader_calls_in_targets(tmp_path, statement):
 def test_assignment_target_runs_after_rhs(tmp_path):
     found = inventory(tmp_path, "import pickle\nP = 'outer.pkl'\ncache[pickle.load(P)] = (P := dynamic)")
     assert len(found) == 1 and found[0].resolved_artifact is None
+
+
+@pytest.mark.parametrize("expression", [
+    "[(lambda: (P := dynamic)) for item in items]",
+    "{(lambda: (P := dynamic)) for item in items}",
+    "{item: (lambda: (P := dynamic)) for item in items}",
+    "((lambda: (P := dynamic)) for item in items)",
+    "[[(lambda: (P := dynamic)) for inner in items] for outer in items]",
+    "[item for item in items if (lambda: (P := dynamic))]",
+    "[item for item in (lambda: (P := dynamic))()]",
+    "[item for item in items for child in (lambda: (P := dynamic))()]",
+])
+@pytest.mark.parametrize("in_function", [False, True])
+def test_lambda_walrus_does_not_escape_comprehension(tmp_path, expression, in_function):
+    body = "P = 'outer.pkl'\n" + expression + "\npickle.load(P)"
+    source = "import pickle\n" + ("def f():\n" + textwrap.indent(body, "    ") if in_function else body)
+    assert [f.resolved_artifact for f in inventory(tmp_path, source)] == ["outer.pkl"]
+
+
+@pytest.mark.parametrize("expression", [
+    "[(P := dynamic) for item in items]",
+    "[[(P := dynamic) for inner in items] for outer in items]",
+    "[(lambda arg=(P := dynamic): arg) for item in items]",
+])
+def test_comprehension_walrus_still_invalidates_enclosing_binding(tmp_path, expression):
+    source = "import pickle\nP = 'outer.pkl'\n" + expression + "\npickle.load(P)"
+    assert [f.resolved_artifact for f in inventory(tmp_path, source)] == [None]
+
+
+def test_lambda_walrus_preserves_outer_loader_alias(tmp_path):
+    found = inventory(tmp_path, """
+        from pickle import load as loader
+        [(lambda: (loader := dynamic)) for item in items]
+        loader('outer.pkl')
+    """)
+    assert [f.resolved_artifact for f in found] == ["outer.pkl"]

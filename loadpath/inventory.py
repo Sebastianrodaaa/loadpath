@@ -77,6 +77,19 @@ class Bindings(ast.NodeVisitor):
     visit_GeneratorExp = visit_ListComp
 
 
+def walrus_bindings(node):
+    if isinstance(node, ast.NamedExpr):
+        yield node.target.id
+    if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef, ast.Lambda)):
+        children = [*node.args.defaults, *filter(None, node.args.kw_defaults)]
+    elif isinstance(node, ast.ClassDef):
+        children = []
+    else:
+        children = ast.iter_child_nodes(node)
+    for child in children:
+        yield from walrus_bindings(child)
+
+
 class Inventory(ast.NodeVisitor):
     def __init__(self, filename):
         self.filename = str(filename)
@@ -262,9 +275,8 @@ class Inventory(ast.NodeVisitor):
                 self.visit(getattr(node, attribute))
         self.values, self.aliases = values, aliases
         self.class_scope = old_class_scope
-        for child in ast.walk(node):
-            if isinstance(child, ast.NamedExpr):
-                self.bind(child.target)
+        for name in walrus_bindings(node):
+            self.invalidate(name)
 
     visit_SetComp = visit_ListComp
     visit_DictComp = visit_ListComp
