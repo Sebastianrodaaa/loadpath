@@ -283,3 +283,27 @@ def test_lambda_and_nested_class_scopes(tmp_path):
         pickle.load(P)
     """)
     assert [f.resolved_artifact for f in found] == [None, "outer.pkl", None, "class.pkl", None, "outer.pkl"]
+
+
+@pytest.mark.parametrize("statement", [
+    "del cache[pickle.load(P)]",
+    "cache[pickle.load(P)] = 1",
+    "pickle.load(P).attribute = 1",
+    "del pickle.load(P).attribute",
+    "cache[pickle.load(P)]: object = 1",
+    "cache[pickle.load(P)]: object",
+    "[item for cache[pickle.load(P)] in items]",
+    "[item for pickle.load(P).attribute in items]",
+    "[item for (name, cache[pickle.load(P)]) in items]",
+    "with manager() as cache[pickle.load(P)]:\n    pass",
+    "cache[pickle.load(P)] += 1",
+    "for cache[pickle.load(P)] in items:\n    pass",
+])
+def test_loader_calls_in_targets(tmp_path, statement):
+    found = inventory(tmp_path, "import pickle\nP = 'outer.pkl'\n" + statement + "\npickle.load(P)")
+    assert [f.resolved_artifact for f in found] == ["outer.pkl", "outer.pkl"]
+
+
+def test_assignment_target_runs_after_rhs(tmp_path):
+    found = inventory(tmp_path, "import pickle\nP = 'outer.pkl'\ncache[pickle.load(P)] = (P := dynamic)")
+    assert len(found) == 1 and found[0].resolved_artifact is None

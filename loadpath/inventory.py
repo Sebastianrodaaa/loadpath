@@ -151,11 +151,22 @@ class Inventory(ast.NodeVisitor):
         elif isinstance(target, ast.Starred):
             self.bind(target.value)
 
+    def visit_target(self, target, value=None):
+        if isinstance(target, ast.Name):
+            self.bind(target, value)
+        elif isinstance(target, (ast.Tuple, ast.List)):
+            for element in target.elts:
+                self.visit_target(element)
+        elif isinstance(target, ast.Starred):
+            self.visit_target(target.value)
+        else:
+            self.visit(target)
+
     def visit_Assign(self, node):
         self.visit(node.value)
         value = self.value(node.value)
         for target in node.targets:
-            self.bind(target, value)
+            self.visit_target(target, value)
 
     def visit_NamedExpr(self, node):
         self.visit(node.value)
@@ -163,7 +174,7 @@ class Inventory(ast.NodeVisitor):
 
     def visit_Delete(self, node):
         for target in node.targets:
-            self.bind(target)
+            self.visit_target(target)
 
     def visit_Global(self, node):
         for name in node.names:
@@ -175,6 +186,8 @@ class Inventory(ast.NodeVisitor):
         if node.value:
             replacement = ast.Assign(targets=[node.target], value=node.value)
             self.visit_Assign(replacement)
+        else:
+            self.visit(node.target)
 
     def visit_AugAssign(self, node):
         self.generic_visit(node)
@@ -184,7 +197,7 @@ class Inventory(ast.NodeVisitor):
         for item in node.items:
             self.visit(item.context_expr)
             if item.optional_vars is not None:
-                self.bind(item.optional_vars, self.value(item.context_expr))
+                self.visit_target(item.optional_vars, self.value(item.context_expr))
         for statement in node.body:
             self.visit(statement)
 
@@ -241,7 +254,7 @@ class Inventory(ast.NodeVisitor):
         for index, generator in enumerate(node.generators):
             if index:
                 self.visit(generator.iter)
-            self.bind(generator.target)
+            self.visit_target(generator.target)
             for condition in generator.ifs:
                 self.visit(condition)
         for attribute in ("elt", "key", "value"):
