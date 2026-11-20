@@ -209,3 +209,18 @@ def test_successful_protocol_zero_sniff_is_preserved():
     info = inspect_bytes(b"cbuiltins\nprint\n.", "metadata")
     assert info["format"] == "pickle" and not info["errors"]
     assert info["imports"][0]["name"] == "print"
+
+
+@pytest.mark.parametrize("nested", [False, True])
+def test_extensionless_pickle_opcode_cutoff_is_an_error(tmp_path, capsys, nested):
+    data = b"N0" * 50001 + b"N."
+    artifact = tmp_path / "model"
+    if nested:
+        data = zip_bytes({"payload": data})
+    artifact.write_bytes(data)
+    assert main(["inspect", str(artifact)]) == 2
+    info = json.loads(capsys.readouterr().out)
+    assert any("opcode limit exceeded" in error for error in info["errors"])
+    payload = info["members"][0] if nested else info
+    assert payload["format"] == "pickle" and payload["protocol"] == 0
+    assert payload["errors"] == ["opcode limit exceeded"]

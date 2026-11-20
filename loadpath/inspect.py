@@ -16,6 +16,7 @@ from pathlib import Path
 MAX_BYTES = 8 * 1024 * 1024
 MAX_DEPTH = 2
 MAX_MEMBERS = 64
+OPCODE_LIMIT_ERROR = "opcode limit exceeded"
 ARCHIVE_ERRORS = (OSError, ValueError, RuntimeError, zipfile.BadZipFile, tarfile.TarError, EOFError, zlib.error, lzma.LZMAError)
 
 
@@ -26,7 +27,8 @@ def pickle_imports(data):
     try:
         for count, (op, arg, pos) in enumerate(pickletools.genops(data)):
             if count > 100000:
-                raise ValueError("opcode limit exceeded")
+                error = OPCODE_LIMIT_ERROR
+                break
             protocol = max(protocol, op.proto)
             if op.name == "PROTO":
                 protocol = arg
@@ -148,7 +150,7 @@ def inspect_bytes(data, name="<bytes>", depth=0, budget=None):
     definite_pickle = data.startswith(b"\x80") or Path(name).suffix.lower() in {".pkl", ".pickle", ".joblib"}
     if definite_pickle or data[:1] in {b"c", b"(", b"}", b"I", b"N", b"l", b"d"}:
         protocol, imports, error = pickle_imports(data)
-        if error and not definite_pickle:
+        if error and error != OPCODE_LIMIT_ERROR and not definite_pickle:
             return result
         result.update(format="pickle", protocol=protocol, imports=imports)
         if error:
