@@ -1,0 +1,3 @@
+import huggingface_hub
+def wrapper(path):
+    return huggingface_hub.hf_hub_download(path)

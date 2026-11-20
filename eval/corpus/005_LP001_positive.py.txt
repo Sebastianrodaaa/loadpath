@@ -1,0 +1,3 @@
+import pickle
+def wrapper(path):
+    return pickle.load(path)

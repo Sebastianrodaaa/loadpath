@@ -1,0 +1,2 @@
+# Example text only: numpy.load('objects.npy', allow_pickle=True)
+pass

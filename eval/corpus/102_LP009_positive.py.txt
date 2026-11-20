@@ -1,0 +1,3 @@
+import tensorflow
+PATH = 'model.bin'
+tensorflow.saved_model.load(PATH)

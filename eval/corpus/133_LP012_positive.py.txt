@@ -1,0 +1,2 @@
+import skops as lib
+lib.io.load('model.skops', trusted=['custom.Type'])

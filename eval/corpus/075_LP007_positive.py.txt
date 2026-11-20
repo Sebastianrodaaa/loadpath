@@ -1,0 +1,2 @@
+from pandas import read_pickle as restore
+restore('frame.pkl')

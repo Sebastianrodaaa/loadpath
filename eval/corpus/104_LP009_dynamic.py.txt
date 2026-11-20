@@ -1,0 +1,2 @@
+import tensorflow
+getattr(tensorflow.saved_model, 'load')('saved_model')

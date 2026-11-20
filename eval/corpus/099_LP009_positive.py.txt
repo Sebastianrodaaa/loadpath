@@ -1,0 +1,2 @@
+from tensorflow.saved_model import load as restore
+restore('saved_model')

@@ -1,0 +1,5855 @@
+{
+  "dataset": {
+    "snippets": 185,
+    "positive_sites": 144,
+    "negative_snippets": 41,
+    "synthetic": true,
+    "label_sha256": "759b71b94c8bfe899a328fd10aee2eb5dd4993e78ff49847b86d78fbb8860e37"
+  },
+  "method": "Exact rule+canonical loader+line+column match; no held-out claim; comments/strings retained for regex.",
+  "systems": {
+    "loadpath": {
+      "overall": {
+        "tp": 113,
+        "fp": 3,
+        "fn": 31,
+        "precision": 0.9741,
+        "recall": 0.7847,
+        "f1": 0.8692
+      },
+      "families": {
+        "LP001": {
+          "tp": 8,
+          "fp": 0,
+          "fn": 3,
+          "precision": 1.0,
+          "recall": 0.7273,
+          "f1": 0.8421
+        },
+        "LP002": {
+          "tp": 8,
+          "fp": 0,
+          "fn": 3,
+          "precision": 1.0,
+          "recall": 0.7273,
+          "f1": 0.8421
+        },
+        "LP003": {
+          "tp": 8,
+          "fp": 1,
+          "fn": 3,
+          "precision": 0.8889,
+          "recall": 0.7273,
+          "f1": 0.8
+        },
+        "LP004": {
+          "tp": 11,
+          "fp": 2,
+          "fn": 3,
+          "precision": 0.8462,
+          "recall": 0.7857,
+          "f1": 0.8148
+        },
+        "LP005": {
+          "tp": 8,
+          "fp": 0,
+          "fn": 3,
+          "precision": 1.0,
+          "recall": 0.7273,
+          "f1": 0.8421
+        },
+        "LP006": {
+          "tp": 11,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.8462,
+          "f1": 0.9167
+        },
+        "LP007": {
+          "tp": 8,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1": 0.8889
+        },
+        "LP008": {
+          "tp": 8,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1": 0.8889
+        },
+        "LP009": {
+          "tp": 8,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1": 0.8889
+        },
+        "LP010": {
+          "tp": 11,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.8462,
+          "f1": 0.9167
+        },
+        "LP011": {
+          "tp": 8,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1": 0.8889
+        },
+        "LP012": {
+          "tp": 8,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1": 0.8889
+        },
+        "LP013": {
+          "tp": 8,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1": 0.8889
+        }
+      }
+    },
+    "regex": {
+      "overall": {
+        "tp": 61,
+        "fp": 31,
+        "fn": 83,
+        "precision": 0.663,
+        "recall": 0.4236,
+        "f1": 0.5169
+      },
+      "families": {
+        "LP001": {
+          "tp": 4,
+          "fp": 3,
+          "fn": 7,
+          "precision": 0.5714,
+          "recall": 0.3636,
+          "f1": 0.4444
+        },
+        "LP002": {
+          "tp": 4,
+          "fp": 2,
+          "fn": 7,
+          "precision": 0.6667,
+          "recall": 0.3636,
+          "f1": 0.4706
+        },
+        "LP003": {
+          "tp": 4,
+          "fp": 3,
+          "fn": 7,
+          "precision": 0.5714,
+          "recall": 0.3636,
+          "f1": 0.4444
+        },
+        "LP004": {
+          "tp": 7,
+          "fp": 5,
+          "fn": 7,
+          "precision": 0.5833,
+          "recall": 0.5,
+          "f1": 0.5385
+        },
+        "LP005": {
+          "tp": 4,
+          "fp": 2,
+          "fn": 7,
+          "precision": 0.6667,
+          "recall": 0.3636,
+          "f1": 0.4706
+        },
+        "LP006": {
+          "tp": 7,
+          "fp": 2,
+          "fn": 6,
+          "precision": 0.7778,
+          "recall": 0.5385,
+          "f1": 0.6364
+        },
+        "LP007": {
+          "tp": 4,
+          "fp": 2,
+          "fn": 6,
+          "precision": 0.6667,
+          "recall": 0.4,
+          "f1": 0.5
+        },
+        "LP008": {
+          "tp": 4,
+          "fp": 2,
+          "fn": 6,
+          "precision": 0.6667,
+          "recall": 0.4,
+          "f1": 0.5
+        },
+        "LP009": {
+          "tp": 4,
+          "fp": 2,
+          "fn": 6,
+          "precision": 0.6667,
+          "recall": 0.4,
+          "f1": 0.5
+        },
+        "LP010": {
+          "tp": 7,
+          "fp": 2,
+          "fn": 6,
+          "precision": 0.7778,
+          "recall": 0.5385,
+          "f1": 0.6364
+        },
+        "LP011": {
+          "tp": 4,
+          "fp": 2,
+          "fn": 6,
+          "precision": 0.6667,
+          "recall": 0.4,
+          "f1": 0.5
+        },
+        "LP012": {
+          "tp": 4,
+          "fp": 2,
+          "fn": 6,
+          "precision": 0.6667,
+          "recall": 0.4,
+          "f1": 0.5
+        },
+        "LP013": {
+          "tp": 4,
+          "fp": 2,
+          "fn": 6,
+          "precision": 0.6667,
+          "recall": 0.4,
+          "f1": 0.5
+        }
+      }
+    }
+  },
+  "cases": [
+    {
+      "file": "000_LP001_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP001",
+          "loader": "pickle.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP001",
+              "loader": "pickle.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP001",
+              "loader": "pickle.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "001_LP001_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP001",
+          "loader": "pickle.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP001",
+              "loader": "pickle.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "002_LP001_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP001",
+          "loader": "pickle.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP001",
+              "loader": "pickle.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "003_LP001_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP001",
+          "loader": "pickle.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP001",
+              "loader": "pickle.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "004_LP001_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP001",
+          "loader": "pickle.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP001",
+              "loader": "pickle.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "005_LP001_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP001",
+          "loader": "pickle.load",
+          "line": 3,
+          "col": 12
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP001",
+              "loader": "pickle.load",
+              "line": 3,
+              "col": 12
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP001",
+              "loader": "pickle.load",
+              "line": 3,
+              "col": 12
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "006_LP001_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP001",
+          "loader": "pickle.load",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP001",
+              "loader": "pickle.load",
+              "line": 3,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP001",
+              "loader": "pickle.load",
+              "line": 3,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "007_LP001_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP001",
+          "loader": "pickle.load",
+          "line": 3,
+          "col": 5
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP001",
+              "loader": "pickle.load",
+              "line": 3,
+              "col": 5
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP001",
+              "loader": "pickle.load",
+              "line": 3,
+              "col": 5
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "008_LP001_dynamic.py.txt",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP001",
+          "loader": "pickle.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "009_LP001_dynamic.py.txt",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP001",
+          "loader": "pickle.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "010_LP001_negative-comment.py.txt",
+      "kind": "negative-comment",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP001",
+              "loader": "pickle.load",
+              "line": 1,
+              "col": 22
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "011_LP001_negative-string.py.txt",
+      "kind": "negative-string",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP001",
+              "loader": "pickle.load",
+              "line": 1,
+              "col": 12
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "012_LP002_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP002",
+          "loader": "dill.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP002",
+              "loader": "dill.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP002",
+              "loader": "dill.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "013_LP002_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP002",
+          "loader": "dill.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP002",
+              "loader": "dill.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "014_LP002_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP002",
+          "loader": "dill.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP002",
+              "loader": "dill.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "015_LP002_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP002",
+          "loader": "dill.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP002",
+              "loader": "dill.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "016_LP002_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP002",
+          "loader": "dill.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP002",
+              "loader": "dill.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "017_LP002_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP002",
+          "loader": "dill.load",
+          "line": 3,
+          "col": 12
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP002",
+              "loader": "dill.load",
+              "line": 3,
+              "col": 12
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP002",
+              "loader": "dill.load",
+              "line": 3,
+              "col": 12
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "018_LP002_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP002",
+          "loader": "dill.load",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP002",
+              "loader": "dill.load",
+              "line": 3,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP002",
+              "loader": "dill.load",
+              "line": 3,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "019_LP002_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP002",
+          "loader": "dill.load",
+          "line": 3,
+          "col": 5
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP002",
+              "loader": "dill.load",
+              "line": 3,
+              "col": 5
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP002",
+              "loader": "dill.load",
+              "line": 3,
+              "col": 5
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "020_LP002_dynamic.py.txt",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP002",
+          "loader": "dill.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "021_LP002_dynamic.py.txt",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP002",
+          "loader": "dill.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "022_LP002_negative-comment.py.txt",
+      "kind": "negative-comment",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP002",
+              "loader": "dill.load",
+              "line": 1,
+              "col": 22
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "023_LP002_negative-string.py.txt",
+      "kind": "negative-string",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP002",
+              "loader": "dill.load",
+              "line": 1,
+              "col": 12
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "024_LP003_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP003",
+          "loader": "joblib.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP003",
+              "loader": "joblib.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP003",
+              "loader": "joblib.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "025_LP003_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP003",
+          "loader": "joblib.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP003",
+              "loader": "joblib.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "026_LP003_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP003",
+          "loader": "joblib.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP003",
+              "loader": "joblib.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "027_LP003_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP003",
+          "loader": "joblib.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP003",
+              "loader": "joblib.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "028_LP003_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP003",
+          "loader": "joblib.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP003",
+              "loader": "joblib.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "029_LP003_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP003",
+          "loader": "joblib.load",
+          "line": 3,
+          "col": 12
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP003",
+              "loader": "joblib.load",
+              "line": 3,
+              "col": 12
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP003",
+              "loader": "joblib.load",
+              "line": 3,
+              "col": 12
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "030_LP003_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP003",
+          "loader": "joblib.load",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP003",
+              "loader": "joblib.load",
+              "line": 3,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP003",
+              "loader": "joblib.load",
+              "line": 3,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "031_LP003_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP003",
+          "loader": "joblib.load",
+          "line": 3,
+          "col": 5
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP003",
+              "loader": "joblib.load",
+              "line": 3,
+              "col": 5
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP003",
+              "loader": "joblib.load",
+              "line": 3,
+              "col": 5
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "032_LP003_dynamic.py.txt",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP003",
+          "loader": "joblib.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "033_LP003_dynamic.py.txt",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP003",
+          "loader": "joblib.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "034_LP003_negative-comment.py.txt",
+      "kind": "negative-comment",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP003",
+              "loader": "joblib.load",
+              "line": 1,
+              "col": 22
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "035_LP003_negative-string.py.txt",
+      "kind": "negative-string",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP003",
+              "loader": "joblib.load",
+              "line": 1,
+              "col": 12
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "036_LP004_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP004",
+          "loader": "torch.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP004",
+              "loader": "torch.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP004",
+              "loader": "torch.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "037_LP004_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP004",
+          "loader": "torch.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP004",
+              "loader": "torch.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "038_LP004_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP004",
+          "loader": "torch.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP004",
+              "loader": "torch.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "039_LP004_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP004",
+          "loader": "torch.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP004",
+              "loader": "torch.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "040_LP004_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP004",
+          "loader": "torch.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP004",
+              "loader": "torch.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "041_LP004_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP004",
+          "loader": "torch.load",
+          "line": 3,
+          "col": 12
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP004",
+              "loader": "torch.load",
+              "line": 3,
+              "col": 12
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP004",
+              "loader": "torch.load",
+              "line": 3,
+              "col": 12
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "042_LP004_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP004",
+          "loader": "torch.load",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP004",
+              "loader": "torch.load",
+              "line": 3,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP004",
+              "loader": "torch.load",
+              "line": 3,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "043_LP004_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP004",
+          "loader": "torch.load",
+          "line": 3,
+          "col": 5
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP004",
+              "loader": "torch.load",
+              "line": 3,
+              "col": 5
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP004",
+              "loader": "torch.load",
+              "line": 3,
+              "col": 5
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "044_LP004_dynamic.py.txt",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP004",
+          "loader": "torch.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "045_LP004_dynamic.py.txt",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP004",
+          "loader": "torch.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "046_LP004_negative-comment.py.txt",
+      "kind": "negative-comment",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP004",
+              "loader": "torch.load",
+              "line": 1,
+              "col": 22
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "047_LP004_negative-string.py.txt",
+      "kind": "negative-string",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP004",
+              "loader": "torch.load",
+              "line": 1,
+              "col": 12
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "048_LP005_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP005",
+          "loader": "torch.jit.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP005",
+              "loader": "torch.jit.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP005",
+              "loader": "torch.jit.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "049_LP005_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP005",
+          "loader": "torch.jit.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP005",
+              "loader": "torch.jit.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "050_LP005_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP005",
+          "loader": "torch.jit.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP005",
+              "loader": "torch.jit.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "051_LP005_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP005",
+          "loader": "torch.jit.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP005",
+              "loader": "torch.jit.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "052_LP005_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP005",
+          "loader": "torch.jit.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP005",
+              "loader": "torch.jit.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "053_LP005_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP005",
+          "loader": "torch.jit.load",
+          "line": 3,
+          "col": 12
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP005",
+              "loader": "torch.jit.load",
+              "line": 3,
+              "col": 12
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP005",
+              "loader": "torch.jit.load",
+              "line": 3,
+              "col": 12
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "054_LP005_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP005",
+          "loader": "torch.jit.load",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP005",
+              "loader": "torch.jit.load",
+              "line": 3,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP005",
+              "loader": "torch.jit.load",
+              "line": 3,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "055_LP005_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP005",
+          "loader": "torch.jit.load",
+          "line": 3,
+          "col": 5
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP005",
+              "loader": "torch.jit.load",
+              "line": 3,
+              "col": 5
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP005",
+              "loader": "torch.jit.load",
+              "line": 3,
+              "col": 5
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "056_LP005_dynamic.py.txt",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP005",
+          "loader": "torch.jit.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "057_LP005_dynamic.py.txt",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP005",
+          "loader": "torch.jit.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "058_LP005_negative-comment.py.txt",
+      "kind": "negative-comment",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP005",
+              "loader": "torch.jit.load",
+              "line": 1,
+              "col": 22
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "059_LP005_negative-string.py.txt",
+      "kind": "negative-string",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP005",
+              "loader": "torch.jit.load",
+              "line": 1,
+              "col": 12
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "060_LP006_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP006",
+          "loader": "numpy.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP006",
+              "loader": "numpy.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP006",
+              "loader": "numpy.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "061_LP006_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP006",
+          "loader": "numpy.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP006",
+              "loader": "numpy.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "062_LP006_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP006",
+          "loader": "numpy.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP006",
+              "loader": "numpy.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "063_LP006_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP006",
+          "loader": "numpy.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP006",
+              "loader": "numpy.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "064_LP006_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP006",
+          "loader": "numpy.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP006",
+              "loader": "numpy.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "065_LP006_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP006",
+          "loader": "numpy.load",
+          "line": 3,
+          "col": 12
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP006",
+              "loader": "numpy.load",
+              "line": 3,
+              "col": 12
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP006",
+              "loader": "numpy.load",
+              "line": 3,
+              "col": 12
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "066_LP006_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP006",
+          "loader": "numpy.load",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP006",
+              "loader": "numpy.load",
+              "line": 3,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP006",
+              "loader": "numpy.load",
+              "line": 3,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "067_LP006_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP006",
+          "loader": "numpy.load",
+          "line": 3,
+          "col": 5
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP006",
+              "loader": "numpy.load",
+              "line": 3,
+              "col": 5
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP006",
+              "loader": "numpy.load",
+              "line": 3,
+              "col": 5
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "068_LP006_dynamic.py.txt",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP006",
+          "loader": "numpy.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "069_LP006_dynamic.py.txt",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP006",
+          "loader": "numpy.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "070_LP006_negative-comment.py.txt",
+      "kind": "negative-comment",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP006",
+              "loader": "numpy.load",
+              "line": 1,
+              "col": 22
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "071_LP006_negative-string.py.txt",
+      "kind": "negative-string",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP006",
+              "loader": "numpy.load",
+              "line": 1,
+              "col": 12
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "072_LP007_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP007",
+          "loader": "pandas.read_pickle",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP007",
+              "loader": "pandas.read_pickle",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP007",
+              "loader": "pandas.read_pickle",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "073_LP007_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP007",
+          "loader": "pandas.read_pickle",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP007",
+              "loader": "pandas.read_pickle",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "074_LP007_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP007",
+          "loader": "pandas.read_pickle",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP007",
+              "loader": "pandas.read_pickle",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "075_LP007_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP007",
+          "loader": "pandas.read_pickle",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP007",
+              "loader": "pandas.read_pickle",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "076_LP007_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP007",
+          "loader": "pandas.read_pickle",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP007",
+              "loader": "pandas.read_pickle",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "077_LP007_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP007",
+          "loader": "pandas.read_pickle",
+          "line": 3,
+          "col": 12
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP007",
+              "loader": "pandas.read_pickle",
+              "line": 3,
+              "col": 12
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP007",
+              "loader": "pandas.read_pickle",
+              "line": 3,
+              "col": 12
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "078_LP007_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP007",
+          "loader": "pandas.read_pickle",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP007",
+              "loader": "pandas.read_pickle",
+              "line": 3,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP007",
+              "loader": "pandas.read_pickle",
+              "line": 3,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "079_LP007_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP007",
+          "loader": "pandas.read_pickle",
+          "line": 3,
+          "col": 5
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP007",
+              "loader": "pandas.read_pickle",
+              "line": 3,
+              "col": 5
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP007",
+              "loader": "pandas.read_pickle",
+              "line": 3,
+              "col": 5
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "080_LP007_dynamic.py.txt",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP007",
+          "loader": "pandas.read_pickle",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "081_LP007_dynamic.py.txt",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP007",
+          "loader": "pandas.read_pickle",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "082_LP007_negative-comment.py.txt",
+      "kind": "negative-comment",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP007",
+              "loader": "pandas.read_pickle",
+              "line": 1,
+              "col": 22
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "083_LP007_negative-string.py.txt",
+      "kind": "negative-string",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP007",
+              "loader": "pandas.read_pickle",
+              "line": 1,
+              "col": 12
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "084_LP008_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP008",
+          "loader": "tensorflow.keras.models.load_model",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP008",
+              "loader": "tensorflow.keras.models.load_model",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP008",
+              "loader": "tensorflow.keras.models.load_model",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "085_LP008_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP008",
+          "loader": "tensorflow.keras.models.load_model",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP008",
+              "loader": "tensorflow.keras.models.load_model",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "086_LP008_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP008",
+          "loader": "tensorflow.keras.models.load_model",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP008",
+              "loader": "tensorflow.keras.models.load_model",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "087_LP008_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP008",
+          "loader": "tensorflow.keras.models.load_model",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP008",
+              "loader": "tensorflow.keras.models.load_model",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "088_LP008_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP008",
+          "loader": "tensorflow.keras.models.load_model",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP008",
+              "loader": "tensorflow.keras.models.load_model",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "089_LP008_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP008",
+          "loader": "tensorflow.keras.models.load_model",
+          "line": 3,
+          "col": 12
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP008",
+              "loader": "tensorflow.keras.models.load_model",
+              "line": 3,
+              "col": 12
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP008",
+              "loader": "tensorflow.keras.models.load_model",
+              "line": 3,
+              "col": 12
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "090_LP008_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP008",
+          "loader": "tensorflow.keras.models.load_model",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP008",
+              "loader": "tensorflow.keras.models.load_model",
+              "line": 3,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP008",
+              "loader": "tensorflow.keras.models.load_model",
+              "line": 3,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "091_LP008_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP008",
+          "loader": "tensorflow.keras.models.load_model",
+          "line": 3,
+          "col": 5
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP008",
+              "loader": "tensorflow.keras.models.load_model",
+              "line": 3,
+              "col": 5
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP008",
+              "loader": "tensorflow.keras.models.load_model",
+              "line": 3,
+              "col": 5
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "092_LP008_dynamic.py.txt",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP008",
+          "loader": "tensorflow.keras.models.load_model",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "093_LP008_dynamic.py.txt",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP008",
+          "loader": "tensorflow.keras.models.load_model",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "094_LP008_negative-comment.py.txt",
+      "kind": "negative-comment",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP008",
+              "loader": "tensorflow.keras.models.load_model",
+              "line": 1,
+              "col": 22
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "095_LP008_negative-string.py.txt",
+      "kind": "negative-string",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP008",
+              "loader": "tensorflow.keras.models.load_model",
+              "line": 1,
+              "col": 12
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "096_LP009_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP009",
+          "loader": "tensorflow.saved_model.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP009",
+              "loader": "tensorflow.saved_model.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP009",
+              "loader": "tensorflow.saved_model.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "097_LP009_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP009",
+          "loader": "tensorflow.saved_model.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP009",
+              "loader": "tensorflow.saved_model.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "098_LP009_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP009",
+          "loader": "tensorflow.saved_model.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP009",
+              "loader": "tensorflow.saved_model.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "099_LP009_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP009",
+          "loader": "tensorflow.saved_model.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP009",
+              "loader": "tensorflow.saved_model.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "100_LP009_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP009",
+          "loader": "tensorflow.saved_model.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP009",
+              "loader": "tensorflow.saved_model.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "101_LP009_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP009",
+          "loader": "tensorflow.saved_model.load",
+          "line": 3,
+          "col": 12
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP009",
+              "loader": "tensorflow.saved_model.load",
+              "line": 3,
+              "col": 12
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP009",
+              "loader": "tensorflow.saved_model.load",
+              "line": 3,
+              "col": 12
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "102_LP009_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP009",
+          "loader": "tensorflow.saved_model.load",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP009",
+              "loader": "tensorflow.saved_model.load",
+              "line": 3,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP009",
+              "loader": "tensorflow.saved_model.load",
+              "line": 3,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "103_LP009_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP009",
+          "loader": "tensorflow.saved_model.load",
+          "line": 3,
+          "col": 5
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP009",
+              "loader": "tensorflow.saved_model.load",
+              "line": 3,
+              "col": 5
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP009",
+              "loader": "tensorflow.saved_model.load",
+              "line": 3,
+              "col": 5
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "104_LP009_dynamic.py.txt",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP009",
+          "loader": "tensorflow.saved_model.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "105_LP009_dynamic.py.txt",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP009",
+          "loader": "tensorflow.saved_model.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "106_LP009_negative-comment.py.txt",
+      "kind": "negative-comment",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP009",
+              "loader": "tensorflow.saved_model.load",
+              "line": 1,
+              "col": 22
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "107_LP009_negative-string.py.txt",
+      "kind": "negative-string",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP009",
+              "loader": "tensorflow.saved_model.load",
+              "line": 1,
+              "col": 12
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "108_LP010_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP010",
+          "loader": "transformers.AutoModel.from_pretrained",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP010",
+              "loader": "transformers.AutoModel.from_pretrained",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP010",
+              "loader": "transformers.AutoModel.from_pretrained",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "109_LP010_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP010",
+          "loader": "transformers.AutoModel.from_pretrained",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP010",
+              "loader": "transformers.AutoModel.from_pretrained",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "110_LP010_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP010",
+          "loader": "transformers.AutoModel.from_pretrained",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP010",
+              "loader": "transformers.AutoModel.from_pretrained",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "111_LP010_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP010",
+          "loader": "transformers.AutoModel.from_pretrained",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP010",
+              "loader": "transformers.AutoModel.from_pretrained",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "112_LP010_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP010",
+          "loader": "transformers.AutoModel.from_pretrained",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP010",
+              "loader": "transformers.AutoModel.from_pretrained",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "113_LP010_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP010",
+          "loader": "transformers.AutoModel.from_pretrained",
+          "line": 3,
+          "col": 12
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP010",
+              "loader": "transformers.AutoModel.from_pretrained",
+              "line": 3,
+              "col": 12
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP010",
+              "loader": "transformers.AutoModel.from_pretrained",
+              "line": 3,
+              "col": 12
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "114_LP010_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP010",
+          "loader": "transformers.AutoModel.from_pretrained",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP010",
+              "loader": "transformers.AutoModel.from_pretrained",
+              "line": 3,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP010",
+              "loader": "transformers.AutoModel.from_pretrained",
+              "line": 3,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "115_LP010_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP010",
+          "loader": "transformers.AutoModel.from_pretrained",
+          "line": 3,
+          "col": 5
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP010",
+              "loader": "transformers.AutoModel.from_pretrained",
+              "line": 3,
+              "col": 5
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP010",
+              "loader": "transformers.AutoModel.from_pretrained",
+              "line": 3,
+              "col": 5
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "116_LP010_dynamic.py.txt",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP010",
+          "loader": "transformers.AutoModel.from_pretrained",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "117_LP010_dynamic.py.txt",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP010",
+          "loader": "transformers.AutoModel.from_pretrained",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "118_LP010_negative-comment.py.txt",
+      "kind": "negative-comment",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP010",
+              "loader": "transformers.AutoModel.from_pretrained",
+              "line": 1,
+              "col": 22
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "119_LP010_negative-string.py.txt",
+      "kind": "negative-string",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP010",
+              "loader": "transformers.AutoModel.from_pretrained",
+              "line": 1,
+              "col": 12
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "120_LP011_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP011",
+          "loader": "huggingface_hub.hf_hub_download",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP011",
+              "loader": "huggingface_hub.hf_hub_download",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP011",
+              "loader": "huggingface_hub.hf_hub_download",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "121_LP011_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP011",
+          "loader": "huggingface_hub.hf_hub_download",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP011",
+              "loader": "huggingface_hub.hf_hub_download",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "122_LP011_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP011",
+          "loader": "huggingface_hub.hf_hub_download",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP011",
+              "loader": "huggingface_hub.hf_hub_download",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "123_LP011_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP011",
+          "loader": "huggingface_hub.hf_hub_download",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP011",
+              "loader": "huggingface_hub.hf_hub_download",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "124_LP011_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP011",
+          "loader": "huggingface_hub.hf_hub_download",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP011",
+              "loader": "huggingface_hub.hf_hub_download",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "125_LP011_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP011",
+          "loader": "huggingface_hub.hf_hub_download",
+          "line": 3,
+          "col": 12
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP011",
+              "loader": "huggingface_hub.hf_hub_download",
+              "line": 3,
+              "col": 12
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP011",
+              "loader": "huggingface_hub.hf_hub_download",
+              "line": 3,
+              "col": 12
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "126_LP011_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP011",
+          "loader": "huggingface_hub.hf_hub_download",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP011",
+              "loader": "huggingface_hub.hf_hub_download",
+              "line": 3,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP011",
+              "loader": "huggingface_hub.hf_hub_download",
+              "line": 3,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "127_LP011_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP011",
+          "loader": "huggingface_hub.hf_hub_download",
+          "line": 3,
+          "col": 5
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP011",
+              "loader": "huggingface_hub.hf_hub_download",
+              "line": 3,
+              "col": 5
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP011",
+              "loader": "huggingface_hub.hf_hub_download",
+              "line": 3,
+              "col": 5
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "128_LP011_dynamic.py.txt",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP011",
+          "loader": "huggingface_hub.hf_hub_download",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "129_LP011_dynamic.py.txt",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP011",
+          "loader": "huggingface_hub.hf_hub_download",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "130_LP011_negative-comment.py.txt",
+      "kind": "negative-comment",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP011",
+              "loader": "huggingface_hub.hf_hub_download",
+              "line": 1,
+              "col": 22
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "131_LP011_negative-string.py.txt",
+      "kind": "negative-string",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP011",
+              "loader": "huggingface_hub.hf_hub_download",
+              "line": 1,
+              "col": 12
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "132_LP012_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP012",
+          "loader": "skops.io.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP012",
+              "loader": "skops.io.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP012",
+              "loader": "skops.io.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "133_LP012_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP012",
+          "loader": "skops.io.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP012",
+              "loader": "skops.io.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "134_LP012_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP012",
+          "loader": "skops.io.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP012",
+              "loader": "skops.io.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "135_LP012_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP012",
+          "loader": "skops.io.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP012",
+              "loader": "skops.io.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "136_LP012_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP012",
+          "loader": "skops.io.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP012",
+              "loader": "skops.io.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "137_LP012_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP012",
+          "loader": "skops.io.load",
+          "line": 3,
+          "col": 12
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP012",
+              "loader": "skops.io.load",
+              "line": 3,
+              "col": 12
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP012",
+              "loader": "skops.io.load",
+              "line": 3,
+              "col": 12
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "138_LP012_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP012",
+          "loader": "skops.io.load",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP012",
+              "loader": "skops.io.load",
+              "line": 3,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP012",
+              "loader": "skops.io.load",
+              "line": 3,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "139_LP012_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP012",
+          "loader": "skops.io.load",
+          "line": 3,
+          "col": 5
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP012",
+              "loader": "skops.io.load",
+              "line": 3,
+              "col": 5
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP012",
+              "loader": "skops.io.load",
+              "line": 3,
+              "col": 5
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "140_LP012_dynamic.py.txt",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP012",
+          "loader": "skops.io.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "141_LP012_dynamic.py.txt",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP012",
+          "loader": "skops.io.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "142_LP012_negative-comment.py.txt",
+      "kind": "negative-comment",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP012",
+              "loader": "skops.io.load",
+              "line": 1,
+              "col": 22
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "143_LP012_negative-string.py.txt",
+      "kind": "negative-string",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP012",
+              "loader": "skops.io.load",
+              "line": 1,
+              "col": 12
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "144_LP013_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP013",
+          "loader": "safetensors.torch.load_file",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP013",
+              "loader": "safetensors.torch.load_file",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP013",
+              "loader": "safetensors.torch.load_file",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "145_LP013_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP013",
+          "loader": "safetensors.torch.load_file",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP013",
+              "loader": "safetensors.torch.load_file",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "146_LP013_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP013",
+          "loader": "safetensors.torch.load_file",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP013",
+              "loader": "safetensors.torch.load_file",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "147_LP013_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP013",
+          "loader": "safetensors.torch.load_file",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP013",
+              "loader": "safetensors.torch.load_file",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "148_LP013_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP013",
+          "loader": "safetensors.torch.load_file",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP013",
+              "loader": "safetensors.torch.load_file",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "149_LP013_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP013",
+          "loader": "safetensors.torch.load_file",
+          "line": 3,
+          "col": 12
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP013",
+              "loader": "safetensors.torch.load_file",
+              "line": 3,
+              "col": 12
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP013",
+              "loader": "safetensors.torch.load_file",
+              "line": 3,
+              "col": 12
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "150_LP013_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP013",
+          "loader": "safetensors.torch.load_file",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP013",
+              "loader": "safetensors.torch.load_file",
+              "line": 3,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP013",
+              "loader": "safetensors.torch.load_file",
+              "line": 3,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "151_LP013_positive.py.txt",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP013",
+          "loader": "safetensors.torch.load_file",
+          "line": 3,
+          "col": 5
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP013",
+              "loader": "safetensors.torch.load_file",
+              "line": 3,
+              "col": 5
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP013",
+              "loader": "safetensors.torch.load_file",
+              "line": 3,
+              "col": 5
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "152_LP013_dynamic.py.txt",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP013",
+          "loader": "safetensors.torch.load_file",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "153_LP013_dynamic.py.txt",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP013",
+          "loader": "safetensors.torch.load_file",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "154_LP013_negative-comment.py.txt",
+      "kind": "negative-comment",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP013",
+              "loader": "safetensors.torch.load_file",
+              "line": 1,
+              "col": 22
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "155_LP013_negative-string.py.txt",
+      "kind": "negative-string",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP013",
+              "loader": "safetensors.torch.load_file",
+              "line": 1,
+              "col": 12
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "156_LP004_risk-argument.py.txt",
+      "kind": "risk-argument",
+      "expected": [
+        {
+          "rule": "LP004",
+          "loader": "torch.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP004",
+              "loader": "torch.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP004",
+              "loader": "torch.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "157_LP006_risk-argument.py.txt",
+      "kind": "risk-argument",
+      "expected": [
+        {
+          "rule": "LP006",
+          "loader": "numpy.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP006",
+              "loader": "numpy.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP006",
+              "loader": "numpy.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "158_LP010_risk-argument.py.txt",
+      "kind": "risk-argument",
+      "expected": [
+        {
+          "rule": "LP010",
+          "loader": "transformers.AutoModel.from_pretrained",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP010",
+              "loader": "transformers.AutoModel.from_pretrained",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP010",
+              "loader": "transformers.AutoModel.from_pretrained",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "159_LP004_risk-argument.py.txt",
+      "kind": "risk-argument",
+      "expected": [
+        {
+          "rule": "LP004",
+          "loader": "torch.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP004",
+              "loader": "torch.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP004",
+              "loader": "torch.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "160_LP006_risk-argument.py.txt",
+      "kind": "risk-argument",
+      "expected": [
+        {
+          "rule": "LP006",
+          "loader": "numpy.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP006",
+              "loader": "numpy.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP006",
+              "loader": "numpy.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "161_LP010_risk-argument.py.txt",
+      "kind": "risk-argument",
+      "expected": [
+        {
+          "rule": "LP010",
+          "loader": "transformers.AutoModel.from_pretrained",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP010",
+              "loader": "transformers.AutoModel.from_pretrained",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP010",
+              "loader": "transformers.AutoModel.from_pretrained",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "162_LP004_risk-argument.py.txt",
+      "kind": "risk-argument",
+      "expected": [
+        {
+          "rule": "LP004",
+          "loader": "torch.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP004",
+              "loader": "torch.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP004",
+              "loader": "torch.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "163_LP006_risk-argument.py.txt",
+      "kind": "risk-argument",
+      "expected": [
+        {
+          "rule": "LP006",
+          "loader": "numpy.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP006",
+              "loader": "numpy.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP006",
+              "loader": "numpy.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "164_LP010_risk-argument.py.txt",
+      "kind": "risk-argument",
+      "expected": [
+        {
+          "rule": "LP010",
+          "loader": "transformers.AutoModel.from_pretrained",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP010",
+              "loader": "transformers.AutoModel.from_pretrained",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP010",
+              "loader": "transformers.AutoModel.from_pretrained",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "165_negative_negative-lookalike.py.txt",
+      "kind": "negative-lookalike",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "166_negative_negative-lookalike.py.txt",
+      "kind": "negative-lookalike",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "167_negative_negative-lookalike.py.txt",
+      "kind": "negative-lookalike",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "168_negative_negative-lookalike.py.txt",
+      "kind": "negative-lookalike",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "169_negative_negative-lookalike.py.txt",
+      "kind": "negative-lookalike",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "170_negative_negative-lookalike.py.txt",
+      "kind": "negative-lookalike",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP004",
+              "loader": "torch.load",
+              "line": 5,
+              "col": 1
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP004",
+              "loader": "torch.load",
+              "line": 5,
+              "col": 1
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "171_negative_negative-lookalike.py.txt",
+      "kind": "negative-lookalike",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP003",
+              "loader": "joblib.load",
+              "line": 5,
+              "col": 1
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP003",
+              "loader": "joblib.load",
+              "line": 5,
+              "col": 1
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "172_negative_negative-lookalike.py.txt",
+      "kind": "negative-lookalike",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "173_negative_negative-lookalike.py.txt",
+      "kind": "negative-lookalike",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [
+            {
+              "rule": "LP004",
+              "loader": "torch.load",
+              "line": 2,
+              "col": 12
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP004",
+              "loader": "torch.load",
+              "line": 2,
+              "col": 12
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "174_negative_negative-lookalike.py.txt",
+      "kind": "negative-lookalike",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "175_negative_negative-lookalike.py.txt",
+      "kind": "negative-lookalike",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "176_negative_negative-lookalike.py.txt",
+      "kind": "negative-lookalike",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "177_negative_negative-lookalike.py.txt",
+      "kind": "negative-lookalike",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "178_negative_negative-lookalike.py.txt",
+      "kind": "negative-lookalike",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP001",
+              "loader": "pickle.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "179_negative_negative-lookalike.py.txt",
+      "kind": "negative-lookalike",
+      "expected": [],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 0
+        },
+        "regex": {
+          "predicted": [
+            {
+              "rule": "LP004",
+              "loader": "torch.load",
+              "line": 2,
+              "col": 1
+            }
+          ],
+          "fp": 1,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "file": "180_LP001_callback.py.txt",
+      "kind": "callback",
+      "expected": [
+        {
+          "rule": "LP001",
+          "loader": "pickle.load",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "181_LP002_callback.py.txt",
+      "kind": "callback",
+      "expected": [
+        {
+          "rule": "LP002",
+          "loader": "dill.load",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "182_LP003_callback.py.txt",
+      "kind": "callback",
+      "expected": [
+        {
+          "rule": "LP003",
+          "loader": "joblib.load",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "183_LP004_callback.py.txt",
+      "kind": "callback",
+      "expected": [
+        {
+          "rule": "LP004",
+          "loader": "torch.load",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "file": "184_LP005_callback.py.txt",
+      "kind": "callback",
+      "expected": [
+        {
+          "rule": "LP005",
+          "loader": "torch.jit.load",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "systems": {
+        "loadpath": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        },
+        "regex": {
+          "predicted": [],
+          "fp": 0,
+          "fn": 1
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+import torch
+def wrapper(path):
+    return torch.jit.load(path)

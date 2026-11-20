@@ -1,0 +1,3 @@
+import safetensors
+def wrapper(path):
+    return safetensors.torch.load_file(path)

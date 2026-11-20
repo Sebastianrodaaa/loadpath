@@ -1,0 +1,2 @@
+import safetensors
+safetensors.torch.load_file('weights.safetensors')

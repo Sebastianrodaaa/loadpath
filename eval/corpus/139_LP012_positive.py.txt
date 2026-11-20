@@ -1,0 +1,3 @@
+import skops
+with open('model.bin', 'rb') as stream:
+    skops.io.load(stream)

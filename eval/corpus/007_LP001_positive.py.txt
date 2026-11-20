@@ -1,0 +1,3 @@
+import pickle
+with open('model.bin', 'rb') as stream:
+    pickle.load(stream)

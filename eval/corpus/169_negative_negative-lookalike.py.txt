@@ -1,0 +1,4 @@
+class Store:
+    def load(self, path):
+        return path
+Store().load('x')

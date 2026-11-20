@@ -1,0 +1,2 @@
+import pickle
+getattr(pickle, 'load')('model.pkl')

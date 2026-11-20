@@ -1,0 +1,3153 @@
+{
+  "captured_at": "2026-11-20T11:46:20.786239+00:00",
+  "python": "3.10.12",
+  "versions": {
+    "picklescan": "1.0.4",
+    "modelscan": "0.8.8",
+    "numpy": "2.2.6",
+    "h5py": "3.16.0",
+    "dill": "0.4.1"
+  },
+  "method": "One subprocess per scanner/file; pickle/_pickle load, loads and Unpickler disabled. Flags are policy observations, not maliciousness.",
+  "limitations": [
+    "lz4 and tar\u2192lz4\u2192pkl (optional codec not installed)",
+    "P7 malformed/polyglot variants and EDP cases",
+    "NeMo/TorchServe runtime loadability",
+    "P6 executable graph and custom-object vulnerabilities"
+  ],
+  "sources": [
+    "https://www.usenix.org/system/files/usenixsecurity26-liu-tong.pdf",
+    "https://arxiv.org/abs/2509.06703",
+    "https://github.com/pytorch/pytorch/blob/v2.6.0/torch/serialization.py"
+  ],
+  "fixtures": [
+    {
+      "file": "pickle-protocol-0.pkl",
+      "path": "pkl",
+      "basis": "P7 raw pkl",
+      "validity": "serializer-produced",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "de767d678fe83e110014f60e0fe56b73f88702d75308c943e40c540b5989b6ea",
+      "bytes": 18,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "flagged",
+          "flags": 1,
+          "scanned": 1,
+          "errors": [],
+          "references": [
+            "posix.getcwd"
+          ],
+          "raw": {
+            "globals": [
+              {
+                "module": "posix",
+                "name": "getcwd",
+                "safety": "dangerous"
+              }
+            ],
+            "scanned_files": 1,
+            "issues_count": 1,
+            "infected_files": 1,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "flagged",
+          "flags": 1,
+          "scanned": 1,
+          "errors": [],
+          "references": [
+            "posix.getcwd"
+          ],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 1
+              },
+              "total_issues": 1,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/pickle-protocol-0.pkl",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:11.287958",
+              "scanned": {
+                "total_scanned": 1,
+                "scanned_files": [
+                  "pickle-protocol-0.pkl"
+                ]
+              },
+              "skipped": {
+                "total_skipped": 0,
+                "skipped_files": []
+              }
+            },
+            "issues": [
+              {
+                "description": "Use of unsafe operator 'getcwd' from module 'posix'",
+                "operator": "getcwd",
+                "module": "posix",
+                "source": "pickle-protocol-0.pkl",
+                "scanner": "modelscan.scanners.PickleUnsafeOpScan",
+                "severity": "CRITICAL"
+              }
+            ],
+            "errors": []
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "pickle-protocol-1.pkl",
+      "path": "pkl",
+      "basis": "P7 raw pkl",
+      "validity": "serializer-produced",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "b1ea2fcc3376c740d9251763b0c0c3d5196c41abee82ec4ff883f8991adb9f64",
+      "bytes": 17,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "flagged",
+          "flags": 1,
+          "scanned": 1,
+          "errors": [],
+          "references": [
+            "posix.getcwd"
+          ],
+          "raw": {
+            "globals": [
+              {
+                "module": "posix",
+                "name": "getcwd",
+                "safety": "dangerous"
+              }
+            ],
+            "scanned_files": 1,
+            "issues_count": 1,
+            "infected_files": 1,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "flagged",
+          "flags": 1,
+          "scanned": 1,
+          "errors": [],
+          "references": [
+            "posix.getcwd"
+          ],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 1
+              },
+              "total_issues": 1,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/pickle-protocol-1.pkl",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:11.530284",
+              "scanned": {
+                "total_scanned": 1,
+                "scanned_files": [
+                  "pickle-protocol-1.pkl"
+                ]
+              },
+              "skipped": {
+                "total_skipped": 0,
+                "skipped_files": []
+              }
+            },
+            "issues": [
+              {
+                "description": "Use of unsafe operator 'getcwd' from module 'posix'",
+                "operator": "getcwd",
+                "module": "posix",
+                "source": "pickle-protocol-1.pkl",
+                "scanner": "modelscan.scanners.PickleUnsafeOpScan",
+                "severity": "CRITICAL"
+              }
+            ],
+            "errors": []
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "pickle-protocol-2.pkl",
+      "path": "pkl",
+      "basis": "P7 raw pkl",
+      "validity": "serializer-produced",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "947b4bdbf066166461fef152301cf6f2b7ae50d39385373550a647bc4b84c811",
+      "bytes": 19,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "flagged",
+          "flags": 1,
+          "scanned": 1,
+          "errors": [],
+          "references": [
+            "posix.getcwd"
+          ],
+          "raw": {
+            "globals": [
+              {
+                "module": "posix",
+                "name": "getcwd",
+                "safety": "dangerous"
+              }
+            ],
+            "scanned_files": 1,
+            "issues_count": 1,
+            "infected_files": 1,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "flagged",
+          "flags": 1,
+          "scanned": 1,
+          "errors": [],
+          "references": [
+            "posix.getcwd"
+          ],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 1
+              },
+              "total_issues": 1,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/pickle-protocol-2.pkl",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:11.768746",
+              "scanned": {
+                "total_scanned": 1,
+                "scanned_files": [
+                  "pickle-protocol-2.pkl"
+                ]
+              },
+              "skipped": {
+                "total_skipped": 0,
+                "skipped_files": []
+              }
+            },
+            "issues": [
+              {
+                "description": "Use of unsafe operator 'getcwd' from module 'posix'",
+                "operator": "getcwd",
+                "module": "posix",
+                "source": "pickle-protocol-2.pkl",
+                "scanner": "modelscan.scanners.PickleUnsafeOpScan",
+                "severity": "CRITICAL"
+              }
+            ],
+            "errors": []
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "pickle-protocol-3.pkl",
+      "path": "pkl",
+      "basis": "P7 raw pkl",
+      "validity": "serializer-produced",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "7c37637ce6e802bcf5f3a9eb06e2c3b8993e0e391640d350b041b93da2618e24",
+      "bytes": 19,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "flagged",
+          "flags": 1,
+          "scanned": 1,
+          "errors": [],
+          "references": [
+            "posix.getcwd"
+          ],
+          "raw": {
+            "globals": [
+              {
+                "module": "posix",
+                "name": "getcwd",
+                "safety": "dangerous"
+              }
+            ],
+            "scanned_files": 1,
+            "issues_count": 1,
+            "infected_files": 1,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "flagged",
+          "flags": 1,
+          "scanned": 1,
+          "errors": [],
+          "references": [
+            "posix.getcwd"
+          ],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 1
+              },
+              "total_issues": 1,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/pickle-protocol-3.pkl",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:12.021179",
+              "scanned": {
+                "total_scanned": 1,
+                "scanned_files": [
+                  "pickle-protocol-3.pkl"
+                ]
+              },
+              "skipped": {
+                "total_skipped": 0,
+                "skipped_files": []
+              }
+            },
+            "issues": [
+              {
+                "description": "Use of unsafe operator 'getcwd' from module 'posix'",
+                "operator": "getcwd",
+                "module": "posix",
+                "source": "pickle-protocol-3.pkl",
+                "scanner": "modelscan.scanners.PickleUnsafeOpScan",
+                "severity": "CRITICAL"
+              }
+            ],
+            "errors": []
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "pickle-protocol-4.pkl",
+      "path": "pkl",
+      "basis": "P7 raw pkl",
+      "validity": "serializer-produced",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "123a9cf8f2df6811ecfbe2ecc63c1da2b2d9b700225fc80da1d6b6562a6efd15",
+      "bytes": 31,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "flagged",
+          "flags": 1,
+          "scanned": 1,
+          "errors": [],
+          "references": [
+            "posix.getcwd"
+          ],
+          "raw": {
+            "globals": [
+              {
+                "module": "posix",
+                "name": "getcwd",
+                "safety": "dangerous"
+              }
+            ],
+            "scanned_files": 1,
+            "issues_count": 1,
+            "infected_files": 1,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "flagged",
+          "flags": 1,
+          "scanned": 1,
+          "errors": [],
+          "references": [
+            "posix.getcwd"
+          ],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 1
+              },
+              "total_issues": 1,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/pickle-protocol-4.pkl",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:12.257460",
+              "scanned": {
+                "total_scanned": 1,
+                "scanned_files": [
+                  "pickle-protocol-4.pkl"
+                ]
+              },
+              "skipped": {
+                "total_skipped": 0,
+                "skipped_files": []
+              }
+            },
+            "issues": [
+              {
+                "description": "Use of unsafe operator 'getcwd' from module 'posix'",
+                "operator": "getcwd",
+                "module": "posix",
+                "source": "pickle-protocol-4.pkl",
+                "scanner": "modelscan.scanners.PickleUnsafeOpScan",
+                "severity": "CRITICAL"
+              }
+            ],
+            "errors": []
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "pickle-protocol-5.pkl",
+      "path": "pkl",
+      "basis": "P7 raw pkl",
+      "validity": "serializer-produced",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "9f31a332edd21e12bd87a1e1abdeef3d6334b9473226f0aa330afb47d4e79fd6",
+      "bytes": 31,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "flagged",
+          "flags": 1,
+          "scanned": 1,
+          "errors": [],
+          "references": [
+            "posix.getcwd"
+          ],
+          "raw": {
+            "globals": [
+              {
+                "module": "posix",
+                "name": "getcwd",
+                "safety": "dangerous"
+              }
+            ],
+            "scanned_files": 1,
+            "issues_count": 1,
+            "infected_files": 1,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "flagged",
+          "flags": 1,
+          "scanned": 1,
+          "errors": [],
+          "references": [
+            "posix.getcwd"
+          ],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 1
+              },
+              "total_issues": 1,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/pickle-protocol-5.pkl",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:12.495060",
+              "scanned": {
+                "total_scanned": 1,
+                "scanned_files": [
+                  "pickle-protocol-5.pkl"
+                ]
+              },
+              "skipped": {
+                "total_skipped": 0,
+                "skipped_files": []
+              }
+            },
+            "issues": [
+              {
+                "description": "Use of unsafe operator 'getcwd' from module 'posix'",
+                "operator": "getcwd",
+                "module": "posix",
+                "source": "pickle-protocol-5.pkl",
+                "scanner": "modelscan.scanners.PickleUnsafeOpScan",
+                "severity": "CRITICAL"
+              }
+            ],
+            "errors": []
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "torch-zip.pt",
+      "path": "zip\u2192pkl",
+      "basis": "P7 Table 1 archive\u2192pkl",
+      "validity": "wrapper-only",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "58059d56fb867d79e4b32f2ffae9b5e18d8969a83c91c4a45b02503469821d3d",
+      "bytes": 368,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "flagged",
+          "flags": 1,
+          "scanned": 1,
+          "errors": [],
+          "references": [
+            "os.getcwd"
+          ],
+          "raw": {
+            "globals": [
+              {
+                "module": "os",
+                "name": "getcwd",
+                "safety": "dangerous"
+              }
+            ],
+            "scanned_files": 1,
+            "issues_count": 1,
+            "infected_files": 1,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "flagged",
+          "flags": 1,
+          "scanned": 1,
+          "errors": [],
+          "references": [
+            "os.getcwd"
+          ],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 1
+              },
+              "total_issues": 1,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/torch-zip.pt",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:12.730797",
+              "scanned": {
+                "total_scanned": 1,
+                "scanned_files": [
+                  "torch-zip.pt:archive/data.pkl"
+                ]
+              },
+              "skipped": {
+                "total_skipped": 2,
+                "skipped_files": [
+                  {
+                    "category": "SCAN_NOT_SUPPORTED",
+                    "description": "Model Scan did not scan file",
+                    "source": "torch-zip.pt:archive/version"
+                  },
+                  {
+                    "category": "SCAN_NOT_SUPPORTED",
+                    "description": "Model Scan did not scan file",
+                    "source": "torch-zip.pt:archive/byteorder"
+                  }
+                ]
+              }
+            },
+            "issues": [
+              {
+                "description": "Use of unsafe operator 'getcwd' from module 'os'",
+                "operator": "getcwd",
+                "module": "os",
+                "source": "torch-zip.pt:archive/data.pkl",
+                "scanner": "modelscan.scanners.PickleUnsafeOpScan",
+                "severity": "CRITICAL"
+              }
+            ],
+            "errors": []
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "torch-legacy-tar.pt",
+      "path": "tar\u2192pkl",
+      "basis": "P7 case study tar members storages/tensors/pickle",
+      "validity": "wrapper-only",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "550cf420fc48c0c241a99eaae4adb123713a4986673fc98f2f3df46a6d903eb5",
+      "bytes": 10240,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "scanned-no-flag",
+          "flags": 0,
+          "scanned": 1,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "globals": [],
+            "scanned_files": 1,
+            "issues_count": 0,
+            "infected_files": 0,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "skipped",
+          "flags": 0,
+          "scanned": 0,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 0
+              },
+              "total_issues": 0,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/torch-legacy-tar.pt",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:12.962627",
+              "scanned": {
+                "total_scanned": 0
+              },
+              "skipped": {
+                "total_skipped": 1,
+                "skipped_files": [
+                  {
+                    "category": "MAGIC_NUMBER",
+                    "description": "Invalid magic number",
+                    "source": "torch-legacy-tar.pt"
+                  }
+                ]
+              }
+            },
+            "issues": [],
+            "errors": []
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "nested-zip.zip",
+      "path": "zip\u2192zip\u2192pkl",
+      "basis": "P7 nested archives",
+      "validity": "wrapper-only",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "65a810dd9708ae5b26a107c6c51aa8b24f0d55c896c2a892461dd78d1acb0bd4",
+      "bytes": 246,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "skipped",
+          "flags": 0,
+          "scanned": 0,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "globals": [],
+            "scanned_files": 0,
+            "issues_count": 0,
+            "infected_files": 0,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "error",
+          "flags": 0,
+          "scanned": 0,
+          "errors": [
+            {
+              "category": "NESTED_ZIP",
+              "description": "ModelScan does not support nested zip files.",
+              "source": "nested-zip.zip:inner.zip"
+            }
+          ],
+          "references": [],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 0
+              },
+              "total_issues": 0,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/nested-zip.zip",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:13.222462",
+              "scanned": {
+                "total_scanned": 0
+              },
+              "skipped": {
+                "total_skipped": 1,
+                "skipped_files": [
+                  {
+                    "category": "SCAN_NOT_SUPPORTED",
+                    "description": "Model Scan did not scan file",
+                    "source": "nested-zip.zip"
+                  }
+                ]
+              }
+            },
+            "issues": [],
+            "errors": [
+              {
+                "category": "NESTED_ZIP",
+                "description": "ModelScan does not support nested zip files.",
+                "source": "nested-zip.zip:inner.zip"
+              }
+            ]
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "nested-tar.tar",
+      "path": "tar\u2192tar\u2192pkl",
+      "basis": "P7 nested archives",
+      "validity": "wrapper-only",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "5894446588d821919b7c1d7b3c82277ad3cb65ad3f394d9a5504b5ff99c1e4ba",
+      "bytes": 20480,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "scanned-no-flag",
+          "flags": 0,
+          "scanned": 1,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "globals": [],
+            "scanned_files": 1,
+            "issues_count": 0,
+            "infected_files": 0,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "skipped",
+          "flags": 0,
+          "scanned": 0,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 0
+              },
+              "total_issues": 0,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/nested-tar.tar",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:13.457279",
+              "scanned": {
+                "total_scanned": 0
+              },
+              "skipped": {
+                "total_skipped": 1,
+                "skipped_files": [
+                  {
+                    "category": "SCAN_NOT_SUPPORTED",
+                    "description": "Model Scan did not scan file",
+                    "source": "nested-tar.tar"
+                  }
+                ]
+              }
+            },
+            "issues": [],
+            "errors": []
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "model-archive.mar",
+      "path": "zip\u2192zip\u2192pkl",
+      "basis": "P7 TorchServe wrapper shape",
+      "validity": "wrapper-only",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "a111a319efacf82da7cc0321fefe0587c37a39d399123ed658cebd360fa16175",
+      "bytes": 486,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "skipped",
+          "flags": 0,
+          "scanned": 0,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "globals": [],
+            "scanned_files": 0,
+            "issues_count": 0,
+            "infected_files": 0,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "error",
+          "flags": 0,
+          "scanned": 0,
+          "errors": [
+            {
+              "category": "NESTED_ZIP",
+              "description": "ModelScan does not support nested zip files.",
+              "source": "model-archive.mar:weights.pt"
+            }
+          ],
+          "references": [],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 0
+              },
+              "total_issues": 0,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/model-archive.mar",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:13.688925",
+              "scanned": {
+                "total_scanned": 0
+              },
+              "skipped": {
+                "total_skipped": 1,
+                "skipped_files": [
+                  {
+                    "category": "SCAN_NOT_SUPPORTED",
+                    "description": "Model Scan did not scan file",
+                    "source": "model-archive.mar"
+                  }
+                ]
+              }
+            },
+            "issues": [],
+            "errors": [
+              {
+                "category": "NESTED_ZIP",
+                "description": "ModelScan does not support nested zip files.",
+                "source": "model-archive.mar:weights.pt"
+              }
+            ]
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "model-tar-archive.mar",
+      "path": "zip\u2192tar\u2192pkl",
+      "basis": "P7 TorchServe wrapper shape",
+      "validity": "wrapper-only",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "8104afc132d902c2a1b3eeb477c645d1eb70d2364309acd23d57b08176f749aa",
+      "bytes": 10358,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "skipped",
+          "flags": 0,
+          "scanned": 0,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "globals": [],
+            "scanned_files": 0,
+            "issues_count": 0,
+            "infected_files": 0,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "skipped",
+          "flags": 0,
+          "scanned": 0,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 0
+              },
+              "total_issues": 0,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/model-tar-archive.mar",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:13.921014",
+              "scanned": {
+                "total_scanned": 0
+              },
+              "skipped": {
+                "total_skipped": 1,
+                "skipped_files": [
+                  {
+                    "category": "MAGIC_NUMBER",
+                    "description": "Invalid magic number",
+                    "source": "model-tar-archive.mar:weights.pt"
+                  }
+                ]
+              }
+            },
+            "issues": [],
+            "errors": []
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "nemo-zip.nemo",
+      "path": "tar\u2192zip\u2192pkl",
+      "basis": "P7 NeMo wrapper shape",
+      "validity": "wrapper-only",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "71649c5067b07df76c451bb3c646dc2a944c3a00c78c9240691882f0362a4f25",
+      "bytes": 10240,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "flagged",
+          "flags": 1,
+          "scanned": 1,
+          "errors": [],
+          "references": [
+            "os.getcwd"
+          ],
+          "raw": {
+            "globals": [
+              {
+                "module": "os",
+                "name": "getcwd",
+                "safety": "dangerous"
+              }
+            ],
+            "scanned_files": 1,
+            "issues_count": 1,
+            "infected_files": 1,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "skipped",
+          "flags": 0,
+          "scanned": 0,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 0
+              },
+              "total_issues": 0,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/nemo-zip.nemo",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:14.156092",
+              "scanned": {
+                "total_scanned": 0
+              },
+              "skipped": {
+                "total_skipped": 1,
+                "skipped_files": [
+                  {
+                    "category": "SCAN_NOT_SUPPORTED",
+                    "description": "Model Scan did not scan file",
+                    "source": "nemo-zip.nemo"
+                  }
+                ]
+              }
+            },
+            "issues": [],
+            "errors": []
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "nemo-tar.nemo",
+      "path": "tar\u2192tar\u2192pkl",
+      "basis": "P7 NeMo wrapper shape",
+      "validity": "wrapper-only",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "723950b5d5bf63d03c102621433024cf6fc89f72ee810a29d610e683c7247e32",
+      "bytes": 20480,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "scanned-no-flag",
+          "flags": 0,
+          "scanned": 1,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "globals": [],
+            "scanned_files": 1,
+            "issues_count": 0,
+            "infected_files": 0,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "skipped",
+          "flags": 0,
+          "scanned": 0,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 0
+              },
+              "total_issues": 0,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/nemo-tar.nemo",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:14.393301",
+              "scanned": {
+                "total_scanned": 0
+              },
+              "skipped": {
+                "total_skipped": 1,
+                "skipped_files": [
+                  {
+                    "category": "SCAN_NOT_SUPPORTED",
+                    "description": "Model Scan did not scan file",
+                    "source": "nemo-tar.nemo"
+                  }
+                ]
+              }
+            },
+            "issues": [],
+            "errors": []
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "nemo-pickle.nemo",
+      "path": "tar\u2192pkl",
+      "basis": "P7 NeMo wrapper shape",
+      "validity": "wrapper-only",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "294636b93a2afcc1072d7ace77571e17dd390e517cbbb045989602fe47cc3b15",
+      "bytes": 10240,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "scanned-no-flag",
+          "flags": 0,
+          "scanned": 1,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "globals": [],
+            "scanned_files": 1,
+            "issues_count": 0,
+            "infected_files": 0,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "skipped",
+          "flags": 0,
+          "scanned": 0,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 0
+              },
+              "total_issues": 0,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/nemo-pickle.nemo",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:14.646498",
+              "scanned": {
+                "total_scanned": 0
+              },
+              "skipped": {
+                "total_skipped": 1,
+                "skipped_files": [
+                  {
+                    "category": "SCAN_NOT_SUPPORTED",
+                    "description": "Model Scan did not scan file",
+                    "source": "nemo-pickle.nemo"
+                  }
+                ]
+              }
+            },
+            "issues": [],
+            "errors": []
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "torch-tar.tgz",
+      "path": "gz\u2192tar\u2192pkl",
+      "basis": "P7 compressed archives",
+      "validity": "wrapper-only",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "9b81c186465624718b4aaeec0f7a9c5e9fb131416d743058250ae13f4359ca80",
+      "bytes": 171,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "scanned-no-flag",
+          "flags": 0,
+          "scanned": 1,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "globals": [],
+            "scanned_files": 1,
+            "issues_count": 0,
+            "infected_files": 0,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "skipped",
+          "flags": 0,
+          "scanned": 0,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 0
+              },
+              "total_issues": 0,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/torch-tar.tgz",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:14.896525",
+              "scanned": {
+                "total_scanned": 0
+              },
+              "skipped": {
+                "total_skipped": 1,
+                "skipped_files": [
+                  {
+                    "category": "SCAN_NOT_SUPPORTED",
+                    "description": "Model Scan did not scan file",
+                    "source": "torch-tar.tgz"
+                  }
+                ]
+              }
+            },
+            "issues": [],
+            "errors": []
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "torch-zip-in-tar.tgz",
+      "path": "gz\u2192tar\u2192zip\u2192pkl",
+      "basis": "P7 compressed archives",
+      "validity": "wrapper-only",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "1928cacae04b6e454f6cf694b68ce98db969f35e61fd1ea4d410475dcd9e35bf",
+      "bytes": 263,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "scanned-no-flag",
+          "flags": 0,
+          "scanned": 1,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "globals": [],
+            "scanned_files": 1,
+            "issues_count": 0,
+            "infected_files": 0,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "skipped",
+          "flags": 0,
+          "scanned": 0,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 0
+              },
+              "total_issues": 0,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/torch-zip-in-tar.tgz",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:15.138631",
+              "scanned": {
+                "total_scanned": 0
+              },
+              "skipped": {
+                "total_skipped": 1,
+                "skipped_files": [
+                  {
+                    "category": "SCAN_NOT_SUPPORTED",
+                    "description": "Model Scan did not scan file",
+                    "source": "torch-zip-in-tar.tgz"
+                  }
+                ]
+              }
+            },
+            "issues": [],
+            "errors": []
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "torch-tar-in-tar.tgz",
+      "path": "gz\u2192tar\u2192tar\u2192pkl",
+      "basis": "P7 compressed archives",
+      "validity": "wrapper-only",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "d0228d27d364e5cfc744236cc0606cf0e476eedfed5975d8e5d4fa2456726be2",
+      "bytes": 208,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "scanned-no-flag",
+          "flags": 0,
+          "scanned": 1,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "globals": [],
+            "scanned_files": 1,
+            "issues_count": 0,
+            "infected_files": 0,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "skipped",
+          "flags": 0,
+          "scanned": 0,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 0
+              },
+              "total_issues": 0,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/torch-tar-in-tar.tgz",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:15.378341",
+              "scanned": {
+                "total_scanned": 0
+              },
+              "skipped": {
+                "total_skipped": 1,
+                "skipped_files": [
+                  {
+                    "category": "SCAN_NOT_SUPPORTED",
+                    "description": "Model Scan did not scan file",
+                    "source": "torch-tar-in-tar.tgz"
+                  }
+                ]
+              }
+            },
+            "issues": [],
+            "errors": []
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "joblib-zlib.joblib",
+      "path": "zlib\u2192pkl",
+      "basis": "P7 Joblib compression",
+      "validity": "standard compressed pickle stream",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "aaa6c18e3570479bee30f06063db289105ab501a8182da02ec348b43eb095907",
+      "bytes": 22,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "scanned-no-flag",
+          "flags": 0,
+          "scanned": 1,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "globals": [],
+            "scanned_files": 1,
+            "issues_count": 0,
+            "infected_files": 0,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "error",
+          "flags": 0,
+          "scanned": 0,
+          "errors": [
+            {
+              "category": "PICKLE_GENOPS",
+              "description": "Parsing error: at position 0, opcode b'x' unknown",
+              "source": "joblib-zlib.joblib"
+            }
+          ],
+          "references": [],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 0
+              },
+              "total_issues": 0,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/joblib-zlib.joblib",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:15.691930",
+              "scanned": {
+                "total_scanned": 0
+              },
+              "skipped": {
+                "total_skipped": 0,
+                "skipped_files": []
+              }
+            },
+            "issues": [],
+            "errors": [
+              {
+                "category": "PICKLE_GENOPS",
+                "description": "Parsing error: at position 0, opcode b'x' unknown",
+                "source": "joblib-zlib.joblib"
+              }
+            ]
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "nemo-zlib.nemo",
+      "path": "tar\u2192zlib\u2192pkl",
+      "basis": "P7 NeMo compression wrapper shape",
+      "validity": "wrapper-only",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "e5644045720191b75f26f82a0f13c2c2943fc2c7880154de84c68ddd927ae308",
+      "bytes": 10240,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "scanned-no-flag",
+          "flags": 0,
+          "scanned": 1,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "globals": [],
+            "scanned_files": 1,
+            "issues_count": 0,
+            "infected_files": 0,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "skipped",
+          "flags": 0,
+          "scanned": 0,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 0
+              },
+              "total_issues": 0,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/nemo-zlib.nemo",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:15.934043",
+              "scanned": {
+                "total_scanned": 0
+              },
+              "skipped": {
+                "total_skipped": 1,
+                "skipped_files": [
+                  {
+                    "category": "SCAN_NOT_SUPPORTED",
+                    "description": "Model Scan did not scan file",
+                    "source": "nemo-zlib.nemo"
+                  }
+                ]
+              }
+            },
+            "issues": [],
+            "errors": []
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "joblib-gz.joblib",
+      "path": "gz\u2192pkl",
+      "basis": "P7 Joblib compression",
+      "validity": "standard compressed pickle stream",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "dc9ed47499cc5fa05083d534df7c203db9b5c819068e84e8776eaa2c9a127e0b",
+      "bytes": 34,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "scanned-no-flag",
+          "flags": 0,
+          "scanned": 1,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "globals": [],
+            "scanned_files": 1,
+            "issues_count": 0,
+            "infected_files": 0,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "error",
+          "flags": 0,
+          "scanned": 0,
+          "errors": [
+            {
+              "category": "PICKLE_GENOPS",
+              "description": "Parsing error: at position 0, opcode b'\\x1f' unknown",
+              "source": "joblib-gz.joblib"
+            }
+          ],
+          "references": [],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 0
+              },
+              "total_issues": 0,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/joblib-gz.joblib",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:16.200160",
+              "scanned": {
+                "total_scanned": 0
+              },
+              "skipped": {
+                "total_skipped": 0,
+                "skipped_files": []
+              }
+            },
+            "issues": [],
+            "errors": [
+              {
+                "category": "PICKLE_GENOPS",
+                "description": "Parsing error: at position 0, opcode b'\\x1f' unknown",
+                "source": "joblib-gz.joblib"
+              }
+            ]
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "nemo-gz.nemo",
+      "path": "tar\u2192gz\u2192pkl",
+      "basis": "P7 NeMo compression wrapper shape",
+      "validity": "wrapper-only",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "886df2b491b8ff2dfd1b0f0900d247ebad9ba2b3b3cfdc143267383d7812027c",
+      "bytes": 10240,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "scanned-no-flag",
+          "flags": 0,
+          "scanned": 1,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "globals": [],
+            "scanned_files": 1,
+            "issues_count": 0,
+            "infected_files": 0,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "skipped",
+          "flags": 0,
+          "scanned": 0,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 0
+              },
+              "total_issues": 0,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/nemo-gz.nemo",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:16.458691",
+              "scanned": {
+                "total_scanned": 0
+              },
+              "skipped": {
+                "total_skipped": 1,
+                "skipped_files": [
+                  {
+                    "category": "SCAN_NOT_SUPPORTED",
+                    "description": "Model Scan did not scan file",
+                    "source": "nemo-gz.nemo"
+                  }
+                ]
+              }
+            },
+            "issues": [],
+            "errors": []
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "joblib-bz2.joblib",
+      "path": "bz2\u2192pkl",
+      "basis": "P7 Joblib compression",
+      "validity": "standard compressed pickle stream",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "494a3e47a78dd2d170cbbae6527ddc12a37061ed7771cd1a8dcaa23089db12d8",
+      "bytes": 56,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "scanned-no-flag",
+          "flags": 0,
+          "scanned": 1,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "globals": [],
+            "scanned_files": 1,
+            "issues_count": 0,
+            "infected_files": 0,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "error",
+          "flags": 0,
+          "scanned": 0,
+          "errors": [
+            {
+              "category": "PICKLE_GENOPS",
+              "description": "Parsing error: expected 825845850 bytes in a bytes4, but only 51 remain",
+              "source": "joblib-bz2.joblib"
+            }
+          ],
+          "references": [],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 0
+              },
+              "total_issues": 0,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/joblib-bz2.joblib",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:16.709298",
+              "scanned": {
+                "total_scanned": 0
+              },
+              "skipped": {
+                "total_skipped": 0,
+                "skipped_files": []
+              }
+            },
+            "issues": [],
+            "errors": [
+              {
+                "category": "PICKLE_GENOPS",
+                "description": "Parsing error: expected 825845850 bytes in a bytes4, but only 51 remain",
+                "source": "joblib-bz2.joblib"
+              }
+            ]
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "nemo-bz2.nemo",
+      "path": "tar\u2192bz2\u2192pkl",
+      "basis": "P7 NeMo compression wrapper shape",
+      "validity": "wrapper-only",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "347587ced87151007b981f948582afb62525de788b905882d4f05ea91b9bd078",
+      "bytes": 10240,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "scanned-no-flag",
+          "flags": 0,
+          "scanned": 1,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "globals": [],
+            "scanned_files": 1,
+            "issues_count": 0,
+            "infected_files": 0,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "skipped",
+          "flags": 0,
+          "scanned": 0,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 0
+              },
+              "total_issues": 0,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/nemo-bz2.nemo",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:16.988662",
+              "scanned": {
+                "total_scanned": 0
+              },
+              "skipped": {
+                "total_skipped": 1,
+                "skipped_files": [
+                  {
+                    "category": "SCAN_NOT_SUPPORTED",
+                    "description": "Model Scan did not scan file",
+                    "source": "nemo-bz2.nemo"
+                  }
+                ]
+              }
+            },
+            "issues": [],
+            "errors": []
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "joblib-lzma.joblib",
+      "path": "lzma\u2192pkl",
+      "basis": "P7 Joblib compression",
+      "validity": "standard compressed pickle stream",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "6c43d2e9fb1acd2a2e5fb6eb3130d11a6760b269918c6ae8ad7f94180d8f0626",
+      "bytes": 38,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "scanned-no-flag",
+          "flags": 0,
+          "scanned": 1,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "globals": [],
+            "scanned_files": 1,
+            "issues_count": 0,
+            "infected_files": 0,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "error",
+          "flags": 0,
+          "scanned": 0,
+          "errors": [
+            {
+              "category": "PICKLE_GENOPS",
+              "description": "Parsing error: at position 1, opcode b'\\x00' unknown",
+              "source": "joblib-lzma.joblib"
+            }
+          ],
+          "references": [],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 0
+              },
+              "total_issues": 0,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/joblib-lzma.joblib",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:17.231477",
+              "scanned": {
+                "total_scanned": 0
+              },
+              "skipped": {
+                "total_skipped": 0,
+                "skipped_files": []
+              }
+            },
+            "issues": [],
+            "errors": [
+              {
+                "category": "PICKLE_GENOPS",
+                "description": "Parsing error: at position 1, opcode b'\\x00' unknown",
+                "source": "joblib-lzma.joblib"
+              }
+            ]
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "nemo-lzma.nemo",
+      "path": "tar\u2192lzma\u2192pkl",
+      "basis": "P7 NeMo compression wrapper shape",
+      "validity": "wrapper-only",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "84a6f17077118032f0e5c622976ab64f0cb51f86c64599f2cbe3303b71b9e410",
+      "bytes": 10240,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "scanned-no-flag",
+          "flags": 0,
+          "scanned": 1,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "globals": [],
+            "scanned_files": 1,
+            "issues_count": 0,
+            "infected_files": 0,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "skipped",
+          "flags": 0,
+          "scanned": 0,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 0
+              },
+              "total_issues": 0,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/nemo-lzma.nemo",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:17.476959",
+              "scanned": {
+                "total_scanned": 0
+              },
+              "skipped": {
+                "total_skipped": 1,
+                "skipped_files": [
+                  {
+                    "category": "SCAN_NOT_SUPPORTED",
+                    "description": "Model Scan did not scan file",
+                    "source": "nemo-lzma.nemo"
+                  }
+                ]
+              }
+            },
+            "issues": [],
+            "errors": []
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "joblib-xz.joblib",
+      "path": "xz\u2192pkl",
+      "basis": "P7 Joblib compression",
+      "validity": "standard compressed pickle stream",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "888549c1f1659e38791bb0c5675b29ee298cea4c16f0d856eb3da513196529ff",
+      "bytes": 72,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "scanned-no-flag",
+          "flags": 0,
+          "scanned": 1,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "globals": [],
+            "scanned_files": 1,
+            "issues_count": 0,
+            "infected_files": 0,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "error",
+          "flags": 0,
+          "scanned": 0,
+          "errors": [
+            {
+              "category": "PICKLE_GENOPS",
+              "description": "Parsing error: at position 0, opcode b'\\xfd' unknown",
+              "source": "joblib-xz.joblib"
+            }
+          ],
+          "references": [],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 0
+              },
+              "total_issues": 0,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/joblib-xz.joblib",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:17.750344",
+              "scanned": {
+                "total_scanned": 0
+              },
+              "skipped": {
+                "total_skipped": 0,
+                "skipped_files": []
+              }
+            },
+            "issues": [],
+            "errors": [
+              {
+                "category": "PICKLE_GENOPS",
+                "description": "Parsing error: at position 0, opcode b'\\xfd' unknown",
+                "source": "joblib-xz.joblib"
+              }
+            ]
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "nemo-xz.nemo",
+      "path": "tar\u2192xz\u2192pkl",
+      "basis": "P7 NeMo compression wrapper shape",
+      "validity": "wrapper-only",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "6a2367d54502e34a6588aebecc30b0c9d099df8752057c1c03b8009083d4dc3d",
+      "bytes": 10240,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "scanned-no-flag",
+          "flags": 0,
+          "scanned": 1,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "globals": [],
+            "scanned_files": 1,
+            "issues_count": 0,
+            "infected_files": 0,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "skipped",
+          "flags": 0,
+          "scanned": 0,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 0
+              },
+              "total_issues": 0,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/nemo-xz.nemo",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:18.002199",
+              "scanned": {
+                "total_scanned": 0
+              },
+              "skipped": {
+                "total_skipped": 1,
+                "skipped_files": [
+                  {
+                    "category": "SCAN_NOT_SUPPORTED",
+                    "description": "Model Scan did not scan file",
+                    "source": "nemo-xz.nemo"
+                  }
+                ]
+              }
+            },
+            "issues": [],
+            "errors": []
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "numpy-objects.npy",
+      "path": "npy\u2192pkl",
+      "basis": "P7 NumPy raw pickle-bearing npy",
+      "validity": "serializer-produced",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "e14309e023ab377a154905f227ca95d9524fd319432cd6340f589af2e7dcdd6d",
+      "bytes": 295,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "flagged",
+          "flags": 1,
+          "scanned": 1,
+          "errors": [],
+          "references": [
+            "numpy.ndarray",
+            "posix.getcwd",
+            "numpy.dtype",
+            "numpy._core.multiarray._reconstruct"
+          ],
+          "raw": {
+            "globals": [
+              {
+                "module": "numpy",
+                "name": "ndarray",
+                "safety": "innocuous"
+              },
+              {
+                "module": "posix",
+                "name": "getcwd",
+                "safety": "dangerous"
+              },
+              {
+                "module": "numpy",
+                "name": "dtype",
+                "safety": "innocuous"
+              },
+              {
+                "module": "numpy._core.multiarray",
+                "name": "_reconstruct",
+                "safety": "innocuous"
+              }
+            ],
+            "scanned_files": 1,
+            "issues_count": 1,
+            "infected_files": 1,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "flagged",
+          "flags": 1,
+          "scanned": 1,
+          "errors": [],
+          "references": [
+            "posix.getcwd"
+          ],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 1
+              },
+              "total_issues": 1,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/numpy-objects.npy",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:18.287005",
+              "scanned": {
+                "total_scanned": 1,
+                "scanned_files": [
+                  "numpy-objects.npy"
+                ]
+              },
+              "skipped": {
+                "total_skipped": 0,
+                "skipped_files": []
+              }
+            },
+            "issues": [
+              {
+                "description": "Use of unsafe operator 'getcwd' from module 'posix'",
+                "operator": "getcwd",
+                "module": "posix",
+                "source": "numpy-objects.npy",
+                "scanner": "modelscan.scanners.NumpyUnsafeOpScan",
+                "severity": "CRITICAL"
+              }
+            ],
+            "errors": []
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "numpy-objects.npz",
+      "path": "zip\u2192npy\u2192pkl",
+      "basis": "P7 NumPy npz",
+      "validity": "standard npz wrapper",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "a35ded2b35460ca98604faadbb97c67b081c0e631145b8b733acc3f5a398ad0a",
+      "bytes": 415,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "flagged",
+          "flags": 1,
+          "scanned": 1,
+          "errors": [],
+          "references": [
+            "numpy.dtype",
+            "numpy._core.multiarray._reconstruct",
+            "numpy.ndarray",
+            "posix.getcwd"
+          ],
+          "raw": {
+            "globals": [
+              {
+                "module": "numpy",
+                "name": "dtype",
+                "safety": "innocuous"
+              },
+              {
+                "module": "numpy._core.multiarray",
+                "name": "_reconstruct",
+                "safety": "innocuous"
+              },
+              {
+                "module": "numpy",
+                "name": "ndarray",
+                "safety": "innocuous"
+              },
+              {
+                "module": "posix",
+                "name": "getcwd",
+                "safety": "dangerous"
+              }
+            ],
+            "scanned_files": 1,
+            "issues_count": 1,
+            "infected_files": 1,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "flagged",
+          "flags": 1,
+          "scanned": 1,
+          "errors": [],
+          "references": [
+            "posix.getcwd"
+          ],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 1
+              },
+              "total_issues": 1,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/numpy-objects.npz",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:18.526118",
+              "scanned": {
+                "total_scanned": 1,
+                "scanned_files": [
+                  "numpy-objects.npz:objects.npy"
+                ]
+              },
+              "skipped": {
+                "total_skipped": 0,
+                "skipped_files": []
+              }
+            },
+            "issues": [
+              {
+                "description": "Use of unsafe operator 'getcwd' from module 'posix'",
+                "operator": "getcwd",
+                "module": "posix",
+                "source": "numpy-objects.npz:objects.npy",
+                "scanner": "modelscan.scanners.NumpyUnsafeOpScan",
+                "severity": "CRITICAL"
+              }
+            ],
+            "errors": []
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "numpy-raw-pickle.npy",
+      "path": "pkl",
+      "basis": "P7 numpy.load fallback for non-npy pickle",
+      "validity": "pickle stream under npy suffix",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "8a5ca9f17432b0a46c6aae4cd398519f8cb77f5ef78f28d64074607dad932e6b",
+      "bytes": 14,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "flagged",
+          "flags": 1,
+          "scanned": 1,
+          "errors": [],
+          "references": [
+            "os.getcwd"
+          ],
+          "raw": {
+            "globals": [
+              {
+                "module": "os",
+                "name": "getcwd",
+                "safety": "dangerous"
+              }
+            ],
+            "scanned_files": 1,
+            "issues_count": 1,
+            "infected_files": 1,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "flagged",
+          "flags": 1,
+          "scanned": 1,
+          "errors": [],
+          "references": [
+            "os.getcwd"
+          ],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 1
+              },
+              "total_issues": 1,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/numpy-raw-pickle.npy",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:18.800930",
+              "scanned": {
+                "total_scanned": 1,
+                "scanned_files": [
+                  "numpy-raw-pickle.npy"
+                ]
+              },
+              "skipped": {
+                "total_skipped": 0,
+                "skipped_files": []
+              }
+            },
+            "issues": [
+              {
+                "description": "Use of unsafe operator 'getcwd' from module 'os'",
+                "operator": "getcwd",
+                "module": "os",
+                "source": "numpy-raw-pickle.npy",
+                "scanner": "modelscan.scanners.NumpyUnsafeOpScan",
+                "severity": "CRITICAL"
+              }
+            ],
+            "errors": []
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "pandas-pickle.pkl",
+      "path": "pkl",
+      "basis": "P6 pickle-based sharing; pandas consumer",
+      "validity": "serializer-produced",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "7157b7d5b6500b9ef7531d7184b76d3a2781cc0f89c165b08754853d17fdf7e1",
+      "bytes": 43,
+      "note": "Plain dict, not a DataFrame; read_pickle accepts ordinary pickled objects.",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "flagged",
+          "flags": 1,
+          "scanned": 1,
+          "errors": [],
+          "references": [
+            "posix.getcwd"
+          ],
+          "raw": {
+            "globals": [
+              {
+                "module": "posix",
+                "name": "getcwd",
+                "safety": "dangerous"
+              }
+            ],
+            "scanned_files": 1,
+            "issues_count": 1,
+            "infected_files": 1,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "flagged",
+          "flags": 1,
+          "scanned": 1,
+          "errors": [],
+          "references": [
+            "posix.getcwd"
+          ],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 1
+              },
+              "total_issues": 1,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/pandas-pickle.pkl",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:19.040578",
+              "scanned": {
+                "total_scanned": 1,
+                "scanned_files": [
+                  "pandas-pickle.pkl"
+                ]
+              },
+              "skipped": {
+                "total_skipped": 0,
+                "skipped_files": []
+              }
+            },
+            "issues": [
+              {
+                "description": "Use of unsafe operator 'getcwd' from module 'posix'",
+                "operator": "getcwd",
+                "module": "posix",
+                "source": "pandas-pickle.pkl",
+                "scanner": "modelscan.scanners.PickleUnsafeOpScan",
+                "severity": "CRITICAL"
+              }
+            ],
+            "errors": []
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "pandas-pickle.pkl.gz",
+      "path": "gz\u2192pkl",
+      "basis": "Compressed pandas pickle stream",
+      "validity": "standard compressed pickle stream",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "99d5a6658fc5410ad9c567ba5c1b99d36cb311581aef995a7593794eaf8cfdb5",
+      "bytes": 58,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "scanned-no-flag",
+          "flags": 0,
+          "scanned": 1,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "globals": [],
+            "scanned_files": 1,
+            "issues_count": 0,
+            "infected_files": 0,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "skipped",
+          "flags": 0,
+          "scanned": 0,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 0
+              },
+              "total_issues": 0,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/pandas-pickle.pkl.gz",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:19.278609",
+              "scanned": {
+                "total_scanned": 0
+              },
+              "skipped": {
+                "total_skipped": 1,
+                "skipped_files": [
+                  {
+                    "category": "SCAN_NOT_SUPPORTED",
+                    "description": "Model Scan did not scan file",
+                    "source": "pandas-pickle.pkl.gz"
+                  }
+                ]
+              }
+            },
+            "issues": [],
+            "errors": []
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "dill-marker.dill",
+      "path": "pkl",
+      "basis": "P6 Python object serialization",
+      "validity": "serializer-produced",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "123a9cf8f2df6811ecfbe2ecc63c1da2b2d9b700225fc80da1d6b6562a6efd15",
+      "bytes": 31,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "flagged",
+          "flags": 1,
+          "scanned": 1,
+          "errors": [],
+          "references": [
+            "posix.getcwd"
+          ],
+          "raw": {
+            "globals": [
+              {
+                "module": "posix",
+                "name": "getcwd",
+                "safety": "dangerous"
+              }
+            ],
+            "scanned_files": 1,
+            "issues_count": 1,
+            "infected_files": 1,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "flagged",
+          "flags": 1,
+          "scanned": 1,
+          "errors": [],
+          "references": [
+            "posix.getcwd"
+          ],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 1
+              },
+              "total_issues": 1,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/dill-marker.dill",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:19.519290",
+              "scanned": {
+                "total_scanned": 1,
+                "scanned_files": [
+                  "dill-marker.dill"
+                ]
+              },
+              "skipped": {
+                "total_skipped": 0,
+                "skipped_files": []
+              }
+            },
+            "issues": [
+              {
+                "description": "Use of unsafe operator 'getcwd' from module 'posix'",
+                "operator": "getcwd",
+                "module": "posix",
+                "source": "dill-marker.dill",
+                "scanner": "modelscan.scanners.PickleUnsafeOpScan",
+                "severity": "CRITICAL"
+              }
+            ],
+            "errors": []
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "keras-metadata.h5",
+      "path": "hdf5\u2192opaque-pkl",
+      "basis": "P6 HDF5 full-model container shape",
+      "validity": "wrapper-only",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "c39792a03b26b6c02c10266276aaec7d7d3e7db9a1aeb34017db0991d11b05ff",
+      "bytes": 6158,
+      "note": "Opaque marker dataset is not a documented Keras load sink; negative traversal control, not a bypass.",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "scanned-no-flag",
+          "flags": 0,
+          "scanned": 1,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "globals": [],
+            "scanned_files": 1,
+            "issues_count": 0,
+            "infected_files": 0,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "scanned-no-flag",
+          "flags": 0,
+          "scanned": 1,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 0
+              },
+              "total_issues": 0,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/keras-metadata.h5",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:19.773188",
+              "scanned": {
+                "total_scanned": 1,
+                "scanned_files": [
+                  "keras-metadata.h5"
+                ]
+              },
+              "skipped": {
+                "total_skipped": 0,
+                "skipped_files": []
+              }
+            },
+            "issues": [],
+            "errors": []
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "keras-pickle.keras",
+      "path": "zip\u2192pkl",
+      "basis": "P7 .keras archive shape",
+      "validity": "wrapper-only",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "79e5f2967241f02b99ead1e0af4ac5ed3f4d1f1ee625798fbd4506842ec18e8b",
+      "bytes": 421,
+      "note": "Asset marker has no declared loading hook; no claim that load_model reaches it.",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "flagged",
+          "flags": 1,
+          "scanned": 1,
+          "errors": [],
+          "references": [
+            "os.getcwd"
+          ],
+          "raw": {
+            "globals": [
+              {
+                "module": "os",
+                "name": "getcwd",
+                "safety": "dangerous"
+              }
+            ],
+            "scanned_files": 1,
+            "issues_count": 1,
+            "infected_files": 1,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "flagged+error",
+          "flags": 1,
+          "scanned": 1,
+          "errors": [
+            {
+              "category": "DEPENDENCY",
+              "description": "To use modelscan.scanners.KerasLambdaDetectScan, please install modelscan with tensorflow extras. `pip install 'modelscan[ tensorflow ]'` if you are using pip.",
+              "source": "keras-pickle.keras"
+            }
+          ],
+          "references": [
+            "os.getcwd"
+          ],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 1
+              },
+              "total_issues": 1,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/keras-pickle.keras",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:20.017207",
+              "scanned": {
+                "total_scanned": 1,
+                "scanned_files": [
+                  "keras-pickle.keras:assets/marker.pkl"
+                ]
+              },
+              "skipped": {
+                "total_skipped": 2,
+                "skipped_files": [
+                  {
+                    "category": "SCAN_NOT_SUPPORTED",
+                    "description": "Model Scan did not scan file",
+                    "source": "keras-pickle.keras:config.json"
+                  },
+                  {
+                    "category": "SCAN_NOT_SUPPORTED",
+                    "description": "Model Scan did not scan file",
+                    "source": "keras-pickle.keras:metadata.json"
+                  }
+                ]
+              }
+            },
+            "issues": [
+              {
+                "description": "Use of unsafe operator 'getcwd' from module 'os'",
+                "operator": "getcwd",
+                "module": "os",
+                "source": "keras-pickle.keras:assets/marker.pkl",
+                "scanner": "modelscan.scanners.PickleUnsafeOpScan",
+                "severity": "CRITICAL"
+              }
+            ],
+            "errors": [
+              {
+                "category": "DEPENDENCY",
+                "description": "To use modelscan.scanners.KerasLambdaDetectScan, please install modelscan with tensorflow extras. `pip install 'modelscan[ tensorflow ]'` if you are using pip.",
+                "source": "keras-pickle.keras"
+              }
+            ]
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "keras-npz.keras",
+      "path": "zip\u2192zip\u2192npy\u2192pkl",
+      "basis": "P7 .keras\u2192.npz\u2192.npy shape",
+      "validity": "wrapper-only",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "3f07a56b1999d630b71a35840c4ab5713f8adb4dccaa9bf67604d375370433d5",
+      "bytes": 822,
+      "note": "Container shape only; no TensorFlow/Keras runtime validation.",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "skipped",
+          "flags": 0,
+          "scanned": 0,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "globals": [],
+            "scanned_files": 0,
+            "issues_count": 0,
+            "infected_files": 0,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "error",
+          "flags": 0,
+          "scanned": 0,
+          "errors": [
+            {
+              "category": "DEPENDENCY",
+              "description": "To use modelscan.scanners.KerasLambdaDetectScan, please install modelscan with tensorflow extras. `pip install 'modelscan[ tensorflow ]'` if you are using pip.",
+              "source": "keras-npz.keras"
+            },
+            {
+              "category": "NESTED_ZIP",
+              "description": "ModelScan does not support nested zip files.",
+              "source": "keras-npz.keras:model.weights.npz"
+            }
+          ],
+          "references": [],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 0
+              },
+              "total_issues": 0,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/keras-npz.keras",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:20.258705",
+              "scanned": {
+                "total_scanned": 0
+              },
+              "skipped": {
+                "total_skipped": 2,
+                "skipped_files": [
+                  {
+                    "category": "SCAN_NOT_SUPPORTED",
+                    "description": "Model Scan did not scan file",
+                    "source": "keras-npz.keras:config.json"
+                  },
+                  {
+                    "category": "SCAN_NOT_SUPPORTED",
+                    "description": "Model Scan did not scan file",
+                    "source": "keras-npz.keras:metadata.json"
+                  }
+                ]
+              }
+            },
+            "issues": [],
+            "errors": [
+              {
+                "category": "DEPENDENCY",
+                "description": "To use modelscan.scanners.KerasLambdaDetectScan, please install modelscan with tensorflow extras. `pip install 'modelscan[ tensorflow ]'` if you are using pip.",
+                "source": "keras-npz.keras"
+              },
+              {
+                "category": "NESTED_ZIP",
+                "description": "ModelScan does not support nested zip files.",
+                "source": "keras-npz.keras:model.weights.npz"
+              }
+            ]
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "keras-lambda-control.keras",
+      "path": "zip\u2192config",
+      "basis": "P6 Lambda configuration policy control",
+      "validity": "wrapper-only",
+      "marker_present": true,
+      "marker": "os.getcwd reference; not invoked",
+      "sha256": "13574a26f1ee33b068a6b896b41ac373acbe7a2abde83a5ed6f2056d3ee8e24c",
+      "bytes": 361,
+      "note": "Inspect raw issues to distinguish marker detection from Lambda policy detection; no TensorFlow extra installed.",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "flagged",
+          "flags": 1,
+          "scanned": 1,
+          "errors": [],
+          "references": [
+            "os.getcwd"
+          ],
+          "raw": {
+            "globals": [
+              {
+                "module": "os",
+                "name": "getcwd",
+                "safety": "dangerous"
+              }
+            ],
+            "scanned_files": 1,
+            "issues_count": 1,
+            "infected_files": 1,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "flagged+error",
+          "flags": 1,
+          "scanned": 1,
+          "errors": [
+            {
+              "category": "DEPENDENCY",
+              "description": "To use modelscan.scanners.KerasLambdaDetectScan, please install modelscan with tensorflow extras. `pip install 'modelscan[ tensorflow ]'` if you are using pip.",
+              "source": "keras-lambda-control.keras"
+            }
+          ],
+          "references": [
+            "os.getcwd"
+          ],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 1
+              },
+              "total_issues": 1,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/keras-lambda-control.keras",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:20.497177",
+              "scanned": {
+                "total_scanned": 1,
+                "scanned_files": [
+                  "keras-lambda-control.keras:assets/marker.pkl"
+                ]
+              },
+              "skipped": {
+                "total_skipped": 1,
+                "skipped_files": [
+                  {
+                    "category": "SCAN_NOT_SUPPORTED",
+                    "description": "Model Scan did not scan file",
+                    "source": "keras-lambda-control.keras:config.json"
+                  }
+                ]
+              }
+            },
+            "issues": [
+              {
+                "description": "Use of unsafe operator 'getcwd' from module 'os'",
+                "operator": "getcwd",
+                "module": "os",
+                "source": "keras-lambda-control.keras:assets/marker.pkl",
+                "scanner": "modelscan.scanners.PickleUnsafeOpScan",
+                "severity": "CRITICAL"
+              }
+            ],
+            "errors": [
+              {
+                "category": "DEPENDENCY",
+                "description": "To use modelscan.scanners.KerasLambdaDetectScan, please install modelscan with tensorflow extras. `pip install 'modelscan[ tensorflow ]'` if you are using pip.",
+                "source": "keras-lambda-control.keras"
+              }
+            ]
+          },
+          "diagnostics": ""
+        }
+      }
+    },
+    {
+      "file": "safe-control.safetensors",
+      "path": "data-only",
+      "basis": "Negative control",
+      "validity": "standard header",
+      "marker_present": false,
+      "marker": null,
+      "sha256": "923afdff26d191ef89cab1c147ad085672266f42df37c22394c5b8c7254b91a1",
+      "bytes": 73,
+      "note": "",
+      "scanners": {
+        "picklescan": {
+          "scanner": "picklescan",
+          "version": "1.0.4",
+          "status": "scanned-no-flag",
+          "flags": 0,
+          "scanned": 1,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "globals": [],
+            "scanned_files": 1,
+            "issues_count": 0,
+            "infected_files": 0,
+            "scan_err": false
+          },
+          "diagnostics": ""
+        },
+        "modelscan": {
+          "scanner": "modelscan",
+          "version": "0.8.8",
+          "status": "skipped",
+          "flags": 0,
+          "scanned": 0,
+          "errors": [],
+          "references": [],
+          "raw": {
+            "summary": {
+              "total_issues_by_severity": {
+                "LOW": 0,
+                "MEDIUM": 0,
+                "HIGH": 0,
+                "CRITICAL": 0
+              },
+              "total_issues": 0,
+              "input_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts/safe-control.safetensors",
+              "absolute_path": "/home/ubuntu/repos/loadpath/eval/scanner_coverage/artifacts",
+              "modelscan_version": "0.8.8",
+              "timestamp": "2026-11-20T11:46:20.760739",
+              "scanned": {
+                "total_scanned": 0
+              },
+              "skipped": {
+                "total_skipped": 1,
+                "skipped_files": [
+                  {
+                    "category": "SCAN_NOT_SUPPORTED",
+                    "description": "Model Scan did not scan file",
+                    "source": "safe-control.safetensors"
+                  }
+                ]
+              }
+            },
+            "issues": [],
+            "errors": []
+          },
+          "diagnostics": ""
+        }
+      }
+    }
+  ]
+}

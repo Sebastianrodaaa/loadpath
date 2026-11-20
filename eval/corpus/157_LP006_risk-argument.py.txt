@@ -1,0 +1,2 @@
+import numpy
+numpy.load('model', allow_pickle=True)

@@ -1,0 +1,2 @@
+import importlib
+importlib.import_module('skops.io').load('model.skops', trusted=['custom.Type'])

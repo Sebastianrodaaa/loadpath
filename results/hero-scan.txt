@@ -1,0 +1,46 @@
+                           loadpath · loader coverage                           
+┏━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┓
+┃ Rule  ┃ Severity ┃ Call site         ┃ Loader / artifact ┃ Coverage          ┃
+┡━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━┩
+│ LP001 │ high     │ examples/demo_app │ pickle.load       │ covered           │
+│       │          │ /app.py:10:1      │ open('clean.pkl', │                   │
+│       │          │                   │ 'rb')             │                   │
+│       │          │                   │ /home/ubuntu/repo │                   │
+│       │          │                   │ s/loadpath/exampl │                   │
+│       │          │                   │ es/demo_app/clean │                   │
+│       │          │                   │ .pkl              │                   │
+│ LP004 │ high     │ examples/demo_app │ torch.load        │ uncovered         │
+│       │          │ /app.py:11:1      │ 'weights.pt'      │                   │
+│       │          │                   │ /home/ubuntu/repo │                   │
+│       │          │                   │ s/loadpath/exampl │                   │
+│       │          │                   │ es/demo_app/weigh │                   │
+│       │          │                   │ ts.pt             │                   │
+│ LP001 │ high     │ examples/demo_app │ pickle.loads      │ uncovered         │
+│       │          │ /app.py:13:5      │ bundle.read('inne │                   │
+│       │          │                   │ r/model.pkl')     │                   │
+│       │          │                   │ /home/ubuntu/repo │                   │
+│       │          │                   │ s/loadpath/exampl │                   │
+│       │          │                   │ es/demo_app/neste │                   │
+│       │          │                   │ d.zip             │                   │
+│ LP003 │ high     │ examples/demo_app │ joblib.load       │ unsupported-forma │
+│       │          │ /app.py:14:1      │ 'compressed.jobli │ t                 │
+│       │          │                   │ b'                │                   │
+│       │          │                   │ /home/ubuntu/repo │                   │
+│       │          │                   │ s/loadpath/exampl │                   │
+│       │          │                   │ es/demo_app/compr │                   │
+│       │          │                   │ essed.joblib      │                   │
+│ LP001 │ high     │ examples/demo_app │ pickle.load       │ unresolved        │
+│       │          │ /app.py:18:12     │ open(path, 'rb')  │                   │
+│       │          │                   │ unresolved        │                   │
+│ LP013 │ info     │ examples/demo_app │ safetensors.torch │ not-required      │
+│       │          │ /app.py:21:1      │ .load_file        │                   │
+│       │          │                   │ 'weights.safetens │                   │
+│       │          │                   │ ors'              │                   │
+│       │          │                   │ /home/ubuntu/repo │                   │
+│       │          │                   │ s/loadpath/exampl │                   │
+│       │          │                   │ es/demo_app/weigh │                   │
+│       │          │                   │ ts.safetensors    │                   │
+└───────┴──────────┴───────────────────┴───────────────────┴───────────────────┘
+Coverage: 1/4 resolvable sites; 1 unresolved
+Data-only sites: 1 not-required (excluded from coverage)
+Coverage is evidence of scanner scope, not safety.

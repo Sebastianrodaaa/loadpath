@@ -1,0 +1,3 @@
+import skops
+def wrapper(path):
+    return skops.io.load(path)

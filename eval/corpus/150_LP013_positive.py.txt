@@ -1,0 +1,3 @@
+import safetensors
+PATH = 'model.bin'
+safetensors.torch.load_file(PATH)

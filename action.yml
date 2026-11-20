@@ -1,0 +1,27 @@
+name: loadpath
+description: Inventory model loaders and audit scanner coverage
+inputs:
+  target:
+    description: Source directory or Python file
+    default: .
+  receipts:
+    description: Optional scanner receipt JSON path
+    default: ''
+  fail-on:
+    description: Severity threshold
+    default: high
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      env:
+        LOADPATH_ACTION: ${{ github.action_path }}
+        LOADPATH_TARGET: ${{ inputs.target }}
+        LOADPATH_RECEIPTS: ${{ inputs.receipts }}
+        LOADPATH_FAIL: ${{ inputs.fail-on }}
+      run: |
+        python -m venv "$RUNNER_TEMP/loadpath-venv"
+        "$RUNNER_TEMP/loadpath-venv/bin/pip" install "$LOADPATH_ACTION"
+        args=(scan "$LOADPATH_TARGET" --fail-on "$LOADPATH_FAIL" --sarif)
+        if [ -n "$LOADPATH_RECEIPTS" ]; then args+=(--receipts "$LOADPATH_RECEIPTS"); fi
+        "$RUNNER_TEMP/loadpath-venv/bin/loadpath" "${args[@]}" > loadpath.sarif

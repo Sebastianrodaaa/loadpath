@@ -1,0 +1,5 @@
+class torch:
+    @staticmethod
+    def load(path):
+        return path
+torch.load('not-a-model')

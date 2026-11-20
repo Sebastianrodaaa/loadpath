@@ -1,0 +1,2 @@
+import importlib
+importlib.import_module('numpy').load('objects.npy', allow_pickle=True)

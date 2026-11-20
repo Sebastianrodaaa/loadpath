@@ -1,0 +1,2 @@
+import tensorflow.keras.models as lib
+lib.load_model('model.h5', safe_mode=False)

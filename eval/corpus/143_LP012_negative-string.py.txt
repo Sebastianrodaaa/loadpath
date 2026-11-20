@@ -1,0 +1,1 @@
+example = "skops.io.load(path)"

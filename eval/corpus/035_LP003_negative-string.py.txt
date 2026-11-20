@@ -1,0 +1,1 @@
+example = "joblib.load(path)"

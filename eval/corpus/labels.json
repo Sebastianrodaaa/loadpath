@@ -1,0 +1,2308 @@
+{
+  "synthetic": true,
+  "cases": [
+    {
+      "file": "000_LP001_positive.py.txt",
+      "family": "LP001",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP001",
+          "loader": "pickle.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "d717b6add636e3a6ebe4a97545e0fe13718f6b78910cf4a938172dc5364b56c0"
+    },
+    {
+      "file": "001_LP001_positive.py.txt",
+      "family": "LP001",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP001",
+          "loader": "pickle.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "01ea153df056f0263ff7eee9d2aa0cbfc1d32a229e71943c46cb4327ac50dfd0"
+    },
+    {
+      "file": "002_LP001_positive.py.txt",
+      "family": "LP001",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP001",
+          "loader": "pickle.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "75e95194002c3011f6d25c71b5b23351f85b483eb9b4c69839dc72d70e771753"
+    },
+    {
+      "file": "003_LP001_positive.py.txt",
+      "family": "LP001",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP001",
+          "loader": "pickle.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "eb20663d4af07789de6c6884e97ac59e452d371125efa8db27e7521c096d09da"
+    },
+    {
+      "file": "004_LP001_positive.py.txt",
+      "family": "LP001",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP001",
+          "loader": "pickle.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "01ea153df056f0263ff7eee9d2aa0cbfc1d32a229e71943c46cb4327ac50dfd0"
+    },
+    {
+      "file": "005_LP001_positive.py.txt",
+      "family": "LP001",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP001",
+          "loader": "pickle.load",
+          "line": 3,
+          "col": 12
+        }
+      ],
+      "sha256": "2c942854f394b7e1349cce03d8c2b89b21824627e1c6b00553f9b9809907055a"
+    },
+    {
+      "file": "006_LP001_positive.py.txt",
+      "family": "LP001",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP001",
+          "loader": "pickle.load",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "sha256": "38f4c556adcf7dd24ba72443c3969b9b12a2ecd5ea54b3929fab278e1752d339"
+    },
+    {
+      "file": "007_LP001_positive.py.txt",
+      "family": "LP001",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP001",
+          "loader": "pickle.load",
+          "line": 3,
+          "col": 5
+        }
+      ],
+      "sha256": "fee72673079bc52776d29961347525912d94a2e3bef1cc977bfb11a6fe2731ac"
+    },
+    {
+      "file": "008_LP001_dynamic.py.txt",
+      "family": "LP001",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP001",
+          "loader": "pickle.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "131262c9a0a4a5f0a316cbf075d7528c8705a6650df4736d8db35b9cc250fcc8"
+    },
+    {
+      "file": "009_LP001_dynamic.py.txt",
+      "family": "LP001",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP001",
+          "loader": "pickle.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "a42e3672303c75717ecc802b149a5c73afb4bfd8ea21c7a8e59f48d6da0622c6"
+    },
+    {
+      "file": "010_LP001_negative-comment.py.txt",
+      "family": "LP001",
+      "kind": "negative-comment",
+      "expected": [],
+      "sha256": "84d225d2239ab601ceecb7f967918f376426e039ea0444a478c4d775bb307ced"
+    },
+    {
+      "file": "011_LP001_negative-string.py.txt",
+      "family": "LP001",
+      "kind": "negative-string",
+      "expected": [],
+      "sha256": "2a4cb9ae8f58ffcf2a728813a2109ea7679b98d7c3530c6bd725aff287641be8"
+    },
+    {
+      "file": "012_LP002_positive.py.txt",
+      "family": "LP002",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP002",
+          "loader": "dill.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "36e8b9f03e5c8082519209c900db5478a416ca0b528e6d2c7a2fe2d5b9620ac1"
+    },
+    {
+      "file": "013_LP002_positive.py.txt",
+      "family": "LP002",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP002",
+          "loader": "dill.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "c8fb6adcda3e576fbbbf817abb2ad7ddf6226c0b0f10f2411522757b06558473"
+    },
+    {
+      "file": "014_LP002_positive.py.txt",
+      "family": "LP002",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP002",
+          "loader": "dill.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "dfaacf523e20cff9b7316234322b1aca347c4a672c88d341a994a31841a0fde7"
+    },
+    {
+      "file": "015_LP002_positive.py.txt",
+      "family": "LP002",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP002",
+          "loader": "dill.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "f88cc1a074104b4ebbfcf9a9812e1df267a974dc42fb3abee44ae70559abe1ed"
+    },
+    {
+      "file": "016_LP002_positive.py.txt",
+      "family": "LP002",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP002",
+          "loader": "dill.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "c8fb6adcda3e576fbbbf817abb2ad7ddf6226c0b0f10f2411522757b06558473"
+    },
+    {
+      "file": "017_LP002_positive.py.txt",
+      "family": "LP002",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP002",
+          "loader": "dill.load",
+          "line": 3,
+          "col": 12
+        }
+      ],
+      "sha256": "efb1e7e485356840ec580e5506d5f397d669e7a79974e530664f9bf605480c45"
+    },
+    {
+      "file": "018_LP002_positive.py.txt",
+      "family": "LP002",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP002",
+          "loader": "dill.load",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "sha256": "053a9e76761d8520214377abc4ca626b6b1c62ab5136b165bb4754c975ba7383"
+    },
+    {
+      "file": "019_LP002_positive.py.txt",
+      "family": "LP002",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP002",
+          "loader": "dill.load",
+          "line": 3,
+          "col": 5
+        }
+      ],
+      "sha256": "4ca9e8c7a6f0642b5b8f9e44488e2e29ea31387a8a172a5378630eb0dc1656f4"
+    },
+    {
+      "file": "020_LP002_dynamic.py.txt",
+      "family": "LP002",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP002",
+          "loader": "dill.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "f3806f39f374e1e5a7faaf43ee7e427f4c2f4abcade62ab8eef0abe47fa606cd"
+    },
+    {
+      "file": "021_LP002_dynamic.py.txt",
+      "family": "LP002",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP002",
+          "loader": "dill.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "bae641cc5f4201c30ae89154e6bd5f6df1f54d4da021fdac3ee2540753e8ca83"
+    },
+    {
+      "file": "022_LP002_negative-comment.py.txt",
+      "family": "LP002",
+      "kind": "negative-comment",
+      "expected": [],
+      "sha256": "3549b14a6dc4960338cae2a32e7fae7a049d8e0ec9da8d53835b5b3ef38083c1"
+    },
+    {
+      "file": "023_LP002_negative-string.py.txt",
+      "family": "LP002",
+      "kind": "negative-string",
+      "expected": [],
+      "sha256": "30b3d06e3b07e4ec59ea14d9e93c67693bbb3847d044c0d4060a2a7fc94891a8"
+    },
+    {
+      "file": "024_LP003_positive.py.txt",
+      "family": "LP003",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP003",
+          "loader": "joblib.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "ca0f53bf13002febe9b5fb614fa10c4862bda41c8e202bb2cb4523c9206d25a1"
+    },
+    {
+      "file": "025_LP003_positive.py.txt",
+      "family": "LP003",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP003",
+          "loader": "joblib.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "fdc1602da670f9619930178dfcc68842190e53da5d02705ce7ede7df3393db37"
+    },
+    {
+      "file": "026_LP003_positive.py.txt",
+      "family": "LP003",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP003",
+          "loader": "joblib.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "ea242708217e7f26839a89cfae7de960bc2743edd9f00de9089228ac435723c7"
+    },
+    {
+      "file": "027_LP003_positive.py.txt",
+      "family": "LP003",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP003",
+          "loader": "joblib.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "9973dda8865ba853412c86d85df684c0b980ce31149eec73e1da55d1cfb1c1df"
+    },
+    {
+      "file": "028_LP003_positive.py.txt",
+      "family": "LP003",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP003",
+          "loader": "joblib.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "fdc1602da670f9619930178dfcc68842190e53da5d02705ce7ede7df3393db37"
+    },
+    {
+      "file": "029_LP003_positive.py.txt",
+      "family": "LP003",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP003",
+          "loader": "joblib.load",
+          "line": 3,
+          "col": 12
+        }
+      ],
+      "sha256": "5e6b4e57cf534d06a5ff2087fe7b1f44f4a67d2554b98642b0ff7acf56423506"
+    },
+    {
+      "file": "030_LP003_positive.py.txt",
+      "family": "LP003",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP003",
+          "loader": "joblib.load",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "sha256": "7533d853422f04fb46da2255303e6860cd7dbf121f67a340477146e36771f818"
+    },
+    {
+      "file": "031_LP003_positive.py.txt",
+      "family": "LP003",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP003",
+          "loader": "joblib.load",
+          "line": 3,
+          "col": 5
+        }
+      ],
+      "sha256": "ec6746e84ee8eeff7c89dbcaf632b6f1d9342e0d6d50696dfc36ac4a95bf4b80"
+    },
+    {
+      "file": "032_LP003_dynamic.py.txt",
+      "family": "LP003",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP003",
+          "loader": "joblib.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "a73b50dd5e660ae01d057b2fa62be7ceabeb59d36868e47cab5494ad3f9bca39"
+    },
+    {
+      "file": "033_LP003_dynamic.py.txt",
+      "family": "LP003",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP003",
+          "loader": "joblib.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "b18e222dd200068870888803f724d0d0b4c15e237f65bdc7d3b93c094c098581"
+    },
+    {
+      "file": "034_LP003_negative-comment.py.txt",
+      "family": "LP003",
+      "kind": "negative-comment",
+      "expected": [],
+      "sha256": "668791ced5ae37aaf01f3d1a06c04ab60a7155310794bca4d5f796cf8be770d2"
+    },
+    {
+      "file": "035_LP003_negative-string.py.txt",
+      "family": "LP003",
+      "kind": "negative-string",
+      "expected": [],
+      "sha256": "1856a1647e6466e324711856557db635c0641949caf8ea2500f07c0475fbff2b"
+    },
+    {
+      "file": "036_LP004_positive.py.txt",
+      "family": "LP004",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP004",
+          "loader": "torch.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "1212dbb6a1cfb403e3a849cd7521deaa56231c950eaeba689f1873abeaafc8fe"
+    },
+    {
+      "file": "037_LP004_positive.py.txt",
+      "family": "LP004",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP004",
+          "loader": "torch.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "d03c6a019ba3a62a5d29425af8eb1123991a6be3bcca92fd9c6fc55f4789115c"
+    },
+    {
+      "file": "038_LP004_positive.py.txt",
+      "family": "LP004",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP004",
+          "loader": "torch.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "3b2693df23a223f77d5142ec12ca0aecd52a9fa92d61a6ca6313966394ab552c"
+    },
+    {
+      "file": "039_LP004_positive.py.txt",
+      "family": "LP004",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP004",
+          "loader": "torch.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "a19064bc4ee04db75d7eceefb87227f3004b924fe4455c24b68a3a6cdfc3fd81"
+    },
+    {
+      "file": "040_LP004_positive.py.txt",
+      "family": "LP004",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP004",
+          "loader": "torch.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "d03c6a019ba3a62a5d29425af8eb1123991a6be3bcca92fd9c6fc55f4789115c"
+    },
+    {
+      "file": "041_LP004_positive.py.txt",
+      "family": "LP004",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP004",
+          "loader": "torch.load",
+          "line": 3,
+          "col": 12
+        }
+      ],
+      "sha256": "8ea08fca043945c00e88d635578856a9c6cc37502c4990f6ade33f6bcd875601"
+    },
+    {
+      "file": "042_LP004_positive.py.txt",
+      "family": "LP004",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP004",
+          "loader": "torch.load",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "sha256": "3be7bd35faabf79d5e3a5f020fd40cc407e2e7c51e6e0d4f91be88e04e014067"
+    },
+    {
+      "file": "043_LP004_positive.py.txt",
+      "family": "LP004",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP004",
+          "loader": "torch.load",
+          "line": 3,
+          "col": 5
+        }
+      ],
+      "sha256": "9d5e3162cf9951a0d7b78160e1904f2ea912867ff3cbbc004078617d60fabbeb"
+    },
+    {
+      "file": "044_LP004_dynamic.py.txt",
+      "family": "LP004",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP004",
+          "loader": "torch.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "67396aa36fc9e4256bb4e0f69dea498aff9039f9e57854b8748f3ce24b4760c5"
+    },
+    {
+      "file": "045_LP004_dynamic.py.txt",
+      "family": "LP004",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP004",
+          "loader": "torch.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "f3ed4a6b62807de0b5f3352d307a96d622c8571905640ced2dc04c8f8429eb00"
+    },
+    {
+      "file": "046_LP004_negative-comment.py.txt",
+      "family": "LP004",
+      "kind": "negative-comment",
+      "expected": [],
+      "sha256": "334e9e8339de5c18781327d04b63f3ce45de2791dec191dfa916c50285ee15cd"
+    },
+    {
+      "file": "047_LP004_negative-string.py.txt",
+      "family": "LP004",
+      "kind": "negative-string",
+      "expected": [],
+      "sha256": "082aea68a681fd5f6fda3c670b1f3fcb5edddf7827486f9bcb9dc74f75430545"
+    },
+    {
+      "file": "048_LP005_positive.py.txt",
+      "family": "LP005",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP005",
+          "loader": "torch.jit.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "eef6d38a513053bdaca03a0e6842ef47d2fb08612ac674ee7f872ac4290a7fc4"
+    },
+    {
+      "file": "049_LP005_positive.py.txt",
+      "family": "LP005",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP005",
+          "loader": "torch.jit.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "6aa3abdeb56c4069c97a1d2ce69ef87973b6247c073e196ec8cb4032fe8cf9ea"
+    },
+    {
+      "file": "050_LP005_positive.py.txt",
+      "family": "LP005",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP005",
+          "loader": "torch.jit.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "0d58bc41c9f7c2420c776e367873ee8f5428ef410ce1c8f7bb44805d3d65be49"
+    },
+    {
+      "file": "051_LP005_positive.py.txt",
+      "family": "LP005",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP005",
+          "loader": "torch.jit.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "377dfdc4868b8ec4d3ef5e16f512b68b7e7419c836e8efc8590299a1b69e9389"
+    },
+    {
+      "file": "052_LP005_positive.py.txt",
+      "family": "LP005",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP005",
+          "loader": "torch.jit.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "6e70e90d7aea4ed5c6dc988cd6ecaed3670ec78e570e2da373af2785f2e72ce6"
+    },
+    {
+      "file": "053_LP005_positive.py.txt",
+      "family": "LP005",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP005",
+          "loader": "torch.jit.load",
+          "line": 3,
+          "col": 12
+        }
+      ],
+      "sha256": "29dbe973833d1591e137163671ebc324b2b7beb5f93dd53765f18c0dcfda8d50"
+    },
+    {
+      "file": "054_LP005_positive.py.txt",
+      "family": "LP005",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP005",
+          "loader": "torch.jit.load",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "sha256": "53a40607ac5db8105b285e1340df84d7c2fbf0a2e9ec46bfe5ce1e02687ba61e"
+    },
+    {
+      "file": "055_LP005_positive.py.txt",
+      "family": "LP005",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP005",
+          "loader": "torch.jit.load",
+          "line": 3,
+          "col": 5
+        }
+      ],
+      "sha256": "1da8438e498079c8994813c51a01c92502255e27d84f95aee2200ba079c16fcf"
+    },
+    {
+      "file": "056_LP005_dynamic.py.txt",
+      "family": "LP005",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP005",
+          "loader": "torch.jit.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "db7207ea4e09ec59918574a1c8406df2e6a0f04bcf35e46639b9b9c2fb9a8db5"
+    },
+    {
+      "file": "057_LP005_dynamic.py.txt",
+      "family": "LP005",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP005",
+          "loader": "torch.jit.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "a0ab0d34a1be5b1a9c2bff3d3ef1a393447d467b6f450c5696a325e824fdbb57"
+    },
+    {
+      "file": "058_LP005_negative-comment.py.txt",
+      "family": "LP005",
+      "kind": "negative-comment",
+      "expected": [],
+      "sha256": "dd2418dd4dcc7d9506b4db6dc8c6ea92488caa1d305004c9fe2eeca93d0d332b"
+    },
+    {
+      "file": "059_LP005_negative-string.py.txt",
+      "family": "LP005",
+      "kind": "negative-string",
+      "expected": [],
+      "sha256": "daf6bc52a208d55ae1c790ef51ee52f14860accd8d3c08118ce5dd0bdc8bc96a"
+    },
+    {
+      "file": "060_LP006_positive.py.txt",
+      "family": "LP006",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP006",
+          "loader": "numpy.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "5459d3d6d098ff91ce5651f83c20f791d8788d26475629867c1661dede8f4736"
+    },
+    {
+      "file": "061_LP006_positive.py.txt",
+      "family": "LP006",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP006",
+          "loader": "numpy.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "bea672e48db130c12efbf5b7d95d0a0d3f4539352d65ad7e448e3064c905b7fb"
+    },
+    {
+      "file": "062_LP006_positive.py.txt",
+      "family": "LP006",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP006",
+          "loader": "numpy.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "f0940c49b19a8bfc021e08f6a5dd610aeb1cd4b8eb12a783842b624ae7854808"
+    },
+    {
+      "file": "063_LP006_positive.py.txt",
+      "family": "LP006",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP006",
+          "loader": "numpy.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "1ef6d558ba3de7cd4f023492f664823ba71d68cec4b8b32129a86c5af9b72aff"
+    },
+    {
+      "file": "064_LP006_positive.py.txt",
+      "family": "LP006",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP006",
+          "loader": "numpy.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "bea672e48db130c12efbf5b7d95d0a0d3f4539352d65ad7e448e3064c905b7fb"
+    },
+    {
+      "file": "065_LP006_positive.py.txt",
+      "family": "LP006",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP006",
+          "loader": "numpy.load",
+          "line": 3,
+          "col": 12
+        }
+      ],
+      "sha256": "24326ab8e5f1bf7abb1dd7541fc35c2561c488fa8f6b21130f41dd6d3164dcad"
+    },
+    {
+      "file": "066_LP006_positive.py.txt",
+      "family": "LP006",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP006",
+          "loader": "numpy.load",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "sha256": "e7a51a593c3cfb87a6641b1148e5b41e83495c41ddd1792999985a1c6c9113f5"
+    },
+    {
+      "file": "067_LP006_positive.py.txt",
+      "family": "LP006",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP006",
+          "loader": "numpy.load",
+          "line": 3,
+          "col": 5
+        }
+      ],
+      "sha256": "c336772052aaefa7d34e0b179a0b5ccc433ba650829633aa8362a237de69455c"
+    },
+    {
+      "file": "068_LP006_dynamic.py.txt",
+      "family": "LP006",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP006",
+          "loader": "numpy.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "7c073f1bd623aac5a063c3cd9250ec1ea8a51400bc6b28ebea4880f2a5cdd258"
+    },
+    {
+      "file": "069_LP006_dynamic.py.txt",
+      "family": "LP006",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP006",
+          "loader": "numpy.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "955ab3aab68a2f6a6c85f8e019123a5e6ed3885cb9476f2a065bf8e29317edc5"
+    },
+    {
+      "file": "070_LP006_negative-comment.py.txt",
+      "family": "LP006",
+      "kind": "negative-comment",
+      "expected": [],
+      "sha256": "a7422188916629add0e56b2f97fa105e8926ada7e97062beaa369c7c9163663b"
+    },
+    {
+      "file": "071_LP006_negative-string.py.txt",
+      "family": "LP006",
+      "kind": "negative-string",
+      "expected": [],
+      "sha256": "0630408a8e4a71a239aef6a04650be552e992cbf34094e39df2b02a2a9cb0eae"
+    },
+    {
+      "file": "072_LP007_positive.py.txt",
+      "family": "LP007",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP007",
+          "loader": "pandas.read_pickle",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "38a82ffd4fee9b794fbbb71c10fa1b8cb67816b92752665ebae21be4e0778957"
+    },
+    {
+      "file": "073_LP007_positive.py.txt",
+      "family": "LP007",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP007",
+          "loader": "pandas.read_pickle",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "70c1a37ebc92defeeb2f6e0a24f66b2d66673b92f9bacb61b43e66bb5ef2c4d4"
+    },
+    {
+      "file": "074_LP007_positive.py.txt",
+      "family": "LP007",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP007",
+          "loader": "pandas.read_pickle",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "9e6edbc06546ecce6ed410411b351b266f059465b3129751c5dca7f0d0266109"
+    },
+    {
+      "file": "075_LP007_positive.py.txt",
+      "family": "LP007",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP007",
+          "loader": "pandas.read_pickle",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "b0c9b0b4cc339a8e48b6f177d75218dcc795ef7cc82abc6621aee69c067b4a48"
+    },
+    {
+      "file": "076_LP007_positive.py.txt",
+      "family": "LP007",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP007",
+          "loader": "pandas.read_pickle",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "70c1a37ebc92defeeb2f6e0a24f66b2d66673b92f9bacb61b43e66bb5ef2c4d4"
+    },
+    {
+      "file": "077_LP007_positive.py.txt",
+      "family": "LP007",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP007",
+          "loader": "pandas.read_pickle",
+          "line": 3,
+          "col": 12
+        }
+      ],
+      "sha256": "69cdb78553cacabe33055110407f8b9b386a3c9025020bdeabe54601c556f2c9"
+    },
+    {
+      "file": "078_LP007_positive.py.txt",
+      "family": "LP007",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP007",
+          "loader": "pandas.read_pickle",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "sha256": "493f9bc779ac71030ad2bc1c5d27c46e0562c6add695ccbd3fd21fe16d728c17"
+    },
+    {
+      "file": "079_LP007_positive.py.txt",
+      "family": "LP007",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP007",
+          "loader": "pandas.read_pickle",
+          "line": 3,
+          "col": 5
+        }
+      ],
+      "sha256": "e1e737fd8ad9868992e235ef9e33277a998ba9f4d09fb64ffc2ccd9945d19cf9"
+    },
+    {
+      "file": "080_LP007_dynamic.py.txt",
+      "family": "LP007",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP007",
+          "loader": "pandas.read_pickle",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "b3c7b3472a14dabf50c6270221573c7975ccd2279f83765fd4e4e0af986816d9"
+    },
+    {
+      "file": "081_LP007_dynamic.py.txt",
+      "family": "LP007",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP007",
+          "loader": "pandas.read_pickle",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "8e4af1999385a7eb851d3c4614d2761fae3d758400e60b2ef9765d99a3298862"
+    },
+    {
+      "file": "082_LP007_negative-comment.py.txt",
+      "family": "LP007",
+      "kind": "negative-comment",
+      "expected": [],
+      "sha256": "9878c61349e169d20d6adf911d3d61a6258dc665a6be96cc15b76bc46b89bd0c"
+    },
+    {
+      "file": "083_LP007_negative-string.py.txt",
+      "family": "LP007",
+      "kind": "negative-string",
+      "expected": [],
+      "sha256": "24b4955ed3875d2f1456c4f8f4ec7a2d4af0cdf47399946361f4e4a1604ba8c4"
+    },
+    {
+      "file": "084_LP008_positive.py.txt",
+      "family": "LP008",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP008",
+          "loader": "tensorflow.keras.models.load_model",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "d9435e99dca378b703b008804f48a08cac85e8549edcd015aa3d2b1d318c04a5"
+    },
+    {
+      "file": "085_LP008_positive.py.txt",
+      "family": "LP008",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP008",
+          "loader": "tensorflow.keras.models.load_model",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "c9729448d325ee60546a5f5ece33dd56309d737729b40fc360dd44b2c44fff78"
+    },
+    {
+      "file": "086_LP008_positive.py.txt",
+      "family": "LP008",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP008",
+          "loader": "tensorflow.keras.models.load_model",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "fadaaf2273c5db70e7861d7c5d5577c83df3b6cf82e4e881b8da4a3f2bb04327"
+    },
+    {
+      "file": "087_LP008_positive.py.txt",
+      "family": "LP008",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP008",
+          "loader": "tensorflow.keras.models.load_model",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "d803b1d47787eba80cdc093cfd5c363aa7fc75601426b0ddfb257346acd80991"
+    },
+    {
+      "file": "088_LP008_positive.py.txt",
+      "family": "LP008",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP008",
+          "loader": "tensorflow.keras.models.load_model",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "2614eda3b41c6855d01e45ba97d1d15b67ab5ad10b1faff2611fe0d4037f9c4e"
+    },
+    {
+      "file": "089_LP008_positive.py.txt",
+      "family": "LP008",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP008",
+          "loader": "tensorflow.keras.models.load_model",
+          "line": 3,
+          "col": 12
+        }
+      ],
+      "sha256": "de57d6a74d9244a152433a1f2acf798808207cbeec38ea421db3bb3c2c11d0d1"
+    },
+    {
+      "file": "090_LP008_positive.py.txt",
+      "family": "LP008",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP008",
+          "loader": "tensorflow.keras.models.load_model",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "sha256": "46346c89e9f13595c905336db8c112ec24f9e4df0aeb3085be6f0dbfca7853bc"
+    },
+    {
+      "file": "091_LP008_positive.py.txt",
+      "family": "LP008",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP008",
+          "loader": "tensorflow.keras.models.load_model",
+          "line": 3,
+          "col": 5
+        }
+      ],
+      "sha256": "690c45f86a14f3a2a35fc0784ab4d4d029a842d8d8e93cdc69db23e9516284d5"
+    },
+    {
+      "file": "092_LP008_dynamic.py.txt",
+      "family": "LP008",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP008",
+          "loader": "tensorflow.keras.models.load_model",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "ffcf274e9f7e76309edcf52eba3d6fa9ec98edbdf33c3137238a6639e7189873"
+    },
+    {
+      "file": "093_LP008_dynamic.py.txt",
+      "family": "LP008",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP008",
+          "loader": "tensorflow.keras.models.load_model",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "ed5c005e13df4a8f770bad6b4da593d26c0c5d04c24da7299250f735bc31f46c"
+    },
+    {
+      "file": "094_LP008_negative-comment.py.txt",
+      "family": "LP008",
+      "kind": "negative-comment",
+      "expected": [],
+      "sha256": "60052bfbb6a6b75e56b53f0d5452a0d83e1ea772ce1d15a91f352041a5991366"
+    },
+    {
+      "file": "095_LP008_negative-string.py.txt",
+      "family": "LP008",
+      "kind": "negative-string",
+      "expected": [],
+      "sha256": "f17c524a0057024b398436b55503dd9c9fc0223027739f38120b771be035ac61"
+    },
+    {
+      "file": "096_LP009_positive.py.txt",
+      "family": "LP009",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP009",
+          "loader": "tensorflow.saved_model.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "be823a0ad4b9e78419bfa67584370c9a2a519738d643a37992e1b95de60a93d9"
+    },
+    {
+      "file": "097_LP009_positive.py.txt",
+      "family": "LP009",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP009",
+          "loader": "tensorflow.saved_model.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "727c33586dea66c614a4bb02bbe5f332f0277055268a2c4d1def2a9d8c17ad64"
+    },
+    {
+      "file": "098_LP009_positive.py.txt",
+      "family": "LP009",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP009",
+          "loader": "tensorflow.saved_model.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "77f4c8c6d119ca2f082fb29fd923b713da3f39b31eeb3ba0f7f270cab17a9179"
+    },
+    {
+      "file": "099_LP009_positive.py.txt",
+      "family": "LP009",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP009",
+          "loader": "tensorflow.saved_model.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "0c5bb199ffb8d22a7bbae4c22cafd6d3c9501a911ebe8471570f8fdcd42547bc"
+    },
+    {
+      "file": "100_LP009_positive.py.txt",
+      "family": "LP009",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP009",
+          "loader": "tensorflow.saved_model.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "2806529d93a6e40a55f6a83896330168800bbd3be7261e9821fd8b6683e3ef22"
+    },
+    {
+      "file": "101_LP009_positive.py.txt",
+      "family": "LP009",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP009",
+          "loader": "tensorflow.saved_model.load",
+          "line": 3,
+          "col": 12
+        }
+      ],
+      "sha256": "0df0318b3c9fb55e77871872100c48b5b684db7ceae91cf575a73ba24bc27aef"
+    },
+    {
+      "file": "102_LP009_positive.py.txt",
+      "family": "LP009",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP009",
+          "loader": "tensorflow.saved_model.load",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "sha256": "0661dc16cd7f5ae54e5d7ae9112e684b68417200438d0e8e5f72e11664d88c0c"
+    },
+    {
+      "file": "103_LP009_positive.py.txt",
+      "family": "LP009",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP009",
+          "loader": "tensorflow.saved_model.load",
+          "line": 3,
+          "col": 5
+        }
+      ],
+      "sha256": "18eedfc01bd85e346899cb0f578bff29d7745bcbdf98ce941d1429c1484f90b4"
+    },
+    {
+      "file": "104_LP009_dynamic.py.txt",
+      "family": "LP009",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP009",
+          "loader": "tensorflow.saved_model.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "052f27d971f560aac654b3051103c3a423717947b610203fa6eeba0e9061132a"
+    },
+    {
+      "file": "105_LP009_dynamic.py.txt",
+      "family": "LP009",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP009",
+          "loader": "tensorflow.saved_model.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "d3f500f3a5b5bda39fda328b79662dd59e9b422c43610628c7ba03a61bca6432"
+    },
+    {
+      "file": "106_LP009_negative-comment.py.txt",
+      "family": "LP009",
+      "kind": "negative-comment",
+      "expected": [],
+      "sha256": "72bb7a410f2eb2520d5ab9907acac3d56eb01aa2bab1b05a31d0b10c566580dd"
+    },
+    {
+      "file": "107_LP009_negative-string.py.txt",
+      "family": "LP009",
+      "kind": "negative-string",
+      "expected": [],
+      "sha256": "0ffc96bc0b881f3753c5f31ede18b345e180a030c9b8861508f0c2383ecaa964"
+    },
+    {
+      "file": "108_LP010_positive.py.txt",
+      "family": "LP010",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP010",
+          "loader": "transformers.AutoModel.from_pretrained",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "5fe88bc5eb79d56ca1aca89a57a6b746f7d6d2061f792f1459c3a294731c865e"
+    },
+    {
+      "file": "109_LP010_positive.py.txt",
+      "family": "LP010",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP010",
+          "loader": "transformers.AutoModel.from_pretrained",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "953b410d147e0035f9d692ac66a60ee9d85212f7fa671ecbef32fe0896e48f49"
+    },
+    {
+      "file": "110_LP010_positive.py.txt",
+      "family": "LP010",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP010",
+          "loader": "transformers.AutoModel.from_pretrained",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "c7b292fce8416b30697f72e7cd6a92c9ebacdd312fcc62e58e065eccaccb9156"
+    },
+    {
+      "file": "111_LP010_positive.py.txt",
+      "family": "LP010",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP010",
+          "loader": "transformers.AutoModel.from_pretrained",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "07b851dfb20e53c151674432f4b788e5696fae110277010aae8cca02de279605"
+    },
+    {
+      "file": "112_LP010_positive.py.txt",
+      "family": "LP010",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP010",
+          "loader": "transformers.AutoModel.from_pretrained",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "e875d34004a61989ae4c616a2d062504faf558072c9f8e6fe9b6e529920b6e06"
+    },
+    {
+      "file": "113_LP010_positive.py.txt",
+      "family": "LP010",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP010",
+          "loader": "transformers.AutoModel.from_pretrained",
+          "line": 3,
+          "col": 12
+        }
+      ],
+      "sha256": "b5a18d52fbc051845c4167ac4835b95d7f564bfdb8c18d0142b58abe3febcfc8"
+    },
+    {
+      "file": "114_LP010_positive.py.txt",
+      "family": "LP010",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP010",
+          "loader": "transformers.AutoModel.from_pretrained",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "sha256": "f7575c5f778dec7e950589c7d53b687c1ceb440639fead01c783bd3607e47dbf"
+    },
+    {
+      "file": "115_LP010_positive.py.txt",
+      "family": "LP010",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP010",
+          "loader": "transformers.AutoModel.from_pretrained",
+          "line": 3,
+          "col": 5
+        }
+      ],
+      "sha256": "8f6c703bc0d732ffbce314cc20a72b5b6858dba24d88d9dcd03e1cdd9e9625fd"
+    },
+    {
+      "file": "116_LP010_dynamic.py.txt",
+      "family": "LP010",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP010",
+          "loader": "transformers.AutoModel.from_pretrained",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "3d02a49d985e8bdaf09f3d817290733f54274e4ed05765f951e71db1bfe639a2"
+    },
+    {
+      "file": "117_LP010_dynamic.py.txt",
+      "family": "LP010",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP010",
+          "loader": "transformers.AutoModel.from_pretrained",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "31b444e3657cc2928a3390e721732c92dcb9491bffeea14f9852455cd3ab00cd"
+    },
+    {
+      "file": "118_LP010_negative-comment.py.txt",
+      "family": "LP010",
+      "kind": "negative-comment",
+      "expected": [],
+      "sha256": "271c8725953ba2884a890b7a6d63e76420aa699b968d38eaa575e2b5ceeecf4b"
+    },
+    {
+      "file": "119_LP010_negative-string.py.txt",
+      "family": "LP010",
+      "kind": "negative-string",
+      "expected": [],
+      "sha256": "f5891ab6d539c4a3bf337dc921b5b1274190387a604799316870018cd27a0ec9"
+    },
+    {
+      "file": "120_LP011_positive.py.txt",
+      "family": "LP011",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP011",
+          "loader": "huggingface_hub.hf_hub_download",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "68256a7ea329eea82d28fc8fd7d5f164c6ceda8d11c204aa9350e41e3ec9995a"
+    },
+    {
+      "file": "121_LP011_positive.py.txt",
+      "family": "LP011",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP011",
+          "loader": "huggingface_hub.hf_hub_download",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "e04c64c00f5bf53172ca33ce62855bccf0e7a303852acf1a71908e7bc7f0ce36"
+    },
+    {
+      "file": "122_LP011_positive.py.txt",
+      "family": "LP011",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP011",
+          "loader": "huggingface_hub.hf_hub_download",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "cdcb4b8d4f8822d2d4c7c07e2e179d3fb91c9b72eb2eb7eb9a2893682864d104"
+    },
+    {
+      "file": "123_LP011_positive.py.txt",
+      "family": "LP011",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP011",
+          "loader": "huggingface_hub.hf_hub_download",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "b528db8d01df233d58b1a31fc32372b695753ab996518e95d39293fe012bffb8"
+    },
+    {
+      "file": "124_LP011_positive.py.txt",
+      "family": "LP011",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP011",
+          "loader": "huggingface_hub.hf_hub_download",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "e04c64c00f5bf53172ca33ce62855bccf0e7a303852acf1a71908e7bc7f0ce36"
+    },
+    {
+      "file": "125_LP011_positive.py.txt",
+      "family": "LP011",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP011",
+          "loader": "huggingface_hub.hf_hub_download",
+          "line": 3,
+          "col": 12
+        }
+      ],
+      "sha256": "5e7fb67167e2344747852f8d09b1f2e6dec34124ab7c2d7ce484727226ffe273"
+    },
+    {
+      "file": "126_LP011_positive.py.txt",
+      "family": "LP011",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP011",
+          "loader": "huggingface_hub.hf_hub_download",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "sha256": "27b65c43801cdd2620e26950115cca5cb327ac592b1b8f44f57fc1762a5919f3"
+    },
+    {
+      "file": "127_LP011_positive.py.txt",
+      "family": "LP011",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP011",
+          "loader": "huggingface_hub.hf_hub_download",
+          "line": 3,
+          "col": 5
+        }
+      ],
+      "sha256": "b751f961b58af4250d4cec5899b43ba875059c83eca66044f32dce526908d1e9"
+    },
+    {
+      "file": "128_LP011_dynamic.py.txt",
+      "family": "LP011",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP011",
+          "loader": "huggingface_hub.hf_hub_download",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "99a4f78f4ed89ccf6717350d21f6ad1b510fa2fb4dc3ee3040d892fdd1ed0371"
+    },
+    {
+      "file": "129_LP011_dynamic.py.txt",
+      "family": "LP011",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP011",
+          "loader": "huggingface_hub.hf_hub_download",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "8c7277dbbaa0119d61c28ce61e9dd9143ccc2214c4bb01c014247761f75a7d9c"
+    },
+    {
+      "file": "130_LP011_negative-comment.py.txt",
+      "family": "LP011",
+      "kind": "negative-comment",
+      "expected": [],
+      "sha256": "c061f953f82e4792eebe308a31f65c88cff76b82c683ac5c8dcade99babf38c0"
+    },
+    {
+      "file": "131_LP011_negative-string.py.txt",
+      "family": "LP011",
+      "kind": "negative-string",
+      "expected": [],
+      "sha256": "338c6adcde72b0cbdeb5840082a5d55f0f21f2f09e1fdd8d939bffa6502fb7a2"
+    },
+    {
+      "file": "132_LP012_positive.py.txt",
+      "family": "LP012",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP012",
+          "loader": "skops.io.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "92d0306610ee8ad2964c6d70a3b0b075a492ddac886276f44fa90ce660543396"
+    },
+    {
+      "file": "133_LP012_positive.py.txt",
+      "family": "LP012",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP012",
+          "loader": "skops.io.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "c2f5735dd459521e04483fad3f82efcf6635ce747b142a4f72afe818736fe268"
+    },
+    {
+      "file": "134_LP012_positive.py.txt",
+      "family": "LP012",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP012",
+          "loader": "skops.io.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "6aeed1dac053478d36bb5b8613eb5f4ec5e566e552e48d4b777fb3249120fe4b"
+    },
+    {
+      "file": "135_LP012_positive.py.txt",
+      "family": "LP012",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP012",
+          "loader": "skops.io.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "f0898b16e2b48c8bf812addab404ae4f03fcff64d34f68245ff9d44b476fb498"
+    },
+    {
+      "file": "136_LP012_positive.py.txt",
+      "family": "LP012",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP012",
+          "loader": "skops.io.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "9b3b33726ee5591f8a0d8d04aad62aed7ed2d3e0c360206c201776745aa28580"
+    },
+    {
+      "file": "137_LP012_positive.py.txt",
+      "family": "LP012",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP012",
+          "loader": "skops.io.load",
+          "line": 3,
+          "col": 12
+        }
+      ],
+      "sha256": "28542bd451e92d99b84d6715907f6d2cba45fa266078553e931cf88a62c3e21f"
+    },
+    {
+      "file": "138_LP012_positive.py.txt",
+      "family": "LP012",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP012",
+          "loader": "skops.io.load",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "sha256": "7a346d7f9346aefbf21c6f39a67de88ec81fddd507672af49e384a75df1a1434"
+    },
+    {
+      "file": "139_LP012_positive.py.txt",
+      "family": "LP012",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP012",
+          "loader": "skops.io.load",
+          "line": 3,
+          "col": 5
+        }
+      ],
+      "sha256": "d9d37989f9a699cc713fff2e6b19cfbb658797a2f591825a29b379a5624260b4"
+    },
+    {
+      "file": "140_LP012_dynamic.py.txt",
+      "family": "LP012",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP012",
+          "loader": "skops.io.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "93805253b8766442e29c58bf27e8dd90c121a29f2bf640390f770d55596a3733"
+    },
+    {
+      "file": "141_LP012_dynamic.py.txt",
+      "family": "LP012",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP012",
+          "loader": "skops.io.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "9a22f7d1b40213fb1a9e720257f8cd0ba3b7329d987c1ae87d54a972282a15be"
+    },
+    {
+      "file": "142_LP012_negative-comment.py.txt",
+      "family": "LP012",
+      "kind": "negative-comment",
+      "expected": [],
+      "sha256": "0d6374e8cfaafe9c2dd7fff80f668d61f756a5276be31d76f3803754a799247b"
+    },
+    {
+      "file": "143_LP012_negative-string.py.txt",
+      "family": "LP012",
+      "kind": "negative-string",
+      "expected": [],
+      "sha256": "1e63f54f159c1f4c33d62e50290a097fa1623928f156d03c1a55d0d7d43e809f"
+    },
+    {
+      "file": "144_LP013_positive.py.txt",
+      "family": "LP013",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP013",
+          "loader": "safetensors.torch.load_file",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "6785affa60924020a9c989d162ea4985c17fac33fdb5bae32524aa3ce2bb48c4"
+    },
+    {
+      "file": "145_LP013_positive.py.txt",
+      "family": "LP013",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP013",
+          "loader": "safetensors.torch.load_file",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "336fec34aca443fe3d6997b1c14b6c9354f4c9a2abaded2b643dcf426af3d1f4"
+    },
+    {
+      "file": "146_LP013_positive.py.txt",
+      "family": "LP013",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP013",
+          "loader": "safetensors.torch.load_file",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "4b16a04f6553625bd9dbd389b1e7e49b68730f9407a61578020feaf67a9c8bdb"
+    },
+    {
+      "file": "147_LP013_positive.py.txt",
+      "family": "LP013",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP013",
+          "loader": "safetensors.torch.load_file",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "f84c3ae42f6707c8ef11dfdbb5c5253eb65b14f5e2bf89961132f2ca1be01026"
+    },
+    {
+      "file": "148_LP013_positive.py.txt",
+      "family": "LP013",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP013",
+          "loader": "safetensors.torch.load_file",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "1bae3efb4198b25e8604223b33faa46876a70ca496382ea802665d7ec6f9f5ea"
+    },
+    {
+      "file": "149_LP013_positive.py.txt",
+      "family": "LP013",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP013",
+          "loader": "safetensors.torch.load_file",
+          "line": 3,
+          "col": 12
+        }
+      ],
+      "sha256": "13e4866c4924e42e6a2db0ade979b49e090677bc7bcfa750875b14ff450319b6"
+    },
+    {
+      "file": "150_LP013_positive.py.txt",
+      "family": "LP013",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP013",
+          "loader": "safetensors.torch.load_file",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "sha256": "15be2b778f62bf8ffb97f28b7b48efc24b6429f4c2ac1acf182f2ebbd39e98c2"
+    },
+    {
+      "file": "151_LP013_positive.py.txt",
+      "family": "LP013",
+      "kind": "positive",
+      "expected": [
+        {
+          "rule": "LP013",
+          "loader": "safetensors.torch.load_file",
+          "line": 3,
+          "col": 5
+        }
+      ],
+      "sha256": "b1f95d67dfd87e7f4fa55b826651352963ff6b35dc4960e66b07461443892806"
+    },
+    {
+      "file": "152_LP013_dynamic.py.txt",
+      "family": "LP013",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP013",
+          "loader": "safetensors.torch.load_file",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "81a3470b1940a5bef5f1d58aaf2dea994183835b6d240bb9cb8d9c119c981cc2"
+    },
+    {
+      "file": "153_LP013_dynamic.py.txt",
+      "family": "LP013",
+      "kind": "dynamic",
+      "expected": [
+        {
+          "rule": "LP013",
+          "loader": "safetensors.torch.load_file",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "ec1f21bf2487d925aa9de5ad609ab7d670b47317560eb0e1d5c1dd975c7236d6"
+    },
+    {
+      "file": "154_LP013_negative-comment.py.txt",
+      "family": "LP013",
+      "kind": "negative-comment",
+      "expected": [],
+      "sha256": "5194637015fd0434d13e6b228bf802d34d6823c4ba6eef24de94b5d33b6ef5e4"
+    },
+    {
+      "file": "155_LP013_negative-string.py.txt",
+      "family": "LP013",
+      "kind": "negative-string",
+      "expected": [],
+      "sha256": "141c59a20e594f57c6323c6b76d1f41fe687239a3cb8545f0b31d9116105e21f"
+    },
+    {
+      "file": "156_LP004_risk-argument.py.txt",
+      "family": "LP004",
+      "kind": "risk-argument",
+      "expected": [
+        {
+          "rule": "LP004",
+          "loader": "torch.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "315d44f02b2136508abc50bbb6c15f1de26f1fdb5200a11a9a1f5669d6997441"
+    },
+    {
+      "file": "157_LP006_risk-argument.py.txt",
+      "family": "LP006",
+      "kind": "risk-argument",
+      "expected": [
+        {
+          "rule": "LP006",
+          "loader": "numpy.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "f0eceea2ce4a9e49e97d2df08b82c0192112a79f7ce8154e0b61b65dae74bd8c"
+    },
+    {
+      "file": "158_LP010_risk-argument.py.txt",
+      "family": "LP010",
+      "kind": "risk-argument",
+      "expected": [
+        {
+          "rule": "LP010",
+          "loader": "transformers.AutoModel.from_pretrained",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "73f20ba4e8377f04a3a16fb4ee875a91941ca4d51c852bbe75b32897b1576e16"
+    },
+    {
+      "file": "159_LP004_risk-argument.py.txt",
+      "family": "LP004",
+      "kind": "risk-argument",
+      "expected": [
+        {
+          "rule": "LP004",
+          "loader": "torch.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "89dbb81836bacd528257e3278ec52f556a79f7638c69b89564c3d4df1394736c"
+    },
+    {
+      "file": "160_LP006_risk-argument.py.txt",
+      "family": "LP006",
+      "kind": "risk-argument",
+      "expected": [
+        {
+          "rule": "LP006",
+          "loader": "numpy.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "345ba1857782fa6bdef55ee1c4302dab1b659e6ea3adf3fa683a996d52fd55ec"
+    },
+    {
+      "file": "161_LP010_risk-argument.py.txt",
+      "family": "LP010",
+      "kind": "risk-argument",
+      "expected": [
+        {
+          "rule": "LP010",
+          "loader": "transformers.AutoModel.from_pretrained",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "27ab2471b9c9519432eb300c16a7efb9a566ab486701d1041b7bb6466fe9eb9a"
+    },
+    {
+      "file": "162_LP004_risk-argument.py.txt",
+      "family": "LP004",
+      "kind": "risk-argument",
+      "expected": [
+        {
+          "rule": "LP004",
+          "loader": "torch.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "b42f6ea9c092bcdef3b9476d24f00fdfa8c73cf48742b0fb734e00e776b34e66"
+    },
+    {
+      "file": "163_LP006_risk-argument.py.txt",
+      "family": "LP006",
+      "kind": "risk-argument",
+      "expected": [
+        {
+          "rule": "LP006",
+          "loader": "numpy.load",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "9d2c6e3a9ff2b9c766e860c2497f48ae89cf8d0412242f0243f7308b9daa8693"
+    },
+    {
+      "file": "164_LP010_risk-argument.py.txt",
+      "family": "LP010",
+      "kind": "risk-argument",
+      "expected": [
+        {
+          "rule": "LP010",
+          "loader": "transformers.AutoModel.from_pretrained",
+          "line": 2,
+          "col": 1
+        }
+      ],
+      "sha256": "714f96a8170ba03348ee94a9035dd58e474886e5733c9c750b671ee0bb8bc0f0"
+    },
+    {
+      "file": "165_negative_negative-lookalike.py.txt",
+      "family": "negative",
+      "kind": "negative-lookalike",
+      "expected": [],
+      "sha256": "03444426bb097b0465715301ce6212f8110de1060680a03436a90b3ffb9b8463"
+    },
+    {
+      "file": "166_negative_negative-lookalike.py.txt",
+      "family": "negative",
+      "kind": "negative-lookalike",
+      "expected": [],
+      "sha256": "d3fb00eb2636cae1a3f7caa09c2e54e80881781be158aff0c5f8b38fcc0cc3c6"
+    },
+    {
+      "file": "167_negative_negative-lookalike.py.txt",
+      "family": "negative",
+      "kind": "negative-lookalike",
+      "expected": [],
+      "sha256": "9a84032f41237ee8065b40c66b5b5da43edea35da4fceaab54823584f58f213b"
+    },
+    {
+      "file": "168_negative_negative-lookalike.py.txt",
+      "family": "negative",
+      "kind": "negative-lookalike",
+      "expected": [],
+      "sha256": "07a4feff55235572513acf196229815482529e837d3c472998d33483ad3b724b"
+    },
+    {
+      "file": "169_negative_negative-lookalike.py.txt",
+      "family": "negative",
+      "kind": "negative-lookalike",
+      "expected": [],
+      "sha256": "f486f5218673c76f9e532f3b60f46174f6c36efea6f1a859f66ff75fd607f84b"
+    },
+    {
+      "file": "170_negative_negative-lookalike.py.txt",
+      "family": "negative",
+      "kind": "negative-lookalike",
+      "expected": [],
+      "sha256": "a63d585316431d23f4d6507d9de9245f1370391478830da03fab47940e93c6a6"
+    },
+    {
+      "file": "171_negative_negative-lookalike.py.txt",
+      "family": "negative",
+      "kind": "negative-lookalike",
+      "expected": [],
+      "sha256": "589816e255e4afab980f6c9f784e9d48c59207dda84bff91fc0bcc4414812836"
+    },
+    {
+      "file": "172_negative_negative-lookalike.py.txt",
+      "family": "negative",
+      "kind": "negative-lookalike",
+      "expected": [],
+      "sha256": "959549160a7332a3e3f95bd6a8b997509a8ed5738c7f489ff064bfe053d521ea"
+    },
+    {
+      "file": "173_negative_negative-lookalike.py.txt",
+      "family": "negative",
+      "kind": "negative-lookalike",
+      "expected": [],
+      "sha256": "b218ed6900ac8fcb54669c25b34bb0c0ad97a368c1ba57fb15b9a9a8f14abd84"
+    },
+    {
+      "file": "174_negative_negative-lookalike.py.txt",
+      "family": "negative",
+      "kind": "negative-lookalike",
+      "expected": [],
+      "sha256": "3e52afa532db85096fc4dc7c2394e4b204960bbbfe9cdf5cfcc891933034ee94"
+    },
+    {
+      "file": "175_negative_negative-lookalike.py.txt",
+      "family": "negative",
+      "kind": "negative-lookalike",
+      "expected": [],
+      "sha256": "2423780fb460379e1b3f0d019603bf3027e9d0cc5f42a8df94318701b6090841"
+    },
+    {
+      "file": "176_negative_negative-lookalike.py.txt",
+      "family": "negative",
+      "kind": "negative-lookalike",
+      "expected": [],
+      "sha256": "47ced440d76d4a76dd3325ed7ac5c9d565cce096e1b6f59b20a5105a55816625"
+    },
+    {
+      "file": "177_negative_negative-lookalike.py.txt",
+      "family": "negative",
+      "kind": "negative-lookalike",
+      "expected": [],
+      "sha256": "dada2d55b706faeea18f01e77844e23fdcaae7f174dc0fce1ba03b45c7493efb"
+    },
+    {
+      "file": "178_negative_negative-lookalike.py.txt",
+      "family": "negative",
+      "kind": "negative-lookalike",
+      "expected": [],
+      "sha256": "d05bb1276627d81529732753b9fc073ff5a09fb8b413b45067249a3e75b26ef2"
+    },
+    {
+      "file": "179_negative_negative-lookalike.py.txt",
+      "family": "negative",
+      "kind": "negative-lookalike",
+      "expected": [],
+      "sha256": "845881a20019ecfb1c5ca9f4e40bbe1980752cf3d49b97c6769731007e5ef62d"
+    },
+    {
+      "file": "180_LP001_callback.py.txt",
+      "family": "LP001",
+      "kind": "callback",
+      "expected": [
+        {
+          "rule": "LP001",
+          "loader": "pickle.load",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "sha256": "27a0734ddfd6d6250a69e8054afa8318fda7b5b67dff5dc55768078f41230707"
+    },
+    {
+      "file": "181_LP002_callback.py.txt",
+      "family": "LP002",
+      "kind": "callback",
+      "expected": [
+        {
+          "rule": "LP002",
+          "loader": "dill.load",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "sha256": "43cf9baecce58fb4ec48c51bc4a8575e8ffc9e42bb620b7c770221567885a70a"
+    },
+    {
+      "file": "182_LP003_callback.py.txt",
+      "family": "LP003",
+      "kind": "callback",
+      "expected": [
+        {
+          "rule": "LP003",
+          "loader": "joblib.load",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "sha256": "81396cec6622a756ce0ecefe6dfd183bb40373e32cb5713867e2f7a62d4fd06b"
+    },
+    {
+      "file": "183_LP004_callback.py.txt",
+      "family": "LP004",
+      "kind": "callback",
+      "expected": [
+        {
+          "rule": "LP004",
+          "loader": "torch.load",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "sha256": "fef4bda81d27ace1703c3b5c951940b97ecb764e382f0c4b69bc1a9ddaeec35b"
+    },
+    {
+      "file": "184_LP005_callback.py.txt",
+      "family": "LP005",
+      "kind": "callback",
+      "expected": [
+        {
+          "rule": "LP005",
+          "loader": "torch.jit.load",
+          "line": 3,
+          "col": 1
+        }
+      ],
+      "sha256": "a6acc14c5cbce22328fe42b5be3a2745ae4b011c224198a9462423a5f976d4f7"
+    }
+  ]
+}

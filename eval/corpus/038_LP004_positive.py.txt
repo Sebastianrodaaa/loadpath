@@ -1,0 +1,2 @@
+from torch import load
+load('weights.pt', weights_only=False)

@@ -1,0 +1,2 @@
+# Example text only: torch.jit.load('script.pt')
+pass

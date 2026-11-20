@@ -1,0 +1,2 @@
+from local_module import load
+load('file')

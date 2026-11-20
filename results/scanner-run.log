@@ -1,0 +1,42 @@
+| Fixture | Wrapper path | picklescan | modelscan |
+|---|---|---|---|
+| pickle-protocol-0.pkl | pkl | flagged | flagged |
+| pickle-protocol-1.pkl | pkl | flagged | flagged |
+| pickle-protocol-2.pkl | pkl | flagged | flagged |
+| pickle-protocol-3.pkl | pkl | flagged | flagged |
+| pickle-protocol-4.pkl | pkl | flagged | flagged |
+| pickle-protocol-5.pkl | pkl | flagged | flagged |
+| torch-zip.pt | zip→pkl | flagged | flagged |
+| torch-legacy-tar.pt | tar→pkl | scanned-no-flag | skipped |
+| nested-zip.zip | zip→zip→pkl | skipped | error |
+| nested-tar.tar | tar→tar→pkl | scanned-no-flag | skipped |
+| model-archive.mar | zip→zip→pkl | skipped | error |
+| model-tar-archive.mar | zip→tar→pkl | skipped | skipped |
+| nemo-zip.nemo | tar→zip→pkl | flagged | skipped |
+| nemo-tar.nemo | tar→tar→pkl | scanned-no-flag | skipped |
+| nemo-pickle.nemo | tar→pkl | scanned-no-flag | skipped |
+| torch-tar.tgz | gz→tar→pkl | scanned-no-flag | skipped |
+| torch-zip-in-tar.tgz | gz→tar→zip→pkl | scanned-no-flag | skipped |
+| torch-tar-in-tar.tgz | gz→tar→tar→pkl | scanned-no-flag | skipped |
+| joblib-zlib.joblib | zlib→pkl | scanned-no-flag | error |
+| nemo-zlib.nemo | tar→zlib→pkl | scanned-no-flag | skipped |
+| joblib-gz.joblib | gz→pkl | scanned-no-flag | error |
+| nemo-gz.nemo | tar→gz→pkl | scanned-no-flag | skipped |
+| joblib-bz2.joblib | bz2→pkl | scanned-no-flag | error |
+| nemo-bz2.nemo | tar→bz2→pkl | scanned-no-flag | skipped |
+| joblib-lzma.joblib | lzma→pkl | scanned-no-flag | error |
+| nemo-lzma.nemo | tar→lzma→pkl | scanned-no-flag | skipped |
+| joblib-xz.joblib | xz→pkl | scanned-no-flag | error |
+| nemo-xz.nemo | tar→xz→pkl | scanned-no-flag | skipped |
+| numpy-objects.npy | npy→pkl | flagged | flagged |
+| numpy-objects.npz | zip→npy→pkl | flagged | flagged |
+| numpy-raw-pickle.npy | pkl | flagged | flagged |
+| pandas-pickle.pkl | pkl | flagged | flagged |
+| pandas-pickle.pkl.gz | gz→pkl | scanned-no-flag | skipped |
+| dill-marker.dill | pkl | flagged | flagged |
+| keras-metadata.h5 | hdf5→opaque-pkl | scanned-no-flag | scanned-no-flag |
+| keras-pickle.keras | zip→pkl | flagged | flagged+error |
+| keras-npz.keras | zip→zip→npy→pkl | skipped | error |
+| keras-lambda-control.keras | zip→config | flagged | flagged+error |
+| safe-control.safetensors | data-only | scanned-no-flag | skipped |
+

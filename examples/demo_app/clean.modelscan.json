@@ -1,0 +1,29 @@
+{
+  "type": "modelscan",
+  "report": {
+    "summary": {
+      "total_issues_by_severity": {
+        "LOW": 0,
+        "MEDIUM": 0,
+        "HIGH": 0,
+        "CRITICAL": 0
+      },
+      "total_issues": 0,
+      "input_path": "/home/ubuntu/repos/loadpath/examples/demo_app/clean.pkl",
+      "absolute_path": "/home/ubuntu/repos/loadpath/examples/demo_app",
+      "modelscan_version": "0.8.8",
+      "timestamp": "2026-11-20T11:35:43.732479",
+      "scanned": {
+        "total_scanned": 1,
+        "scanned_files": [
+          "clean.pkl"
+        ]
+      }
+    },
+    "issues": [],
+    "errors": []
+  },
+  "hashes": {
+    "clean.pkl": "a0af446c049bb329a062f9453cf38a939642adfebbf662c66be27bef74772507"
+  }
+}

@@ -1,0 +1,3 @@
+import pickle
+PATH = 'model.bin'
+pickle.load(PATH)

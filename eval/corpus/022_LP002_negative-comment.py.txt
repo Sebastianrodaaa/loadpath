@@ -1,0 +1,2 @@
+# Example text only: dill.load('model.dill')
+pass

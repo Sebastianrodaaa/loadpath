@@ -1,0 +1,2 @@
+from transformers.AutoModel import from_pretrained as restore
+restore('owner/repo', trust_remote_code=True)

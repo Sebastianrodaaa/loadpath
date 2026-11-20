@@ -1,0 +1,3 @@
+import dill
+with open('model.bin', 'rb') as stream:
+    dill.load(stream)

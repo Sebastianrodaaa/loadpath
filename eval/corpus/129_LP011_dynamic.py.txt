@@ -1,0 +1,2 @@
+import importlib
+importlib.import_module('huggingface_hub').hf_hub_download('owner/repo', filename='model.pkl')

@@ -1,0 +1,34 @@
+# Curated convenience sample, not a random sample. Default branch on first run;
+# exact commits are recorded in results/registry.json and reused via --pins.
+karpathy/nanoGPT
+karpathy/minGPT
+karpathy/micrograd
+huggingface/transformers
+huggingface/diffusers
+huggingface/accelerate
+huggingface/peft
+huggingface/datasets
+huggingface/pytorch-image-models
+UKPLab/sentence-transformers
+ultralytics/ultralytics
+open-mmlab/mmcv
+open-mmlab/mmengine
+open-mmlab/mmdetection
+open-mmlab/mmsegmentation
+facebookresearch/fairseq
+facebookresearch/dinov2
+facebookresearch/segment-anything
+facebookresearch/detectron2
+CompVis/stable-diffusion
+CompVis/latent-diffusion
+CompVis/taming-transformers
+AUTOMATIC1111/stable-diffusion-webui
+vllm-project/vllm
+scikit-learn/scikit-learn
+keras-team/keras
+pytorch/examples
+pytorch/vision
+lucidrains/denoising-diffusion-pytorch
+ggerganov/whisper.cpp
+NVIDIA/NeMo
+Stability-AI/generative-models

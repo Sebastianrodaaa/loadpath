@@ -1,0 +1,3 @@
+import skops
+PATH = 'model.bin'
+skops.io.load(PATH)

@@ -1,0 +1,17 @@
+┏━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Rule  ┃ Name                   ┃ Severity ┃ Summary                                                                            ┃
+┡━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ LP001 │ pickle-deserialization │ high     │ Pickle deserialization can execute code.                                           │
+│ LP002 │ extended-pickle        │ high     │ dill and cloudpickle restore executable Python objects.                            │
+│ LP003 │ joblib-load            │ high     │ Joblib may deserialize executable objects, including compressed streams.           │
+│ LP004 │ torch-load             │ high     │ Unrestricted torch.load can execute code; weights_only changes the loading policy. │
+│ LP005 │ torchscript-load       │ high     │ TorchScript is executable model code, not just weights.                            │
+│ LP006 │ numpy-pickle           │ high     │ allow_pickle=True permits object deserialization.                                  │
+│ LP007 │ pandas-pickle          │ high     │ read_pickle restores executable Python objects.                                    │
+│ LP008 │ keras-load             │ medium   │ safe_mode=False and legacy HDF5 models require special review.                     │
+│ LP009 │ savedmodel-load        │ high     │ SavedModel restores executable computation graphs.                                 │
+│ LP010 │ remote-model-code      │ high     │ trust_remote_code=True permits repository code execution.                          │
+│ LP011 │ hub-download           │ info     │ Download provenance is context, not scanner coverage.                              │
+│ LP012 │ skops-load             │ medium   │ Review the trusted types passed to skops.io.load.                                  │
+│ LP013 │ safetensors-load       │ info     │ Data-only safetensors loading; this is not a certificate for surrounding code.     │
+└───────┴────────────────────────┴──────────┴────────────────────────────────────────────────────────────────────────────────────┘

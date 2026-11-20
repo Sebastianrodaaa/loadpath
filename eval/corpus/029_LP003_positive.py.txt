@@ -1,0 +1,3 @@
+import joblib
+def wrapper(path):
+    return joblib.load(path)

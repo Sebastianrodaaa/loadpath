@@ -1,0 +1,2 @@
+import transformers
+transformers.AutoModel.from_pretrained('model', trust_remote_code=runtime_flag)

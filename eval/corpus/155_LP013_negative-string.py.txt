@@ -1,0 +1,1 @@
+example = "safetensors.torch.load_file(path)"

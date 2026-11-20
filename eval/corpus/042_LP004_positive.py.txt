@@ -1,0 +1,3 @@
+import torch
+PATH = 'model.bin'
+torch.load(PATH)

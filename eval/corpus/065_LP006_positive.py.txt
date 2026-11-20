@@ -1,0 +1,3 @@
+import numpy
+def wrapper(path):
+    return numpy.load(path)

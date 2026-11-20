@@ -1,0 +1,2 @@
+from skops.io import load as restore
+restore('model.skops', trusted=['custom.Type'])

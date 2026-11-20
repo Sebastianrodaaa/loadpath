@@ -1,0 +1,2 @@
+# Example text only: tensorflow.saved_model.load('saved_model')
+pass

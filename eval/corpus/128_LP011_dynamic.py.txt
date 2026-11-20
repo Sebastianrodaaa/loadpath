@@ -1,0 +1,2 @@
+import huggingface_hub
+getattr(huggingface_hub, 'hf_hub_download')('owner/repo', filename='model.pkl')

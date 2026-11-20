@@ -1,0 +1,2 @@
+def f(torch):
+    return torch.load('local-object')

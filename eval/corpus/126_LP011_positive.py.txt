@@ -1,0 +1,3 @@
+import huggingface_hub
+PATH = 'model.bin'
+huggingface_hub.hf_hub_download(PATH)

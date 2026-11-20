@@ -1,0 +1,2 @@
+import joblib
+getattr(joblib, 'load')('model.joblib')

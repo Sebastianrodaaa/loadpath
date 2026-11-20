@@ -1,0 +1,3 @@
+import transformers
+def wrapper(path):
+    return transformers.AutoModel.from_pretrained(path)

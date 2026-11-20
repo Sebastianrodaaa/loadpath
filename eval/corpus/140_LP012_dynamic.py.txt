@@ -1,0 +1,2 @@
+import skops
+getattr(skops.io, 'load')('model.skops', trusted=['custom.Type'])

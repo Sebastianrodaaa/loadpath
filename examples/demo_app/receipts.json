@@ -1,0 +1,44 @@
+{
+  "receipts": [
+    {
+      "artifact": "clean.pkl",
+      "sha256": "a0af446c049bb329a062f9453cf38a939642adfebbf662c66be27bef74772507",
+      "scanner": "picklescan",
+      "version": "1.0.4",
+      "formats": [
+        "npz",
+        "numpy",
+        "pickle",
+        "torch-zip"
+      ],
+      "complete": true,
+      "evidence": {
+        "globals": [],
+        "scanned_files": 1,
+        "issues_count": 0,
+        "infected_files": 0,
+        "scan_err": false
+      }
+    },
+    {
+      "artifact": "compressed.joblib",
+      "sha256": "29b1bc847d18354e432c45e3ae86afdccbf77d9697e451313235d67fccb89c14",
+      "scanner": "picklescan",
+      "version": "1.0.4",
+      "formats": [
+        "npz",
+        "numpy",
+        "pickle",
+        "torch-zip"
+      ],
+      "complete": true,
+      "evidence": {
+        "globals": [],
+        "scanned_files": 1,
+        "issues_count": 0,
+        "infected_files": 0,
+        "scan_err": false
+      }
+    }
+  ]
+}

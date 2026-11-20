@@ -1,0 +1,3 @@
+import huggingface_hub
+with open('model.bin', 'rb') as stream:
+    huggingface_hub.hf_hub_download(stream)

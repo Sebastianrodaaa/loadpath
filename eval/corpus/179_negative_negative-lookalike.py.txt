@@ -1,0 +1,2 @@
+import json as torch
+torch.load(stream)

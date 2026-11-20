@@ -1,0 +1,314 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>loadpath · coverage receipt</title><style>
+:root{
+color-scheme:dark}
+*{
+box-sizing:border-box}
+body{
+margin:0;
+background:#0b0b0d;
+color:#eeeef0;
+font:14px system-ui,sans-serif}
+
+main{
+max-width:1280px;
+padding:38px 36px;
+margin:auto}
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #29292e;
+padding-bottom:24px}
+
+.brand{
+font-size:30px;
+letter-spacing:-1px;
+font-weight:650}
+.brand span{
+color:#85858d;
+font-size:12px;
+font-family:monospace;
+letter-spacing:0;
+margin-left:14px}
+
+.tag{
+border:1px solid #36363b;
+border-radius:20px;
+padding:7px 12px;
+color:#aaaab1;
+font:11px monospace}
+
+h1{
+font-size:35px;
+letter-spacing:-1.2px;
+margin:27px 0 8px}
+p{
+color:#92929c;
+line-height:1.6;
+margin:6px 0}
+.eyebrow{
+font:10px monospace;
+letter-spacing:1.5px;
+color:#8a8a94}
+
+.metrics{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:12px;
+margin:23px 0}
+.metric{
+border:1px solid #2d2d33;
+border-radius:8px;
+padding:16px 20px;
+background:#111113}
+
+.metric b{
+font-size:31px;
+font-weight:500;
+display:block;
+letter-spacing:-1px}
+.metric span{
+font:10px monospace;
+text-transform:uppercase;
+letter-spacing:1px;
+color:#93939d}
+
+.panel{
+border:1px solid #2d2d33;
+border-radius:8px;
+padding:22px 24px;
+background:#101012;
+margin:20px 0}
+.section-head{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:16px}
+
+h2{
+font-size:16px;
+margin:0;
+font-weight:550}
+.muted{
+font:11px monospace;
+color:#85858f}
+.bar{
+height:7px;
+background:#2c2c32;
+border-radius:5px;
+overflow:hidden;
+margin:15px 0 10px}
+
+.bar span{
+display:block;
+height:100%;
+background:#d9e3dd}
+.legend{
+font:11px monospace;
+color:#9696a0;
+display:flex;
+justify-content:space-between}
+
+.graph{
+overflow-x:auto;
+margin-top:25px}
+.graph svg{
+display:block;
+width:100%;
+min-width:850px;
+font:12px monospace}
+
+.graph-label{
+fill:#888892;
+font-size:10px;
+letter-spacing:1.2px}
+.table-wrap{
+overflow-x:auto;
+margin-top:14px}
+
+table{
+width:100%;
+border-collapse:collapse;
+table-layout:fixed;
+font-size:12px}
+th{
+font:10px monospace;
+color:#82828c;
+letter-spacing:1px;
+text-transform:uppercase;
+text-align:left;
+padding:14px 10px}
+
+td{
+padding:13px 10px;
+border-top:1px solid #28282d;
+vertical-align:top;
+overflow-wrap:anywhere}
+th:first-child{
+width:18%}
+th:nth-child(2){
+width:53%}
+th:nth-child(3){
+width:9%}
+th:last-child{
+width:20%}
+
+.rule{
+font:11px monospace;
+color:#d9d9e0}
+.location,.detail{
+display:block;
+color:#85858e;
+font-size:11px;
+line-height:1.5;
+margin-top:4px}
+
+strong{
+font:12px monospace;
+color:#e3e3e8}
+code{
+display:block;
+color:#b3b3bd;
+font:11px monospace;
+margin-top:5px;
+overflow-wrap:anywhere}
+
+.severity{
+font:10px monospace;
+text-transform:uppercase;
+color:#aaaab2}
+.status{
+display:inline-block;
+font:10px monospace;
+border:1px solid;
+border-radius:4px;
+padding:5px 7px;
+white-space:nowrap}
+
+.covered{
+color:#b7e4cd;
+border-color:#335042;
+background:#12231a}
+.gap{
+color:#cfb58b;
+border-color:#4a3f30;
+background:#211d17}
+
+.neutral{
+color:#a3a3af;
+border-color:#3d3d45;
+background:#1c1c22}
+.error{
+color:#dfb0a8}
+footer{
+display:flex;
+justify-content:space-between;
+border-top:1px solid #29292e;
+margin-top:26px;
+padding-top:15px;
+font:10px monospace;
+color:#73737e}
+
+@media(max-width:700px){
+main{
+padding:20px 16px}
+.brand span,.tag{
+display:none}
+.metrics{
+grid-template-columns:repeat(2,1fr)}
+h1{
+font-size:27px}
+.panel{
+padding:16px}
+table{
+min-width:760px}
+.legend,footer{
+gap:12px;
+flex-wrap:wrap}
+}
+
+</style>
+</head>
+<body>
+<main>
+<header>
+<div class="brand"><svg width="27" height="27" viewBox="0 0 64 64" aria-hidden="true" style="vertical-align:-3px;margin-right:5px">
+<path d="M12 12 H32 V32 H52 M12 52 H32 V32" fill="none" stroke="#bbb" stroke-width="3"/>
+<path d="M7 7 H17 V17 H7 Z M7 47 H17 V57 H7 Z M47 27 H57 V37 H47 Z" fill="#111" stroke="#eee" stroke-width="2"/>
+<circle cx="32" cy="32" r="3" fill="#eee"/></svg> loadpath<span>SOURCE → ARTIFACT → SCANNER</span>
+</div>
+<span class="tag">OFFLINE / STATIC ANALYSIS</span>
+</header>
+<h1>A scan is not a loading path.</h1>
+<p>Trace the code that loads your models to the evidence that covers it. Coverage is not a safety verdict.</p>
+<div class="metrics">
+<div class="metric">
+<b>06</b>
+<span>Loading call sites</span>
+</div>
+<div class="metric">
+<b>25%</b>
+<span>Required coverage</span>
+</div>
+<div class="metric">
+<b>01</b>
+<span>Unresolved paths</span>
+</div>
+<div class="metric">
+<b>01</b>
+<span>Data-only / not-required</span>
+</div>
+</div>
+<section class="panel">
+<div class="section-head">
+<h2>1 / 4 resolvable call sites covered</h2>
+<span class="muted">HASH + FORMAT + COMPLETION</span>
+</div>
+<div class="bar" role="meter" aria-label="Coverage" aria-valuenow="25.0" aria-valuemin="0" aria-valuemax="100">
+<span style="width:25.0%">
+</span>
+</div>
+<div class="legend">
+<span>Missing files stay in the denominator.</span>
+<span>1 unresolved · 1 data-only excluded</span>
+</div>
+<div class="graph">
+<svg role="img" aria-label="Call-site to artifact to receipt graph" viewBox="0 0 1150 500">
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+<path d="M 0 0 L 10 5 L 0 10" fill="#7d7d85"/>
+</marker>
+</defs>
+<text x="0" y="16" class="graph-label">01 / CALL SITE</text>
+<text x="400" y="16" class="graph-label">02 / ARTIFACT</text>
+<text x="800" y="16" class="graph-label">03 / SCANNER EVIDENCE</text><path d="M 350 73 H 400 M 750 73 H 800" stroke="#b7e4cd" stroke-width="1.3" marker-end="url(#arrow)" stroke-dasharray="4 4"/><g><title>pickle.load — LP001 · app.py:10:1</title><rect x="0" y="45" width="350" height="56" rx="6" fill="#141416" stroke="#343439"/><circle cx="16" cy="65" r="3" fill="#b7e4cd"/><text x="28" y="69" fill="#eeeef0">pickle.load</text><text x="16" y="88" fill="#b7e4cd" font-size="10">LP001 · app.py:10:1</text></g><g><title>clean.pkl — open(&#x27;clean.pkl&#x27;, &#x27;rb&#x27;)</title><rect x="400" y="45" width="350" height="56" rx="6" fill="#141416" stroke="#343439"/><circle cx="416" cy="65" r="3" fill="#b7e4cd"/><text x="428" y="69" fill="#eeeef0">clean.pkl</text><text x="416" y="88" fill="#b7e4cd" font-size="10">open(&#x27;clean.pkl&#x27;, &#x27;rb&#x27;)</text></g><g><title>picklescan 1.0.4 — covered</title><rect x="800" y="45" width="350" height="56" rx="6" fill="#141416" stroke="#343439"/><circle cx="816" cy="65" r="3" fill="#b7e4cd"/><text x="828" y="69" fill="#eeeef0">picklescan 1.0.4</text><text x="816" y="88" fill="#b7e4cd" font-size="10">covered</text></g><path d="M 350 147 H 400 M 750 147 H 800" stroke="#cfb58b" stroke-width="1.3" marker-end="url(#arrow)" stroke-dasharray="4 4"/><g><title>torch.load — LP004 · app.py:11:1</title><rect x="0" y="119" width="350" height="56" rx="6" fill="#141416" stroke="#343439"/><circle cx="16" cy="139" r="3" fill="#cfb58b"/><text x="28" y="143" fill="#eeeef0">torch.load</text><text x="16" y="162" fill="#cfb58b" font-size="10">LP004 · app.py:11:1</text></g><g><title>weights.pt — &#x27;weights.pt&#x27;</title><rect x="400" y="119" width="350" height="56" rx="6" fill="#141416" stroke="#343439"/><circle cx="416" cy="139" r="3" fill="#cfb58b"/><text x="428" y="143" fill="#eeeef0">weights.pt</text><text x="416" y="162" fill="#cfb58b" font-size="10">&#x27;weights.pt&#x27;</text></g><g><title>No matching receipt — uncovered</title><rect x="800" y="119" width="350" height="56" rx="6" fill="#141416" stroke="#343439"/><circle cx="816" cy="139" r="3" fill="#cfb58b"/><text x="828" y="143" fill="#eeeef0">No matching receipt</text><text x="816" y="162" fill="#cfb58b" font-size="10">uncovered</text></g><path d="M 350 221 H 400 M 750 221 H 800" stroke="#cfb58b" stroke-width="1.3" marker-end="url(#arrow)" stroke-dasharray="4 4"/><g><title>pickle.loads — LP001 · app.py:13:5</title><rect x="0" y="193" width="350" height="56" rx="6" fill="#141416" stroke="#343439"/><circle cx="16" cy="213" r="3" fill="#cfb58b"/><text x="28" y="217" fill="#eeeef0">pickle.loads</text><text x="16" y="236" fill="#cfb58b" font-size="10">LP001 · app.py:13:5</text></g><g><title>nested.zip — bundle.read(&#x27;inner/model.pkl&#x27;)</title><rect x="400" y="193" width="350" height="56" rx="6" fill="#141416" stroke="#343439"/><circle cx="416" cy="213" r="3" fill="#cfb58b"/><text x="428" y="217" fill="#eeeef0">nested.zip</text><text x="416" y="236" fill="#cfb58b" font-size="10">bundle.read(&#x27;inner/model.pkl&#x27;)</text></g><g><title>No matching receipt — uncovered</title><rect x="800" y="193" width="350" height="56" rx="6" fill="#141416" stroke="#343439"/><circle cx="816" cy="213" r="3" fill="#cfb58b"/><text x="828" y="217" fill="#eeeef0">No matching receipt</text><text x="816" y="236" fill="#cfb58b" font-size="10">uncovered</text></g><path d="M 350 295 H 400 M 750 295 H 800" stroke="#cfb58b" stroke-width="1.3" marker-end="url(#arrow)" stroke-dasharray="4 4"/><g><title>joblib.load — LP003 · app.py:14:1</title><rect x="0" y="267" width="350" height="56" rx="6" fill="#141416" stroke="#343439"/><circle cx="16" cy="287" r="3" fill="#cfb58b"/><text x="28" y="291" fill="#eeeef0">joblib.load</text><text x="16" y="310" fill="#cfb58b" font-size="10">LP003 · app.py:14:1</text></g><g><title>compressed.joblib — &#x27;compressed.joblib&#x27;</title><rect x="400" y="267" width="350" height="56" rx="6" fill="#141416" stroke="#343439"/><circle cx="416" cy="287" r="3" fill="#cfb58b"/><text x="428" y="291" fill="#eeeef0">compressed.joblib</text><text x="416" y="310" fill="#cfb58b" font-size="10">&#x27;compressed.joblib&#x27;</text></g><g><title>picklescan 1.0.4 — unsupported-format</title><rect x="800" y="267" width="350" height="56" rx="6" fill="#141416" stroke="#343439"/><circle cx="816" cy="287" r="3" fill="#cfb58b"/><text x="828" y="291" fill="#eeeef0">picklescan 1.0.4</text><text x="816" y="310" fill="#cfb58b" font-size="10">unsupported-format</text></g><path d="M 350 369 H 400 M 750 369 H 800" stroke="#929298" stroke-width="1.3" marker-end="url(#arrow)" stroke-dasharray="4 4"/><g><title>pickle.load — LP001 · app.py:18:12</title><rect x="0" y="341" width="350" height="56" rx="6" fill="#141416" stroke="#343439"/><circle cx="16" cy="361" r="3" fill="#929298"/><text x="28" y="365" fill="#eeeef0">pickle.load</text><text x="16" y="384" fill="#929298" font-size="10">LP001 · app.py:18:12</text></g><g><title>open(path, &#x27;rb&#x27;) — open(path, &#x27;rb&#x27;)</title><rect x="400" y="341" width="350" height="56" rx="6" fill="#141416" stroke="#343439"/><circle cx="416" cy="361" r="3" fill="#929298"/><text x="428" y="365" fill="#eeeef0">open(path, &#x27;rb&#x27;)</text><text x="416" y="384" fill="#929298" font-size="10">open(path, &#x27;rb&#x27;)</text></g><g><title>No matching receipt — unresolved</title><rect x="800" y="341" width="350" height="56" rx="6" fill="#141416" stroke="#343439"/><circle cx="816" cy="361" r="3" fill="#929298"/><text x="828" y="365" fill="#eeeef0">No matching receipt</text><text x="816" y="384" fill="#929298" font-size="10">unresolved</text></g><path d="M 350 443 H 400 M 750 443 H 800" stroke="#929298" stroke-width="1.3" marker-end="url(#arrow)" stroke-dasharray="4 4"/><g><title>safetensors.torch.load_file — LP013 · app.py:21:1</title><rect x="0" y="415" width="350" height="56" rx="6" fill="#141416" stroke="#343439"/><circle cx="16" cy="435" r="3" fill="#929298"/><text x="28" y="439" fill="#eeeef0">safetensors.torch.load_file</text><text x="16" y="458" fill="#929298" font-size="10">LP013 · app.py:21:1</text></g><g><title>weights.safetensors — &#x27;weights.safetensors&#x27;</title><rect x="400" y="415" width="350" height="56" rx="6" fill="#141416" stroke="#343439"/><circle cx="416" cy="435" r="3" fill="#929298"/><text x="428" y="439" fill="#eeeef0">weights.safetensors</text><text x="416" y="458" fill="#929298" font-size="10">&#x27;weights.safetensors&#x27;</text></g><g><title>Data-only · no receipt required — not-required</title><rect x="800" y="415" width="350" height="56" rx="6" fill="#141416" stroke="#343439"/><circle cx="816" cy="435" r="3" fill="#929298"/><text x="828" y="439" fill="#eeeef0">Data-only · no receipt required</text><text x="816" y="458" fill="#929298" font-size="10">not-required</text></g></svg>
+</div>
+</section>
+<section class="panel">
+<div class="section-head">
+<h2>Findings &amp; loading context</h2>
+<span class="muted">RISK ≠ COVERAGE</span>
+</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Call site</th>
+<th>Loader / risk context</th>
+<th>Risk</th>
+<th>Coverage</th>
+</tr>
+</thead>
+<tbody><tr><td><span class="rule">LP001</span><span class="location" title="examples/demo_app/app.py">app.py:10:1</span></td><td><strong>pickle.load</strong><code>open(&#x27;clean.pkl&#x27;, &#x27;rb&#x27;)</code><span class="detail">Pickle can execute code.</span><span class="detail"></span><span class="detail"></span></td><td><span class="severity">high</span></td><td><span class="status covered">covered</span></td></tr><tr><td><span class="rule">LP004</span><span class="location" title="examples/demo_app/app.py">app.py:11:1</span></td><td><strong>torch.load</strong><code>&#x27;weights.pt&#x27;</code><span class="detail">weights_only=&#x27;&lt;missing&gt;&#x27;; PyTorch &gt;=2.6 defaults to True when pickle_module is not passed; installed version and custom pickle_module are not inferred.</span><span class="detail"></span><span class="detail"></span></td><td><span class="severity">high</span></td><td><span class="status gap">uncovered</span></td></tr><tr><td><span class="rule">LP001</span><span class="location" title="examples/demo_app/app.py">app.py:13:5</span></td><td><strong>pickle.loads</strong><code>bundle.read(&#x27;inner/model.pkl&#x27;)</code><span class="detail">Pickle can execute code.</span><span class="detail"></span><span class="detail">archive: nested.zip; member: inner/model.pkl</span></td><td><span class="severity">high</span></td><td><span class="status gap">uncovered</span></td></tr><tr><td><span class="rule">LP003</span><span class="location" title="examples/demo_app/app.py">app.py:14:1</span></td><td><strong>joblib.load</strong><code>&#x27;compressed.joblib&#x27;</code><span class="detail">Joblib can execute code.</span><span class="detail"></span><span class="detail"></span></td><td><span class="severity">high</span></td><td><span class="status gap">unsupported-format</span></td></tr><tr><td><span class="rule">LP001</span><span class="location" title="examples/demo_app/app.py">app.py:18:12</span></td><td><strong>pickle.load</strong><code>open(path, &#x27;rb&#x27;)</code><span class="detail">Pickle can execute code.</span><span class="detail"></span><span class="detail"></span></td><td><span class="severity">high</span></td><td><span class="status neutral">unresolved</span></td></tr><tr><td><span class="rule">LP013</span><span class="location" title="examples/demo_app/app.py">app.py:21:1</span></td><td><strong>safetensors.torch.load_file</strong><code>&#x27;weights.safetensors&#x27;</code><span class="detail">Data-only format; informational inventory.</span><span class="detail"></span><span class="detail"></span></td><td><span class="severity">info</span></td><td><span class="status neutral">not-required</span></td></tr></tbody>
+</table>
+</div>
+</section>
+
+<footer>
+<span>loadpath / coverage receipt</span>
+<span>Literal paths are lexical. Dynamic data flows remain unknown.</span>
+</footer>
+</main>
+</body>
+</html>

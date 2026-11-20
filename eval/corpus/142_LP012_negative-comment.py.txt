@@ -1,0 +1,2 @@
+# Example text only: skops.io.load('model.skops', trusted=['custom.Type'])
+pass

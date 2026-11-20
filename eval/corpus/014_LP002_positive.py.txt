@@ -1,0 +1,2 @@
+from dill import load
+load('model.dill')

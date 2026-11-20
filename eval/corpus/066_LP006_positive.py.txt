@@ -1,0 +1,3 @@
+import numpy
+PATH = 'model.bin'
+numpy.load(PATH)

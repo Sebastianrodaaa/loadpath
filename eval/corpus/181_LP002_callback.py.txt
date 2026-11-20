@@ -1,0 +1,3 @@
+import dill
+restore = dill.load
+restore('model')

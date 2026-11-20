@@ -1,0 +1,7 @@
+# Additional measurement/plot dependencies; core scans do not import these.
+picklescan==1.0.4
+modelscan==0.8.8
+numpy==2.2.6
+h5py==3.16.0
+dill==0.4.1
+matplotlib==3.10.9

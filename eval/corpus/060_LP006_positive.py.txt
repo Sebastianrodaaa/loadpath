@@ -1,0 +1,2 @@
+import numpy
+numpy.load('objects.npy', allow_pickle=True)

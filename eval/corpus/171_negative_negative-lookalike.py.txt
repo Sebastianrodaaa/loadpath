@@ -1,0 +1,5 @@
+class joblib:
+    @staticmethod
+    def load(path):
+        return path
+joblib.load('not-a-model')

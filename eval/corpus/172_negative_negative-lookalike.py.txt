@@ -1,0 +1,3 @@
+import pickle as p
+p = replacement
+p.load('x')

@@ -1,0 +1,2 @@
+from torch.jit import load as restore
+restore('script.pt')

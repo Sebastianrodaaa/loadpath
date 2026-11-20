@@ -1,0 +1,3 @@
+import transformers
+with open('model.bin', 'rb') as stream:
+    transformers.AutoModel.from_pretrained(stream)

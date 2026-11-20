@@ -1,0 +1,2 @@
+import tensorflow as lib
+lib.saved_model.load('saved_model')

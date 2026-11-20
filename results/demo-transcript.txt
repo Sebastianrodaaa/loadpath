@@ -1,0 +1,472 @@
+$ loadpath scan examples/demo_app
+                                                             loadpath · loader coverage                                                             
+┏━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ Rule   ┃ Severity  ┃ Call site                         ┃ Loader / artifact                                                       ┃ Coverage      ┃
+┡━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ LP001  │ high      │ examples/demo_app/app.py:10:1     │ pickle.load                                                             │ uncovered     │
+│        │           │                                   │ open('clean.pkl', 'rb')                                                 │               │
+│        │           │                                   │ /home/ubuntu/repos/loadpath/examples/demo_app/clean.pkl                 │               │
+│ LP004  │ high      │ examples/demo_app/app.py:11:1     │ torch.load                                                              │ uncovered     │
+│        │           │                                   │ 'weights.pt'                                                            │               │
+│        │           │                                   │ /home/ubuntu/repos/loadpath/examples/demo_app/weights.pt                │               │
+│ LP001  │ high      │ examples/demo_app/app.py:13:5     │ pickle.loads                                                            │ uncovered     │
+│        │           │                                   │ bundle.read('inner/model.pkl')                                          │               │
+│        │           │                                   │ /home/ubuntu/repos/loadpath/examples/demo_app/nested.zip                │               │
+│ LP003  │ high      │ examples/demo_app/app.py:14:1     │ joblib.load                                                             │ uncovered     │
+│        │           │                                   │ 'compressed.joblib'                                                     │               │
+│        │           │                                   │ /home/ubuntu/repos/loadpath/examples/demo_app/compressed.joblib         │               │
+│ LP001  │ high      │ examples/demo_app/app.py:18:12    │ pickle.load                                                             │ unresolved    │
+│        │           │                                   │ open(path, 'rb')                                                        │               │
+│        │           │                                   │ unresolved                                                              │               │
+│ LP013  │ info      │ examples/demo_app/app.py:21:1     │ safetensors.torch.load_file                                             │ not-required  │
+│        │           │                                   │ 'weights.safetensors'                                                   │               │
+│        │           │                                   │ /home/ubuntu/repos/loadpath/examples/demo_app/weights.safetensors       │               │
+└────────┴───────────┴───────────────────────────────────┴─────────────────────────────────────────────────────────────────────────┴───────────────┘
+Coverage: 0/4 resolvable sites; 1 unresolved
+Data-only sites: 1 not-required (excluded from coverage)
+Coverage is evidence of scanner scope, not safety.
+
+$ loadpath inspect examples/demo_app/global-reference.pkl
+{
+  "name": "examples/demo_app/global-reference.pkl",
+  "format": "pickle",
+  "size": 14,
+  "members": [],
+  "errors": [],
+  "protocol": 2,
+  "imports": [
+    {
+      "module": "os",
+      "name": "system",
+      "offset": 2,
+      "opcode": "GLOBAL"
+    }
+  ]
+}
+
+$ loadpath scan examples/demo_app --receipts examples/demo_app/receipts.json
+                                                             loadpath · loader coverage                                                             
+┏━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┓
+┃ Rule   ┃ Severity  ┃ Call site                        ┃ Loader / artifact                                                   ┃ Coverage           ┃
+┡━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━┩
+│ LP001  │ high      │ examples/demo_app/app.py:10:1    │ pickle.load                                                         │ covered            │
+│        │           │                                  │ open('clean.pkl', 'rb')                                             │                    │
+│        │           │                                  │ /home/ubuntu/repos/loadpath/examples/demo_app/clean.pkl             │                    │
+│ LP004  │ high      │ examples/demo_app/app.py:11:1    │ torch.load                                                          │ uncovered          │
+│        │           │                                  │ 'weights.pt'                                                        │                    │
+│        │           │                                  │ /home/ubuntu/repos/loadpath/examples/demo_app/weights.pt            │                    │
+│ LP001  │ high      │ examples/demo_app/app.py:13:5    │ pickle.loads                                                        │ uncovered          │
+│        │           │                                  │ bundle.read('inner/model.pkl')                                      │                    │
+│        │           │                                  │ /home/ubuntu/repos/loadpath/examples/demo_app/nested.zip            │                    │
+│ LP003  │ high      │ examples/demo_app/app.py:14:1    │ joblib.load                                                         │ unsupported-format │
+│        │           │                                  │ 'compressed.joblib'                                                 │                    │
+│        │           │                                  │ /home/ubuntu/repos/loadpath/examples/demo_app/compressed.joblib     │                    │
+│ LP001  │ high      │ examples/demo_app/app.py:18:12   │ pickle.load                                                         │ unresolved         │
+│        │           │                                  │ open(path, 'rb')                                                    │                    │
+│        │           │                                  │ unresolved                                                          │                    │
+│ LP013  │ info      │ examples/demo_app/app.py:21:1    │ safetensors.torch.load_file                                         │ not-required       │
+│        │           │                                  │ 'weights.safetensors'                                               │                    │
+│        │           │                                  │ /home/ubuntu/repos/loadpath/examples/demo_app/weights.safetensors   │                    │
+└────────┴───────────┴──────────────────────────────────┴─────────────────────────────────────────────────────────────────────┴────────────────────┘
+Coverage: 1/4 resolvable sites; 1 unresolved
+Data-only sites: 1 not-required (excluded from coverage)
+Coverage is evidence of scanner scope, not safety.
+
+$ loadpath scan examples/demo_app --receipts examples/demo_app/receipts.json --sarif > results/demo.sarif
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "loadpath",
+          "version": "0.1.0",
+          "rules": [
+            {
+              "id": "LP001",
+              "name": "pickle-deserialization",
+              "shortDescription": {
+                "text": "Pickle deserialization can execute code."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "supply-chain"
+                ],
+                "security-severity": "8.0"
+              }
+            },
+            {
+              "id": "LP002",
+              "name": "extended-pickle",
+              "shortDescription": {
+                "text": "dill and cloudpickle restore executable Python objects."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "supply-chain"
+                ],
+                "security-severity": "8.0"
+              }
+            },
+            {
+              "id": "LP003",
+              "name": "joblib-load",
+              "shortDescription": {
+                "text": "Joblib may deserialize executable objects, including compressed streams."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "supply-chain"
+                ],
+                "security-severity": "8.0"
+              }
+            },
+            {
+              "id": "LP004",
+              "name": "torch-load",
+              "shortDescription": {
+                "text": "Unrestricted torch.load can execute code; weights_only changes the loading policy."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "supply-chain"
+                ],
+                "security-severity": "8.0"
+              }
+            },
+            {
+              "id": "LP005",
+              "name": "torchscript-load",
+              "shortDescription": {
+                "text": "TorchScript is executable model code, not just weights."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "supply-chain"
+                ],
+                "security-severity": "8.0"
+              }
+            },
+            {
+              "id": "LP006",
+              "name": "numpy-pickle",
+              "shortDescription": {
+                "text": "allow_pickle=True permits object deserialization."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "supply-chain"
+                ],
+                "security-severity": "8.0"
+              }
+            },
+            {
+              "id": "LP007",
+              "name": "pandas-pickle",
+              "shortDescription": {
+                "text": "read_pickle restores executable Python objects."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "supply-chain"
+                ],
+                "security-severity": "8.0"
+              }
+            },
+            {
+              "id": "LP008",
+              "name": "keras-load",
+              "shortDescription": {
+                "text": "safe_mode=False and legacy HDF5 models require special review."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "supply-chain"
+                ],
+                "security-severity": "5.5"
+              }
+            },
+            {
+              "id": "LP009",
+              "name": "savedmodel-load",
+              "shortDescription": {
+                "text": "SavedModel restores executable computation graphs."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "supply-chain"
+                ],
+                "security-severity": "8.0"
+              }
+            },
+            {
+              "id": "LP010",
+              "name": "remote-model-code",
+              "shortDescription": {
+                "text": "trust_remote_code=True permits repository code execution."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "supply-chain"
+                ],
+                "security-severity": "8.0"
+              }
+            },
+            {
+              "id": "LP011",
+              "name": "hub-download",
+              "shortDescription": {
+                "text": "Download provenance is context, not scanner coverage."
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "supply-chain"
+                ],
+                "security-severity": "1.0"
+              }
+            },
+            {
+              "id": "LP012",
+              "name": "skops-load",
+              "shortDescription": {
+                "text": "Review the trusted types passed to skops.io.load."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "supply-chain"
+                ],
+                "security-severity": "5.5"
+              }
+            },
+            {
+              "id": "LP013",
+              "name": "safetensors-load",
+              "shortDescription": {
+                "text": "Data-only safetensors loading; this is not a certificate for surrounding code."
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "supply-chain"
+                ],
+                "security-severity": "1.0"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "LP001",
+          "level": "error",
+          "message": {
+            "text": "pickle.load: Pickle can execute code. Coverage: covered."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "examples/demo_app/app.py"
+                },
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "severity": "high",
+            "coverage": "covered",
+            "args": {}
+          }
+        },
+        {
+          "ruleId": "LP004",
+          "level": "error",
+          "message": {
+            "text": "torch.load: weights_only='<missing>'; PyTorch >=2.6 defaults to True when pickle_module is not passed; installed version and custom pickle_module are not inferred. Coverage: uncovered."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "examples/demo_app/app.py"
+                },
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "severity": "high",
+            "coverage": "uncovered",
+            "args": {}
+          }
+        },
+        {
+          "ruleId": "LP001",
+          "level": "error",
+          "message": {
+            "text": "pickle.loads: Pickle can execute code. Coverage: uncovered."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "examples/demo_app/app.py"
+                },
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 5
+                }
+              }
+            }
+          ],
+          "properties": {
+            "severity": "high",
+            "coverage": "uncovered",
+            "args": {}
+          }
+        },
+        {
+          "ruleId": "LP003",
+          "level": "error",
+          "message": {
+            "text": "joblib.load: Joblib can execute code. Coverage: unsupported-format."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "examples/demo_app/app.py"
+                },
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "severity": "high",
+            "coverage": "unsupported-format",
+            "args": {}
+          }
+        },
+        {
+          "ruleId": "LP001",
+          "level": "error",
+          "message": {
+            "text": "pickle.load: Pickle can execute code. Coverage: unresolved."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "examples/demo_app/app.py"
+                },
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 12
+                }
+              }
+            }
+          ],
+          "properties": {
+            "severity": "high",
+            "coverage": "unresolved",
+            "args": {}
+          }
+        },
+        {
+          "ruleId": "LP013",
+          "level": "note",
+          "message": {
+            "text": "safetensors.torch.load_file: Data-only format; informational inventory. Coverage: not-required."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "examples/demo_app/app.py"
+                },
+                "region": {
+                  "startLine": 21,
+                  "startColumn": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "severity": "info",
+            "coverage": "not-required",
+            "args": {}
+          }
+        }
+      ],
+      "invocations": [
+        {
+          "executionSuccessful": true,
+          "toolExecutionNotifications": []
+        }
+      ]
+    }
+  ]
+}
+$ python -c "import json; r=json.load(open('results/demo.sarif')); print('SARIF',r['version'],len(r['runs'][0]['results']),'findings')"
+SARIF 2.1.0 6 findings

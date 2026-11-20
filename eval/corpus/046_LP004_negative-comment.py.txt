@@ -1,0 +1,2 @@
+# Example text only: torch.load('weights.pt', weights_only=False)
+pass

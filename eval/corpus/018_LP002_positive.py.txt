@@ -1,0 +1,3 @@
+import dill
+PATH = 'model.bin'
+dill.load(PATH)

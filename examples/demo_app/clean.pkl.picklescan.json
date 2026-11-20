@@ -1,0 +1,13 @@
+{
+  "type": "picklescan",
+  "version": "1.0.4",
+  "artifact": "clean.pkl",
+  "sha256": "a0af446c049bb329a062f9453cf38a939642adfebbf662c66be27bef74772507",
+  "result": {
+    "globals": [],
+    "scanned_files": 1,
+    "issues_count": 0,
+    "infected_files": 0,
+    "scan_err": false
+  }
+}

@@ -1,0 +1,3 @@
+import pickle
+restore = pickle.load
+restore('model')

@@ -1,0 +1,2 @@
+# Example text only: transformers.AutoModel.from_pretrained('owner/repo', trust_remote_code=True)
+pass

@@ -1,0 +1,1 @@
+example = "torch.load(path)"

@@ -1,0 +1,2 @@
+# Example text only: safetensors.torch.load_file('weights.safetensors')
+pass

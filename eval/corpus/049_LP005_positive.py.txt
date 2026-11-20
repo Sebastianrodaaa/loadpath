@@ -1,0 +1,2 @@
+import torch as lib
+lib.jit.load('script.pt')

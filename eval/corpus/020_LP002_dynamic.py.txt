@@ -1,0 +1,2 @@
+import dill
+getattr(dill, 'load')('model.dill')

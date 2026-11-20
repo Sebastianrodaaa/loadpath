@@ -1,0 +1,1 @@
+example = "huggingface_hub.hf_hub_download(path)"

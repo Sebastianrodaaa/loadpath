@@ -1,0 +1,3 @@
+import transformers
+PATH = 'model.bin'
+transformers.AutoModel.from_pretrained(PATH)

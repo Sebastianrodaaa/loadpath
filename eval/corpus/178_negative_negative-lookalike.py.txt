@@ -1,0 +1,2 @@
+import json as pickle
+pickle.load(stream)

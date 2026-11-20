@@ -1,0 +1,2 @@
+import transformers as lib
+lib.AutoModel.from_pretrained('owner/repo', trust_remote_code=True)
