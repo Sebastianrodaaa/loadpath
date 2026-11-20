@@ -142,6 +142,8 @@ def inspect_bytes(data, name="<bytes>", depth=0, budget=None):
                         result["members"].append({"name": member_name, "format": "unknown", "errors": [str(exc)]})
         except ARCHIVE_ERRORS as exc:
             result["errors"].append(str(exc))
+        for member in result["members"]:
+            result["errors"].extend(f"{member['name']}: {error}" for error in member.get("errors", []))
         return result
     if data.startswith(b"\x80") or Path(name).suffix.lower() in {".pkl", ".pickle", ".joblib"} or data[:1] in {b"c", b"(", b"}", b"I", b"N", b"l", b"d"}:
         protocol, imports, error = pickle_imports(data)

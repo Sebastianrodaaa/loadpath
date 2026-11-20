@@ -147,3 +147,32 @@ def test_member_decompression_errors_are_isolated(monkeypatch, error):
     info = inspect_bytes(zip_bytes({"bad.pkl": b"bad", "good.pkl": b"\x80\x02N."}))
     assert info["members"][0]["errors"] == [str(error)]
     assert info["members"][1]["format"] == "pickle"
+
+
+@pytest.mark.parametrize("nested", [False, True])
+@pytest.mark.parametrize("kind", ["deflate", "crc", "pickle"])
+def test_inspect_cli_fails_on_member_errors(tmp_path, capsys, nested, kind):
+    if kind == "deflate":
+        data = corrupt_deflated_zip()
+    elif kind == "crc":
+        data = bytearray(zip_bytes({"model.pkl": b"\x80\x02N."}))
+        data[30 + len("model.pkl")] ^= 1
+        data = bytes(data)
+    else:
+        data = zip_bytes({"model.pkl": b"\x80\x02"})
+    if nested:
+        data = zip_bytes({"inner.zip": data})
+    artifact = tmp_path / "model.zip"
+    artifact.write_bytes(data)
+    assert main(["inspect", str(artifact)]) == 2
+    info = json.loads(capsys.readouterr().out)
+    assert info["errors"]
+    assert info["members"][0]["name"] in info["errors"][0]
+
+
+@pytest.mark.parametrize("data", [b"", zip_bytes({"model.pkl": b"\x80\x02N."})])
+def test_inspect_cli_accepts_error_free_members(tmp_path, capsys, data):
+    artifact = tmp_path / "model.zip"
+    artifact.write_bytes(data)
+    assert main(["inspect", str(artifact)]) == 0
+    assert not json.loads(capsys.readouterr().out)["errors"]
