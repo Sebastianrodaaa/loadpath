@@ -5,15 +5,18 @@ from __future__ import annotations
 import ast
 import io
 import json
+import lzma
 import pickletools
 import struct
 import tarfile
 import zipfile
+import zlib
 from pathlib import Path
 
 MAX_BYTES = 8 * 1024 * 1024
 MAX_DEPTH = 2
 MAX_MEMBERS = 64
+ARCHIVE_ERRORS = (OSError, ValueError, RuntimeError, zipfile.BadZipFile, tarfile.TarError, EOFError, zlib.error, lzma.LZMAError)
 
 
 def pickle_imports(data):
@@ -128,12 +131,16 @@ def inspect_bytes(data, name="<bytes>", depth=0, budget=None):
                     if size > budget["bytes"]:
                         result["members"].append({"name": member_name, "format": "unknown", "errors": ["archive byte limit exceeded"]})
                         continue
-                    stream = archive.open(entry) if is_zip else archive.extractfile(entry)
-                    with stream:
-                        member = stream.read(min(size + 1, budget["bytes"] + 1))
-                    budget["bytes"] -= len(member)
-                    result["members"].append(inspect_bytes(member, member_name, depth + 1, budget))
-        except (OSError, ValueError, RuntimeError, zipfile.BadZipFile, tarfile.TarError, EOFError) as exc:
+                    try:
+                        stream = archive.open(entry) if is_zip else archive.extractfile(entry)
+                        with stream:
+                            member = stream.read(min(size + 1, budget["bytes"] + 1))
+                        budget["bytes"] -= len(member)
+                        result["members"].append(inspect_bytes(member, member_name, depth + 1, budget))
+                    except ARCHIVE_ERRORS as exc:
+                        budget["bytes"] -= min(size, budget["bytes"])
+                        result["members"].append({"name": member_name, "format": "unknown", "errors": [str(exc)]})
+        except ARCHIVE_ERRORS as exc:
             result["errors"].append(str(exc))
         return result
     if data.startswith(b"\x80") or Path(name).suffix.lower() in {".pkl", ".pickle", ".joblib"} or data[:1] in {b"c", b"(", b"}", b"I", b"N", b"l", b"d"}:

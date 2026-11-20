@@ -1,5 +1,6 @@
 import io
 import json
+import lzma
 import pickle
 import struct
 import tarfile
@@ -8,7 +9,9 @@ import zlib
 
 import pytest
 
+from loadpath.cli import main
 from loadpath.inspect import MAX_BYTES, inspect_artifact, inspect_bytes
+from loadpath.receipts import sha256
 
 
 def zip_bytes(entries):
@@ -92,3 +95,55 @@ def test_empty_and_corrupt(tmp_path):
     assert inspect_bytes(b"\x93NUMPY")["errors"]
     with pytest.raises(ValueError):
         inspect_artifact(tmp_path)
+
+
+def corrupt_deflated_zip():
+    stream = io.BytesIO()
+    with zipfile.ZipFile(stream, "w", compression=zipfile.ZIP_DEFLATED) as archive:
+        archive.writestr("weights/data.pkl", b"\x80\x02N.")
+        archive.writestr("good.pkl", b"\x80\x02N.")
+    data = bytearray(stream.getvalue())
+    name_size, extra_size = struct.unpack_from("<HH", data, 26)
+    data[30 + name_size + extra_size] = 7
+    return bytes(data)
+
+
+def test_corrupt_deflate_member_does_not_abort_report(tmp_path, capsys):
+    artifact = tmp_path / "model.pt"
+    artifact.write_bytes(corrupt_deflated_zip())
+    info = inspect_artifact(artifact)
+    assert info["members"][0]["name"] == "weights/data.pkl"
+    assert info["members"][0]["errors"]
+    assert info["members"][1]["format"] == "pickle"
+    source = tmp_path / "app.py"
+    source.write_text("import torch\ntorch.load('model.pt')\ntorch.load('absent.pt')")
+    receipts = tmp_path / "receipts.json"
+    receipts.write_text(json.dumps([{
+        "artifact": "model.pt", "sha256": sha256(artifact), "scanner": "picklescan",
+        "version": "1.0.4", "formats": ["torch-zip"],
+    }]))
+    report = tmp_path / "report.html"
+    assert main(["scan", str(source), "--receipts", str(receipts), "--json", "--html", str(report)]) == 0
+    document = json.loads(capsys.readouterr().out)
+    assert len(document["findings"]) == 2
+    assert document["findings"][0]["coverage"] == "unsupported-format"
+    assert document["findings"][0]["receipts"][0]["required_format"] == "incomplete-inspection"
+    assert report.is_file() and "torch.load" in report.read_text()
+
+
+@pytest.mark.parametrize("error", [
+    zlib.error("invalid deflate"), zipfile.BadZipFile("bad CRC"), EOFError("truncated"),
+    lzma.LZMAError("invalid LZMA"), OSError("Invalid data stream"),
+])
+def test_member_decompression_errors_are_isolated(monkeypatch, error):
+    original = zipfile.ZipExtFile.read
+
+    def read(stream, *args, **kwargs):
+        if stream.name == "bad.pkl":
+            raise error
+        return original(stream, *args, **kwargs)
+
+    monkeypatch.setattr(zipfile.ZipExtFile, "read", read)
+    info = inspect_bytes(zip_bytes({"bad.pkl": b"bad", "good.pkl": b"\x80\x02N."}))
+    assert info["members"][0]["errors"] == [str(error)]
+    assert info["members"][1]["format"] == "pickle"
