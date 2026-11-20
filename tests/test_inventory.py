@@ -203,3 +203,83 @@ def test_empty_error_and_no_execution(tmp_path):
     assert scan(tmp_path)[1]
     with pytest.raises(ValueError, match="does not exist"):
         scan(tmp_path / "absent")
+
+
+@pytest.mark.parametrize("expression", [
+    "[pickle.load(P) for P in paths]",
+    "{pickle.load(P) for P in paths}",
+    "{P: pickle.load(P) for P in paths}",
+    "(pickle.load(P) for P in paths)",
+])
+def test_comprehension_targets_are_local(tmp_path, expression):
+    found = inventory(tmp_path, "import pickle\nP = 'outer.pkl'\n" + expression + "\npickle.load(P)")
+    assert [f.resolved_artifact for f in found] == [None, "outer.pkl"]
+
+
+def test_comprehension_does_not_hide_function_binding(tmp_path):
+    found = inventory(tmp_path, """
+        import pickle
+        P = 'outer.pkl'
+        def f():
+            pickle.load(P)
+            return [P for P in paths]
+    """)
+    assert [f.resolved_artifact for f in found] == ["outer.pkl"]
+
+
+def test_class_attributes_are_not_method_bindings(tmp_path):
+    found = inventory(tmp_path, """
+        import pickle
+        P = 'outer.pkl'
+        class Model:
+            P = 'class.pkl'
+            pickle.load(P)
+            def load(self):
+                pickle.load(P)
+            outputs = [pickle.load(P) for item in items]
+        pickle.load(P)
+    """)
+    assert [f.resolved_artifact for f in found] == ["class.pkl", "outer.pkl", "outer.pkl", "outer.pkl"]
+
+
+def test_class_in_function_keeps_lexical_binding(tmp_path):
+    found = inventory(tmp_path, """
+        import pickle
+        def outer():
+            P = 'closure.pkl'
+            class Model:
+                P = 'class.pkl'
+                def load(self):
+                    pickle.load(P)
+    """)
+    assert [f.resolved_artifact for f in found] == ["closure.pkl"]
+
+
+def test_comprehension_iterators_filters_and_walrus(tmp_path):
+    found = inventory(tmp_path, """
+        import pickle
+        P = 'outer.pkl'
+        values = [pickle.load(P) for item in pickle.load(P) for P in paths if pickle.load(P)]
+        [(P := dynamic) for item in items]
+        pickle.load(P)
+    """)
+    assert [f.resolved_artifact for f in found] == [None, "outer.pkl", None, None]
+
+
+def test_lambda_and_nested_class_scopes(tmp_path):
+    found = inventory(tmp_path, """
+        import pickle
+        P = 'outer.pkl'
+        f = lambda P: pickle.load(P)
+        class Outer:
+            P = 'class.pkl'
+            class Inner:
+                pickle.load(P)
+            outputs = [pickle.load(item) for item in pickle.load(P)]
+        class NoOuterBinding:
+            Q = 'class.pkl'
+            def load(self):
+                pickle.load(Q)
+        pickle.load(P)
+    """)
+    assert [f.resolved_artifact for f in found] == [None, "outer.pkl", None, "class.pkl", None, "outer.pkl"]

@@ -36,12 +36,54 @@ class Value:
     context: tuple[str, ...] = ()
 
 
+class Bindings(ast.NodeVisitor):
+    def __init__(self):
+        self.names = set()
+
+    def visit_Name(self, node):
+        if isinstance(node.ctx, (ast.Store, ast.Del)):
+            self.names.add(node.id)
+
+    def visit_Import(self, node):
+        self.names.update(a.asname or a.name.split(".")[0] for a in node.names)
+
+    visit_ImportFrom = visit_Import
+
+    def visit_Global(self, node):
+        self.names.update(node.names)
+
+    visit_Nonlocal = visit_Global
+
+    def visit_FunctionDef(self, node):
+        self.names.add(node.name)
+
+    visit_AsyncFunctionDef = visit_FunctionDef
+    visit_ClassDef = visit_FunctionDef
+
+    def visit_Lambda(self, node):
+        pass
+
+    def visit_ListComp(self, node):
+        for generator in node.generators:
+            self.visit(generator.iter)
+            for condition in generator.ifs:
+                self.visit(condition)
+        for attribute in ("elt", "key", "value"):
+            if hasattr(node, attribute):
+                self.visit(getattr(node, attribute))
+
+    visit_SetComp = visit_ListComp
+    visit_DictComp = visit_ListComp
+    visit_GeneratorExp = visit_ListComp
+
+
 class Inventory(ast.NodeVisitor):
     def __init__(self, filename):
         self.filename = str(filename)
         self.aliases = {}
         self.values = {}
         self.findings = []
+        self.class_scope = None
 
     def name(self, node):
         if isinstance(node, ast.Name):
@@ -149,29 +191,71 @@ class Inventory(ast.NodeVisitor):
     visit_AsyncWith = visit_With
 
     def visit_FunctionDef(self, node):
+        for expression in [*node.decorator_list, *node.args.defaults, *filter(None, node.args.kw_defaults)]:
+            self.visit(expression)
         self.invalidate(node.name)
+        self.function_scope(node.args, node.body)
+
+    def function_scope(self, args, body):
         old_values, old_aliases = self.values.copy(), self.aliases.copy()
-        local_names = {n.id for n in ast.walk(node) if isinstance(n, ast.Name) and isinstance(n.ctx, (ast.Store, ast.Del))}
-        local_names |= {a.arg for a in ast.walk(node.args) if isinstance(a, ast.arg)}
-        for child in ast.walk(node):
-            if isinstance(child, (ast.Import, ast.ImportFrom)):
-                local_names.update(a.asname or a.name.split(".")[0] for a in child.names)
-            elif isinstance(child, (ast.Global, ast.Nonlocal)):
-                local_names.update(child.names)
-        for name in local_names:
-            self.values.pop(name, None)
-            self.aliases.pop(name, None)
-        for statement in node.body:
+        old_class_scope = self.class_scope
+        if self.class_scope is not None:
+            self.values, self.aliases = (scope.copy() for scope in self.class_scope)
+        self.class_scope = None
+        bindings = Bindings()
+        for statement in body:
+            bindings.visit(statement)
+        parameters = [*args.posonlyargs, *args.args, *args.kwonlyargs, args.vararg, args.kwarg]
+        for name in bindings.names | {a.arg for a in parameters if a is not None}:
+            self.invalidate(name)
+        for statement in body:
             self.visit(statement)
         self.values, self.aliases = old_values, old_aliases
+        self.class_scope = old_class_scope
 
     visit_AsyncFunctionDef = visit_FunctionDef
 
+    def visit_Lambda(self, node):
+        self.function_scope(node.args, [node.body])
+
     def visit_ClassDef(self, node):
         values, aliases = self.values.copy(), self.aliases.copy()
+        old_class_scope = self.class_scope
+        self.class_scope = self.class_scope or (values, aliases)
+        self.values, self.aliases = (scope.copy() for scope in self.class_scope)
         for statement in node.body:
             self.visit(statement)
         self.values, self.aliases = values, aliases
+        self.class_scope = old_class_scope
+        self.invalidate(node.name)
+
+    def visit_ListComp(self, node):
+        self.visit(node.generators[0].iter)
+        values, aliases = self.values.copy(), self.aliases.copy()
+        old_class_scope = self.class_scope
+        if self.class_scope is not None:
+            self.values, self.aliases = (scope.copy() for scope in self.class_scope)
+        self.class_scope = None
+        for generator in node.generators:
+            self.bind(generator.target)
+        for index, generator in enumerate(node.generators):
+            if index:
+                self.visit(generator.iter)
+            self.bind(generator.target)
+            for condition in generator.ifs:
+                self.visit(condition)
+        for attribute in ("elt", "key", "value"):
+            if hasattr(node, attribute):
+                self.visit(getattr(node, attribute))
+        self.values, self.aliases = values, aliases
+        self.class_scope = old_class_scope
+        for child in ast.walk(node):
+            if isinstance(child, ast.NamedExpr):
+                self.bind(child.target)
+
+    visit_SetComp = visit_ListComp
+    visit_DictComp = visit_ListComp
+    visit_GeneratorExp = visit_ListComp
 
     def uncertain_block(self, node):
         changed = {n.id for n in ast.walk(node) if isinstance(n, ast.Name) and isinstance(n.ctx, ast.Store)}
